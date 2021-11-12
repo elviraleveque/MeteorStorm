@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A170273E7E1700167292 /* MeteorStormApp.swift */; };
+		5984A173273E7E1700167292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A172273E7E1700167292 /* ContentView.swift */; };
+		5984A175273E7E1900167292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5984A174273E7E1900167292 /* Assets.xcassets */; };
+		5984A178273E7E1900167292 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5984A177273E7E1900167292 /* Preview Assets.xcassets */; };
+		5984A17A273E7E1900167292 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A179273E7E1900167292 /* Persistence.swift */; };
+		5984A17D273E7E1900167292 /* MeteorStorm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5984A17B273E7E1900167292 /* MeteorStorm.xcdatamodeld */; };
+		5984A187273E7E1900167292 /* MeteorStormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A186273E7E1900167292 /* MeteorStormTests.swift */; };
+		5984A191273E7E1900167292 /* MeteorStormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A190273E7E1900167292 /* MeteorStormUITests.swift */; };
+		5984A193273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A192273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5984A183273E7E1900167292 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5984A165273E7E1700167292 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5984A16C273E7E1700167292;
+			remoteInfo = MeteorStorm;
+		};
+		5984A18D273E7E1900167292 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5984A165273E7E1700167292 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5984A16C273E7E1700167292;
+			remoteInfo = MeteorStorm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5984A16D273E7E1700167292 /* MeteorStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteorStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5984A170273E7E1700167292 /* MeteorStormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormApp.swift; sourceTree = "<group>"; };
+		5984A172273E7E1700167292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5984A174273E7E1900167292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5984A177273E7E1900167292 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5984A179273E7E1900167292 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		5984A17C273E7E1900167292 /* MeteorStorm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeteorStorm.xcdatamodel; sourceTree = "<group>"; };
+		5984A182273E7E1900167292 /* MeteorStormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteorStormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5984A186273E7E1900167292 /* MeteorStormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormTests.swift; sourceTree = "<group>"; };
+		5984A18C273E7E1900167292 /* MeteorStormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteorStormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5984A190273E7E1900167292 /* MeteorStormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormUITests.swift; sourceTree = "<group>"; };
+		5984A192273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5984A16A273E7E1700167292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5984A17F273E7E1900167292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5984A189273E7E1900167292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5984A164273E7E1700167292 = {
+			isa = PBXGroup;
+			children = (
+				5984A16F273E7E1700167292 /* MeteorStorm */,
+				5984A185273E7E1900167292 /* MeteorStormTests */,
+				5984A18F273E7E1900167292 /* MeteorStormUITests */,
+				5984A16E273E7E1700167292 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5984A16E273E7E1700167292 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5984A16D273E7E1700167292 /* MeteorStorm.app */,
+				5984A182273E7E1900167292 /* MeteorStormTests.xctest */,
+				5984A18C273E7E1900167292 /* MeteorStormUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5984A16F273E7E1700167292 /* MeteorStorm */ = {
+			isa = PBXGroup;
+			children = (
+				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
+				5984A172273E7E1700167292 /* ContentView.swift */,
+				5984A174273E7E1900167292 /* Assets.xcassets */,
+				5984A179273E7E1900167292 /* Persistence.swift */,
+				5984A17B273E7E1900167292 /* MeteorStorm.xcdatamodeld */,
+				5984A176273E7E1900167292 /* Preview Content */,
+			);
+			path = MeteorStorm;
+			sourceTree = "<group>";
+		};
+		5984A176273E7E1900167292 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5984A177273E7E1900167292 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5984A185273E7E1900167292 /* MeteorStormTests */ = {
+			isa = PBXGroup;
+			children = (
+				5984A186273E7E1900167292 /* MeteorStormTests.swift */,
+			);
+			path = MeteorStormTests;
+			sourceTree = "<group>";
+		};
+		5984A18F273E7E1900167292 /* MeteorStormUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5984A190273E7E1900167292 /* MeteorStormUITests.swift */,
+				5984A192273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift */,
+			);
+			path = MeteorStormUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5984A16C273E7E1700167292 /* MeteorStorm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5984A196273E7E1900167292 /* Build configuration list for PBXNativeTarget "MeteorStorm" */;
+			buildPhases = (
+				5984A169273E7E1700167292 /* Sources */,
+				5984A16A273E7E1700167292 /* Frameworks */,
+				5984A16B273E7E1700167292 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeteorStorm;
+			productName = MeteorStorm;
+			productReference = 5984A16D273E7E1700167292 /* MeteorStorm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5984A181273E7E1900167292 /* MeteorStormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5984A199273E7E1900167292 /* Build configuration list for PBXNativeTarget "MeteorStormTests" */;
+			buildPhases = (
+				5984A17E273E7E1900167292 /* Sources */,
+				5984A17F273E7E1900167292 /* Frameworks */,
+				5984A180273E7E1900167292 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5984A184273E7E1900167292 /* PBXTargetDependency */,
+			);
+			name = MeteorStormTests;
+			productName = MeteorStormTests;
+			productReference = 5984A182273E7E1900167292 /* MeteorStormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5984A18B273E7E1900167292 /* MeteorStormUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5984A19C273E7E1900167292 /* Build configuration list for PBXNativeTarget "MeteorStormUITests" */;
+			buildPhases = (
+				5984A188273E7E1900167292 /* Sources */,
+				5984A189273E7E1900167292 /* Frameworks */,
+				5984A18A273E7E1900167292 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5984A18E273E7E1900167292 /* PBXTargetDependency */,
+			);
+			name = MeteorStormUITests;
+			productName = MeteorStormUITests;
+			productReference = 5984A18C273E7E1900167292 /* MeteorStormUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5984A165273E7E1700167292 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					5984A16C273E7E1700167292 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					5984A181273E7E1900167292 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 5984A16C273E7E1700167292;
+					};
+					5984A18B273E7E1900167292 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 5984A16C273E7E1700167292;
+					};
+				};
+			};
+			buildConfigurationList = 5984A168273E7E1700167292 /* Build configuration list for PBXProject "MeteorStorm" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5984A164273E7E1700167292;
+			productRefGroup = 5984A16E273E7E1700167292 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5984A16C273E7E1700167292 /* MeteorStorm */,
+				5984A181273E7E1900167292 /* MeteorStormTests */,
+				5984A18B273E7E1900167292 /* MeteorStormUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5984A16B273E7E1700167292 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5984A178273E7E1900167292 /* Preview Assets.xcassets in Resources */,
+				5984A175273E7E1900167292 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5984A180273E7E1900167292 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5984A18A273E7E1900167292 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5984A169273E7E1700167292 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5984A17A273E7E1900167292 /* Persistence.swift in Sources */,
+				5984A17D273E7E1900167292 /* MeteorStorm.xcdatamodeld in Sources */,
+				5984A173273E7E1700167292 /* ContentView.swift in Sources */,
+				5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5984A17E273E7E1900167292 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5984A187273E7E1900167292 /* MeteorStormTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5984A188273E7E1900167292 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5984A193273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift in Sources */,
+				5984A191273E7E1900167292 /* MeteorStormUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5984A184273E7E1900167292 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5984A16C273E7E1700167292 /* MeteorStorm */;
+			targetProxy = 5984A183273E7E1900167292 /* PBXContainerItemProxy */;
+		};
+		5984A18E273E7E1900167292 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5984A16C273E7E1700167292 /* MeteorStorm */;
+			targetProxy = 5984A18D273E7E1900167292 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5984A194273E7E1900167292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5984A195273E7E1900167292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5984A197273E7E1900167292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MeteorStorm/Preview Content\"";
+				DEVELOPMENT_TEAM = 2G8PXYNWSD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MeteorStorm.MeteorStorm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5984A198273E7E1900167292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MeteorStorm/Preview Content\"";
+				DEVELOPMENT_TEAM = 2G8PXYNWSD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MeteorStorm.MeteorStorm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5984A19A273E7E1900167292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2G8PXYNWSD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MeteorStorm.MeteorStormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeteorStorm.app/MeteorStorm";
+			};
+			name = Debug;
+		};
+		5984A19B273E7E1900167292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2G8PXYNWSD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MeteorStorm.MeteorStormTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeteorStorm.app/MeteorStorm";
+			};
+			name = Release;
+		};
+		5984A19D273E7E1900167292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2G8PXYNWSD;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MeteorStorm.MeteorStormUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeteorStorm;
+			};
+			name = Debug;
+		};
+		5984A19E273E7E1900167292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2G8PXYNWSD;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MeteorStorm.MeteorStormUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeteorStorm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5984A168273E7E1700167292 /* Build configuration list for PBXProject "MeteorStorm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5984A194273E7E1900167292 /* Debug */,
+				5984A195273E7E1900167292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5984A196273E7E1900167292 /* Build configuration list for PBXNativeTarget "MeteorStorm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5984A197273E7E1900167292 /* Debug */,
+				5984A198273E7E1900167292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5984A199273E7E1900167292 /* Build configuration list for PBXNativeTarget "MeteorStormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5984A19A273E7E1900167292 /* Debug */,
+				5984A19B273E7E1900167292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5984A19C273E7E1900167292 /* Build configuration list for PBXNativeTarget "MeteorStormUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5984A19D273E7E1900167292 /* Debug */,
+				5984A19E273E7E1900167292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5984A17B273E7E1900167292 /* MeteorStorm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5984A17C273E7E1900167292 /* MeteorStorm.xcdatamodel */,
+			);
+			currentVersion = 5984A17C273E7E1900167292 /* MeteorStorm.xcdatamodel */;
+			path = MeteorStorm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5984A165273E7E1700167292 /* Project object */;
+}
