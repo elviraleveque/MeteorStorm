@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		446518F727402F1C00B18829 /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446518F627402F1C00B18829 /* BreathingView.swift */; };
 		5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A170273E7E1700167292 /* MeteorStormApp.swift */; };
 		5984A173273E7E1700167292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A172273E7E1700167292 /* ContentView.swift */; };
 		5984A175273E7E1900167292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5984A174273E7E1900167292 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		446518F627402F1C00B18829 /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
 		5984A16D273E7E1700167292 /* MeteorStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteorStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5984A170273E7E1700167292 /* MeteorStormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormApp.swift; sourceTree = "<group>"; };
 		5984A172273E7E1700167292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
+				446518F627402F1C00B18829 /* BreathingView.swift */,
 				5984A172273E7E1700167292 /* ContentView.swift */,
 				5984A174273E7E1900167292 /* Assets.xcassets */,
 				5984A179273E7E1900167292 /* Persistence.swift */,
@@ -267,6 +270,7 @@
 				5984A17D273E7E1900167292 /* MeteorStorm.xcdatamodeld in Sources */,
 				5984A173273E7E1700167292 /* ContentView.swift in Sources */,
 				5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */,
+				446518F727402F1C00B18829 /* BreathingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
