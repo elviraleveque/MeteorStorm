@@ -22,9 +22,10 @@ struct ContentView: View {
                     Text("How do you feel today?")
                         .font(.system(size: 48, weight: .bold, design: .default))
                         .foregroundColor(Color(.systemGray))
-                        .padding(.leading)
-//                        .minimumScaleFactor(0.01)//Added to scale on screens like iphone 8
-//                        .lineLimit(1)
+                        .padding(.horizontal)
+                    //The attributes below are used to scale the size on iphone 8
+                        .minimumScaleFactor((UIScreen.main.bounds.size.width > 375) ? 1 : 0.1)
+                        .lineLimit((UIScreen.main.bounds.size.width > 375) ? 2 : 1)
                 }//HStack
                 .frame(width: UIScreen.main.bounds.size.width, alignment: .leading)
                 //In order to be more adaptive we pick the width from the screen we are using
@@ -86,6 +87,8 @@ struct ContentView: View {
                         Spacer()
                     }// Hstack Emoji
                 }// Zstack emotions
+                
+                //MARK: Check-in Button
                 
                 HStack{
                     Button{
