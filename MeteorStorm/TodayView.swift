@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-//MARK: ContentView
+//MARK: TodayView
 
-struct ContentView: View {
+struct TodayView: View {
     
     @State var quote: String = "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. "
     
@@ -124,7 +124,6 @@ struct ContentView: View {
                     .padding(.horizontal)
                     .padding(.horizontal)
                     .padding(.horizontal)
-//                    .minimumScaleFactor(0.5)//Added to scale on screens like iphone 8
                     
                     HStack{
                         VStack(alignment: .trailing){
@@ -134,7 +133,6 @@ struct ContentView: View {
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .italic()
                                 .padding(.trailing)
-//                                .minimumScaleFactor(0.5) //Added to scale on screens like iphone 8
 
                         }
                         .frame(width: UIScreen.main.bounds.size.width - 32, alignment: .trailing)
@@ -166,36 +164,10 @@ struct ContentView: View {
     }
 }
 
-//MARK: TabBar View
-
-struct TabBar: View{
-    var body: some View{
-        TabView{
-            ContentView()
-                .tabItem{
-                    Label("Today", systemImage: "sun.max")
-                }
-            
-            Text("Calendar")
-                .tabItem{
-                    Label("Calendar", systemImage: "calendar")
-                }
-            
-            Text("Training")
-                .tabItem{
-                    Label("Training", systemImage: "brain")
-                }
-
-        }
-        //This is the color of the labels in the tabBar
-        .accentColor(Color(.systemIndigo))
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
+struct TodayView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TabBar()
+            TodayView()
                 .preferredColorScheme(.light)
         }
     }
