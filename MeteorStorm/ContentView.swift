@@ -2,87 +2,198 @@
 //  ContentView.swift
 //  MeteorStorm
 //
-//  Created by Elvira Leveque on 12/11/21.
+//  Created by Vincenzo Pascarella on 13/11/21.
 //
 
 import SwiftUI
-import CoreData
+
+//MARK: ContentView
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
+    @State var quote: String = "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. "
+    
+    @State var quoteArtist: String = "John Doe"
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+            VStack{
+                HStack{
+                    Text("How do you feel today?")
+                        .font(.system(size: 48, weight: .bold, design: .default))
+                        .foregroundColor(Color(.systemGray))
+                        .padding(.leading)
+//                        .minimumScaleFactor(0.01)//Added to scale on screens like iphone 8
+//                        .lineLimit(1)
+                }//HStack
+                .frame(width: UIScreen.main.bounds.size.width, alignment: .leading)
+                //In order to be more adaptive we pick the width from the screen we are using
+                
+                //In the Zstack we have 2 HStack one with circles background and one with the emojis both with spacer in order to adapt to each screen size
+                ZStack{
+                    HStack{
+                        Spacer()
+                        Circle()
+                            .frame(width: 76, height: 76)
+                            .padding(.bottom)
+                            .foregroundColor(Color(.systemRed))
+                        
+                        Spacer()
+                        Circle()
+                            .frame(width: 76, height: 76)
+                            .padding(.bottom)
+                            .foregroundColor(Color(.systemGreen))
+                        
+                        Spacer()
+                        Circle()
+                            .frame(width: 76, height: 76)
+                            .padding(.bottom)
+                            .foregroundColor(Color(.systemYellow))
+                        
+                        Spacer()
+                        Circle()
+                            .frame(width: 76, height: 76)
+                            .padding(.bottom)
+                            .foregroundColor(Color(.systemTeal))
+                        Spacer()
+                        
+                    } // Hstack circles
+                    
+                    HStack{
+                        Spacer()
+                        Text("🤬")
+                            .font(.system(size: 50))
+                            .frame(width: 76, height: 76)
+                            .padding(.bottom)
+                        
+                        Spacer()
+                        Text("🥳")
+                            .font(.system(size: 50))
+                            .frame(width: 76, height: 76)
+                            .padding(.bottom)
+                        
+                        Spacer()
+                        Text("😐")
+                            .font(.system(size: 50))
+                            .frame(width: 76, height: 76)
+                            .padding(.bottom)
+                        
+                        Spacer()
+                        Text("😢")
+                            .font(.system(size: 50))
+                            .frame(width: 76, height: 76)
+                            .padding(.bottom)
+                        Spacer()
+                    }// Hstack Emoji
+                }// Zstack emotions
+                
+                HStack{
+                    Button{
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        Text("Check-in")
+                            .font(.system(size: 17, weight: .semibold, design: .default))
                     }
+                }//HStack Check-in
+                .padding(.vertical)
+                .frame(width: UIScreen.main.bounds.size.width - 32)
+                .foregroundColor(.white)
+                .background(Color(.systemIndigo))
+                .cornerRadius(14)
+                .padding(.horizontal)
+                
+                HStack{
+                    Text("Daily quote")
+                        .font(.system(size: 28, weight: .bold, design: .default))
+                        .foregroundColor(Color(.systemGray))
+                        .padding()
+                }//HStack
+                .frame(width: UIScreen.main.bounds.size.width, alignment: .leading)
+                                
+                VStack(alignment: .leading){
+                    Text("\(Image(systemName: "quote.opening"))")
+                        .padding(.leading)
+                    
+                    
+                    HStack{
+                        Text("\(quote)")
+                            .font(.system(size: 17, weight: .regular, design: .default))
+                    }//Hstack of quote, 3 padding in order to centre it
+                    .padding(.horizontal)
+                    .padding(.horizontal)
+                    .padding(.horizontal)
+//                    .minimumScaleFactor(0.5)//Added to scale on screens like iphone 8
+                    
+                    HStack{
+                        VStack(alignment: .trailing){
+                            Text("\(Image(systemName: "quote.closing"))")
+                            
+                            Text("- \(quoteArtist)")
+                                .font(.system(size: 14, weight: .regular, design: .default))
+                                .italic()
+                                .padding(.trailing)
+//                                .minimumScaleFactor(0.5) //Added to scale on screens like iphone 8
+
+                        }
+                        .frame(width: UIScreen.main.bounds.size.width - 32, alignment: .trailing)
+                        .padding(.trailing)
+                    }//Hstack Closing quote + artist
+                    
+                    
+                }//VStack daily quote
+                .frame(width: UIScreen.main.bounds.size.width - 32)
+                .padding(.vertical)
+                .background(Color(.systemGray6))
+                .cornerRadius(32)
+                
+            }//Vstack
+            .navigationTitle("Today")
+            .padding(.bottom) //Add to prevent overlay with tabBar
+            .toolbar{
+                
+                Button{
+                  //Place the action that the button performs
+                } label: {
+                    Image(systemName: "gearshape")
+                        .foregroundColor(Color(.systemIndigo))
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+                
+            }//Toolbar
+            
+        }//Navigation View
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+//MARK: TabBar View
+
+struct TabBar: View{
+    var body: some View{
+        TabView{
+            ContentView()
+                .tabItem{
+                    Label("Today", systemImage: "sun.max")
+                }
+            
+            Text("Calendar")
+                .tabItem{
+                    Label("Calendar", systemImage: "calendar")
+                }
+            
+            Text("Training")
+                .tabItem{
+                    Label("Training", systemImage: "brain")
+                }
+
+        }
+        //This is the color of the labels in the tabBar
+        .accentColor(Color(.systemIndigo))
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        Group {
+            TabBar()
+                .preferredColorScheme(.light)
+        }
     }
 }
