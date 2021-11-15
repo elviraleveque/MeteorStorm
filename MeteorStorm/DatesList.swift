@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DatesList.swift
 //  MeteorStorm
 //
 //  Created by Elvira Leveque on 12/11/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct DatesList: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -81,8 +81,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_Previews: PreviewProvider {
+struct DatesList_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        DatesList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
