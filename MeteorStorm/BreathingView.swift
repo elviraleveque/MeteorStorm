@@ -9,12 +9,13 @@ import Foundation
 
 struct BreathingView: View {
     var body: some View {
+        NavigationView {
         VStack{
             Spacer()
             Image(systemName: "lungs")
                 .resizable(resizingMode: .tile)
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(Color.purple)
+                .foregroundColor(Color(.systemIndigo))
                 .frame(width: 123, height: 86)
            
 
@@ -36,11 +37,25 @@ struct BreathingView: View {
 
                 .foregroundColor(Color.white)}
             )
-                .background(Color.purple).cornerRadius(14)
+                .background(Color(.systemIndigo)).cornerRadius(14)
                 .padding(.horizontal)
                 
-        }
-        
+            }//VStack
+        .navigationTitle("Breathing")
+        .padding(.bottom)
+            
+        .toolbar{
+            
+            Button{
+              //Place the action that the button performs
+            } label: {
+                Image(systemName: "gearshape")
+                    .foregroundColor(Color(.systemIndigo))
+            }
+            
+        }//Toolbar
+            
+        }//navigationView
     }
 }
 
