@@ -27,7 +27,7 @@ struct TodayView: View {
                         .minimumScaleFactor((UIScreen.main.bounds.size.width > 375) ? 1 : 0.1)
                         .lineLimit((UIScreen.main.bounds.size.width > 375) ? 2 : 1)
                 }//HStack
-                .frame(width: UIScreen.main.bounds.size.width, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 //In order to be more adaptive we pick the width from the screen we are using
                 
                 //In the Zstack we have 2 HStack one with circles background and one with the emojis both with spacer in order to adapt to each screen size
@@ -98,7 +98,7 @@ struct TodayView: View {
                     }
                 }//HStack Check-in
                 .padding(.vertical)
-                .frame(width: UIScreen.main.bounds.size.width - 32)
+                .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
                 .background(Color(.systemIndigo))
                 .cornerRadius(14)
@@ -110,7 +110,7 @@ struct TodayView: View {
                         .foregroundColor(Color(.systemGray))
                         .padding()
                 }//HStack
-                .frame(width: UIScreen.main.bounds.size.width, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                                 
                 VStack(alignment: .leading){
                     Text("\(Image(systemName: "quote.opening"))")
@@ -135,16 +135,18 @@ struct TodayView: View {
                                 .padding(.trailing)
 
                         }
-                        .frame(width: UIScreen.main.bounds.size.width - 32, alignment: .trailing)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.trailing)
                     }//Hstack Closing quote + artist
                     
                     
                 }//VStack daily quote
-                .frame(width: UIScreen.main.bounds.size.width - 32)
                 .padding(.vertical)
+                .frame(maxWidth: .infinity)
                 .background(Color(.systemGray6))
                 .cornerRadius(32)
+                .padding(.horizontal)
+
                 
             }//Vstack
             .navigationTitle("Today")
