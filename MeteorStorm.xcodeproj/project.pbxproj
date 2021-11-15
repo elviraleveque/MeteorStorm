@@ -114,7 +114,6 @@
 				7B04739827413A210013496C /* TrainingView.swift */,
 				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
 				446518F627402F1C00B18829 /* BreathingView.swift */,
-				5984A172273E7E1700167292 /* ContentView.swift */,
 				5984A172273E7E1700167292 /* DatesList.swift */,
 				5984A174273E7E1900167292 /* Assets.xcassets */,
 				5984A179273E7E1900167292 /* Persistence.swift */,

@@ -29,16 +29,16 @@ struct BreathingView: View {
             Spacer()
             
             Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
-            Button(action: {
-                
-            }, label: {Text("Start")
-                    .padding(.vertical)
-                    .frame( maxWidth: .infinity)
 
-                .foregroundColor(Color.white)}
-            )
-                .background(Color(.systemIndigo)).cornerRadius(14)
-                .padding(.horizontal)
+            NavigationLink(destination: BreathingExercise()) {
+                                Text("Start")
+                    .padding(.vertical)
+                                        .frame( maxWidth: .infinity)
+                    
+                                    .foregroundColor(Color.white)
+                                    .background(Color(.systemIndigo)).cornerRadius(14)
+                                    .padding(.horizontal)
+                            }
                 
             }//VStack
         .navigationTitle("Breathing")
@@ -56,6 +56,13 @@ struct BreathingView: View {
         }//Toolbar
             
         }//navigationView
+    }
+}
+
+
+struct BreathingExercise: View {
+    var body: some View{
+        Text("Hi")
     }
 }
 
