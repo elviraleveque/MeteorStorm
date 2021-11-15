@@ -61,10 +61,29 @@ struct BreathingView: View {
 
 
 struct BreathingExercise: View {
+ @State private var isVisible = false
+    
     var body: some View{
-        Text("Hi")
+        NavigationView{
+            VStack{
+                Text("Inhale/Exhale")
+                Spacer()
+                ZStack {
+                    Image("MovingCircle")
+                        .scaleEffect(isVisible ? 1.5: 0.8)
+                        .onAppear(perform: {
+                            withAnimation(.easeInOut(duration: 4).repeatForever(autoreverses: true)){
+                                self.isVisible.toggle()
+                            }
+                        })
+                       
+                    Image("StaticCircle")
+                }
+                Spacer()
+            }
+        }.navigationTitle("Breathing")
     }
-}
+}//view with the real exercise
 
 struct BreathingView_Previews: PreviewProvider {
     static var previews: some View {
