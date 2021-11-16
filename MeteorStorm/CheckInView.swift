@@ -11,158 +11,75 @@ struct CheckInView: View {
     
     @Binding var showCheckInView: Bool
 //Binding: the value will come from outside and will be shared with another view
-    @State var selection: String = "swatch_shipcove"
+    
+    @State var emotionSelected: Int = 0
     
     var body: some View {
         NavigationView {
             
         VStack{
+            Spacer()
+            
             Text("How do you feel today?")
                 .font(.system(size: 34, weight: .regular, design: .default))
-                .foregroundColor(.black)
+                .foregroundColor(Color.primary)
                 .padding()
             
-            ColorSwatchView(selection: $selection)
+            Text("Choose the emoji that \n represents you the most")
+                .multilineTextAlignment(.center)
+                .font(.system(size: 17, weight: .regular, design: .default))
+                .foregroundColor(Color(.systemGray))
             
-            ZStack{
-                HStack{
-                    Spacer()
-                    Button(action: {
+            Spacer()
                         
-                    },
-                           label: {
-                        Circle()
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                            .foregroundColor(Color(.systemRed))
-                    })
-                    
-                    Spacer()
-                    Button(action: {
-                        
-                    },
-                           label: {
-                        Circle()
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                            .foregroundColor(Color(.systemGreen))
-                    })
-                    
-                    Spacer()
-                    Circle()
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                        .foregroundColor(Color(.systemYellow))
-                    
-                    Spacer()
-                    
-                } // Hstack circles
-                
                 HStack{
                     Spacer()
-                    Text("🤬")
-                        .font(.system(size: 50))
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
+                    
+                    CircleEmoji(emoji: "🥳", emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected)
                     
                     Spacer()
-                    Text("🥳")
-                        .font(.system(size: 50))
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
+                    CircleEmoji(emoji: "😍", emotionIndex: 2, color: Color(.systemOrange), emotionSelected: $emotionSelected)
                     
                     Spacer()
-                    Text("😐")
-                        .font(.system(size: 50))
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
+                    
+                    CircleEmoji(emoji: "😮", emotionIndex: 3, color: Color(.systemPurple), emotionSelected: $emotionSelected)
                     
                     Spacer()
-                }// Hstack Emoji
-            }// Zstack emotions
+                    
+                } // Hstack circles row 1
             
-            ZStack{
                 HStack{
                     
                     Spacer()
-                    Circle()
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                        .foregroundColor(Color(.systemYellow))
+                    
+                    CircleEmoji(emoji: "🥱", emotionIndex: 4, color: Color(.systemTeal).opacity(0.75), emotionSelected: $emotionSelected)
                     
                     Spacer()
-                    Circle()
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                        .foregroundColor(Color(.systemTeal))
+                    CircleEmoji(emoji: "😐",emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected)
                     Spacer()
                     
-                } // Hstack circles
-                
-                HStack{
-                    
-                    Spacer()
-                    Text("😐")
-                        .font(.system(size: 50))
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                    
-                    Spacer()
-                    Text("😢")
-                        .font(.system(size: 50))
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                    Spacer()
-                }// Hstack Emoji
-            }
+                } // Hstack circles row 2
             
-            ZStack{
                 HStack{
                     
                     Spacer()
-                    Circle()
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                        .foregroundColor(Color(.systemGreen))
+                    
+                    CircleEmoji(emoji: "🤬", emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected)
                     
                     Spacer()
-                    Circle()
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                        .foregroundColor(Color(.systemYellow))
+                    
+                    CircleEmoji(emoji: "😢", emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected)
                     
                     Spacer()
-                    Circle()
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                        .foregroundColor(Color(.systemTeal))
-                    Spacer()
                     
-                } // Hstack circles
-                
-                HStack{
+                    CircleEmoji(emoji: "😱", emotionIndex: 8, color: Color(.systemBrown), emotionSelected: $emotionSelected)
                     
                     Spacer()
-                    Text("🥳")
-                        .font(.system(size: 50))
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
                     
-                    Spacer()
-                    Text("😐")
-                        .font(.system(size: 50))
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                    
-                    Spacer()
-                    Text("😢")
-                        .font(.system(size: 50))
-                        .frame(width: 76, height: 76)
-                        .padding(.bottom)
-                    Spacer()
-                }// Hstack Emoji
-            }
-
+                } // Hstack circles row 3
+            
+            Spacer()
+            
             Button(action: {
                 self.showCheckInView = false
             }, //.append adds the item at the end of the list . insert at the start
