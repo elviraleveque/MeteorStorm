@@ -11,6 +11,9 @@ import SwiftUI
 
 struct TodayView: View {
     
+    @State private var showCheckInView = false
+    //boolean var shared with CheckInView to create a modal view
+    
     @State var quote: String = "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. "
     
     @State var quoteArtist: String = "John Doe"
@@ -91,11 +94,17 @@ struct TodayView: View {
                 //MARK: Check-in Button
                 
                 HStack{
-                    Button{
-                    } label: {
-                        Text("Check-in")
-                            .font(.system(size: 17, weight: .semibold, design: .default))
-                    }
+                    Button(action: {
+                         self.showCheckInView.toggle()
+                     }, label: {
+                         Text("Check-in")
+                             .font(.system(size: 17, weight: .semibold, design: .default))
+                     }
+                    )
+                     .sheet(isPresented: $showCheckInView){
+                         CheckInView(showCheckInView: self.$showCheckInView)
+                     //when showCheckInView is true the view is presented, $ to bind the value from and to another view
+                     }
                 }//HStack Check-in
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)
