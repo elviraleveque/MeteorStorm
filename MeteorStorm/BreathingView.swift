@@ -11,52 +11,49 @@ import Foundation
 
 struct BreathingView: View {
           var body: some View {
-                    NavigationView {
-                              VStack{
-                                        Spacer()
-                                        Image(systemName: "lungs")
-                                                  .resizable(resizingMode: .tile)
-                                                  .aspectRatio(contentMode: .fit)
-                                                  .foregroundColor(Color(.systemIndigo))
-                                                  .frame(width: 123, height: 86)
-                                        
-                                        
-                                        
-                                        Text("Sit on a chair that supports your back or lay    \non a yoga  mat on the floor.")
-                                        
+                    VStack{
+                              Spacer()
+                              Image(systemName: "lungs")
+                                        .resizable(resizingMode: .tile)
+                                        .aspectRatio(contentMode: .fit)
+                                        .foregroundColor(Color(.systemIndigo))
+                                        .frame(width: 123, height: 86)
+                              
+                              
+                              
+                              Text("Sit on a chair that supports your back or lay    \non a yoga  mat on the floor.")
+                              
+                                        .padding(.vertical)
+                              
+                              Text("Breath in through your nose and out through your mouth.")
+                              
+                              Spacer()
+                              
+                              Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
+                              
+                              NavigationLink(destination: BreathingExercise()) {
+                                        Text("Start")
                                                   .padding(.vertical)
-                                        
-                                        Text("Breath in through your nose and out through your mouth.")
-                                        
-                                        Spacer()
-                                        
-                                        Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
-                                        
-                                        NavigationLink(destination: BreathingExercise()) {
-                                                  Text("Start")
-                                                            .padding(.vertical)
-                                                            .frame( maxWidth: .infinity)
-                                                            .foregroundColor(Color.white)
-                                                            .background(Color(.systemIndigo)).cornerRadius(14)
-                                                            .padding(.horizontal)
-                                        }
-                                        
-                              }//VStack
-                              .navigationTitle("Breathing")
-                              .padding(.bottom)
+                                                  .frame( maxWidth: .infinity)
+                                                  .foregroundColor(Color.white)
+                                                  .background(Color(.systemIndigo)).cornerRadius(14)
+                                                  .padding(.horizontal)
+                              }
                               
-                              .toolbar{
-                                        
-                                        Button{
-                                                  //Place the action that the button performs
-                                        } label: {
-                                                  Image(systemName: "gearshape")
-                                                            .foregroundColor(Color(.systemIndigo))
-                                        }
-                                        
-                              }//Toolbar
+                    }//VStack
+                    .navigationTitle("Breathing")
+                    .padding(.bottom)
+                    
+                    .toolbar{
                               
-                    }//navigationView
+                              Button{
+                                        //Place the action that the button performs
+                              } label: {
+                                        Image(systemName: "gearshape")
+                                                  .foregroundColor(Color(.systemIndigo))
+                              }
+                              
+                    }//Toolbar
           }
 }
 
@@ -70,7 +67,7 @@ struct BreathingExercise: View {
                     NavigationView{
                               VStack{
                                         TextSwitch()
-//
+                                        //
                                         Spacer()
                                         Spacer()
                                         ZStack {
@@ -171,19 +168,19 @@ struct TextSwitch: View {
           @State var timeText = 16
           var body: some View{
                     ZStack {
-                             Text("\(texts[timeText%2])")                  
+                              Text("\(texts[timeText%2])")
                                         .fontWeight(.semibold)
                                         .font(.system(size: 30))
                                         .onReceive(timer) {_ in
-
-                                                            if timeText > 0
-                                                            {
-                                                                timeText -= 1
-
-                                                            }
-                                                        }
-
-                           }
+                                                  
+                                                  if timeText > 0
+                                                  {
+                                                            timeText -= 1
+                                                            
+                                                  }
+                                        }
+                              
+                    }
           }
 }
 
