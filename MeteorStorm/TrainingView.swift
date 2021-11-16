@@ -7,43 +7,51 @@
 
 import SwiftUI
 
-struct TrainingListItem: View {
+struct TrainingListItem<Destination: View>: View {
+    
     var icon: String = "person"
     var exercise: String
     var isCompleted: String
+        
+    var destination: Destination
     
     var body: some View {
         HStack {
-            Image(systemName: icon)
-                .foregroundColor(Color(.systemIndigo))
-                .frame(width: 25)
-            VStack (alignment: .leading){
-                Text(exercise)
-                    .font(.headline)
-                Text(isCompleted)
-                    .font(.subheadline)
-                    .foregroundColor(Color.gray)
-            }
-            .padding(.horizontal)
-
-            Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(Color(.systemIndigo))
+            NavigationLink(destination: destination, label: {
+                Image(systemName: icon)
+                    .foregroundColor(Color(.systemIndigo))
+                    .frame(width: 25)
+                VStack (alignment: .leading){
+                    Text(exercise)
+                        .font(.headline)
+                    Text(isCompleted)
+                        .font(.subheadline)
+                        .foregroundColor(Color.gray)
+                }
+            })
         }
     }
 }
 
 struct TrainingView: View {
+    
+    let destinations = []
+    
     var body: some View {
         NavigationView {
             List{
                 Section(header: Text("Exercises")) {
-                    TrainingListItem(icon: "lungs", exercise: "Breathing", isCompleted: "Completed")
-                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed")
-                    TrainingListItem(icon: "eyes", exercise: "Eye Contact", isCompleted: "Completed")
-                    TrainingListItem(icon: "aqi.medium", exercise: "Guided meditation", isCompleted: "Completed")
-                    TrainingListItem(icon: "figure.wave", exercise: "Self Esteem", isCompleted: "Completed")
-                    TrainingListItem(icon: "lungs", exercise: "Traffic Light", isCompleted: "Completed")
+                    ForEach(destinations) {
+                        TrainingListItem(icon: "lungs", exercise: "Breathing", isCompleted: "Completed", destination: BreathingView())
+                    }
+                    
+                    TrainingListItem(icon: "lungs", exercise: "Breathing", isCompleted: "Completed", destination: BreathingView())
+                    
+                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: BreathingView())
+                    TrainingListItem(icon: "eyes", exercise: "Eye Contact", isCompleted: "Completed", destination: BreathingView())
+                    TrainingListItem(icon: "aqi.medium", exercise: "Guided meditation", isCompleted: "Completed", destination: BreathingView())
+                    TrainingListItem(icon: "figure.wave", exercise: "Self Esteem", isCompleted: "Completed", destination: BreathingView())
+                    TrainingListItem(icon: "lungs", exercise: "Traffic Light", isCompleted: "Completed", destination: BreathingView())
                 }
             }
             .listStyle(.insetGrouped)
