@@ -11,6 +11,9 @@ import SwiftUI
 
 struct TodayView: View {
     
+    @State private var showCheckInView = false
+    //boolean var shared with CheckInView to create a modal view
+    
     @State var quote: String = "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. "
     
     @State var quoteArtist: String = "John Doe"
@@ -91,18 +94,26 @@ struct TodayView: View {
                 //MARK: Check-in Button
                 
                 HStack{
-                    Button{
-                    } label: {
+                    Button(action: {
+                        self.showCheckInView.toggle()
+                    }, label: {
                         Text("Check-in")
                             .font(.system(size: 17, weight: .semibold, design: .default))
+                            .padding(.vertical)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.white)
+                            .background(Color(.systemIndigo))
+                            .cornerRadius(14)
+                            .padding(.horizontal)
                     }
+                    )
+                        
+                        .sheet(isPresented: $showCheckInView){
+                            CheckInView(showCheckInView: $showCheckInView)
+                            //when showCheckInView is true the view is presented, $ to bind the value from and to another view
+                        }
                 }//HStack Check-in
-                .padding(.vertical)
-                .frame(maxWidth: .infinity)
-                .foregroundColor(.white)
-                .background(Color(.systemIndigo))
-                .cornerRadius(14)
-                .padding(.horizontal)
+                
                 
                 HStack{
                     Text("Daily quote")
@@ -111,7 +122,7 @@ struct TodayView: View {
                         .padding()
                 }//HStack
                 .frame(maxWidth: .infinity, alignment: .leading)
-                                
+                
                 VStack(alignment: .leading){
                     Text("\(Image(systemName: "quote.opening"))")
                         .padding(.leading)
@@ -133,7 +144,7 @@ struct TodayView: View {
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .italic()
                                 .padding(.trailing)
-
+                            
                         }
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.trailing)
@@ -146,7 +157,7 @@ struct TodayView: View {
                 .background(Color(.systemGray6))
                 .cornerRadius(32)
                 .padding(.horizontal)
-
+                
                 
             }//Vstack
             .navigationTitle("Today")
@@ -154,7 +165,7 @@ struct TodayView: View {
             .toolbar{
                 
                 Button{
-                  //Place the action that the button performs
+                    //Place the action that the button performs
                 } label: {
                     Image(systemName: "gearshape")
                         .foregroundColor(Color(.systemIndigo))
@@ -171,6 +182,8 @@ struct TodayView_Previews: PreviewProvider {
         Group {
             TodayView()
                 .preferredColorScheme(.light)
+            TodayView()
+                .preferredColorScheme(.dark)
         }
     }
 }
