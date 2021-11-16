@@ -25,6 +25,8 @@
 		7B04739927413A210013496C /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04739827413A210013496C /* TrainingView.swift */; };
 		7B33C9942743C181000F3D2E /* CircleEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33C9932743C181000F3D2E /* CircleEmoji.swift */; };
 		7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A7563274032DD00E4EB9F /* TodayView.swift */; };
+		7BA92FAE27440C8300C002F4 /* CheckInView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA92FAD27440C8300C002F4 /* CheckInView2.swift */; };
+		7BA92FB027442AEC00C002F4 /* NotTappableEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		7B04739827413A210013496C /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		7B33C9932743C181000F3D2E /* CircleEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleEmoji.swift; sourceTree = "<group>"; };
 		7B7A7563274032DD00E4EB9F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		7BA92FAD27440C8300C002F4 /* CheckInView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView2.swift; sourceTree = "<group>"; };
+		7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTappableEmoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +123,10 @@
 				7B047394274138D60013496C /* TabBarView.swift */,
 				7B7A7563274032DD00E4EB9F /* TodayView.swift */,
 				763FA36A2742981300E2108D /* CheckInView.swift */,
+				7BA92FAD27440C8300C002F4 /* CheckInView2.swift */,
 				7B047396274139330013496C /* CalendarView.swift */,
 				7B33C9932743C181000F3D2E /* CircleEmoji.swift */,
+				7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */,
 				7B04739827413A210013496C /* TrainingView.swift */,
 				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
 				446518F627402F1C00B18829 /* BreathingView.swift */,
@@ -296,12 +302,14 @@
 				763FA36B2742981300E2108D /* CheckInView.swift in Sources */,
 				7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */,
 				5984A17D273E7E1900167292 /* MeteorStorm.xcdatamodeld in Sources */,
+				7BA92FB027442AEC00C002F4 /* NotTappableEmoji.swift in Sources */,
 				7B04739927413A210013496C /* TrainingView.swift in Sources */,
 				5984A173273E7E1700167292 /* DatesList.swift in Sources */,
 				44F747662743C7770059322F /* BreathingDetector.swift in Sources */,
 				7B047395274138D60013496C /* TabBarView.swift in Sources */,
 				5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */,
 				7B33C9942743C181000F3D2E /* CircleEmoji.swift in Sources */,
+				7BA92FAE27440C8300C002F4 /* CheckInView2.swift in Sources */,
 				446518F727402F1C00B18829 /* BreathingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

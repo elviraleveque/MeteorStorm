@@ -4,6 +4,7 @@
 //
 //  Created by Vincenzo Pascarella on 13/11/21.
 //
+//  Manca il check della data per capire se c'è bisogno di una nuova emoji
 
 import SwiftUI
 
@@ -18,11 +19,29 @@ struct TodayView: View {
     
     @State var quoteArtist: String = "John Doe"
     
+    @State var emotionSelected: Int = 0
+    
+    @State var doneCheck = false
+    
+    let emotionList: [notTappableEmoji] = [
+        notTappableEmoji(emoji: "", color: .white),
+        notTappableEmoji(emoji: "🥳", color: Color(.systemGreen)),
+        notTappableEmoji(emoji: "😍", color: Color(.systemOrange)),
+        notTappableEmoji(emoji: "😮", color: Color(.systemPurple)),
+        notTappableEmoji(emoji: "🥱", color: Color(.systemTeal).opacity(0.75)),
+        notTappableEmoji(emoji: "😐", color: Color(.systemYellow)),
+        notTappableEmoji(emoji: "🤬", color: Color(.systemRed)),
+        notTappableEmoji(emoji: "😢", color: Color(.systemBlue)),
+        notTappableEmoji(emoji: "😱", color: Color(.systemBrown)),
+
+
+    ]
+    
     var body: some View {
         NavigationView {
             VStack{
                 HStack{
-                    Text("How do you feel today?")
+                    Text(doneCheck ? "Your daily feeling is:" : "How do you feel today?")
                         .font(.system(size: 48, weight: .bold, design: .default))
                         .foregroundColor(Color(.systemGray))
                         .padding(.horizontal)
@@ -34,84 +53,56 @@ struct TodayView: View {
                 //In order to be more adaptive we pick the width from the screen we are using
                 
                 //In the Zstack we have 2 HStack one with circles background and one with the emojis both with spacer in order to adapt to each screen size
+                
                 ZStack{
                     HStack{
                         Spacer()
-                        Circle()
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                            .foregroundColor(Color(.systemRed))
+                        
+                        CircleEmoji(emoji: "🤬", emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
                         
                         Spacer()
-                        Circle()
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                            .foregroundColor(Color(.systemGreen))
+                        
+                        CircleEmoji(emoji: "🥳", emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
                         
                         Spacer()
-                        Circle()
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                            .foregroundColor(Color(.systemYellow))
+                        
+                        CircleEmoji(emoji: "😐",emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        
                         
                         Spacer()
-                        Circle()
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                            .foregroundColor(Color(.systemTeal))
-                        Spacer()
                         
-                    } // Hstack circles
+                        CircleEmoji(emoji: "😢", emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        
+                        Spacer()
+                    }
+                    .opacity(doneCheck ? 0 : 1)// Hstack circles
                     
-                    HStack{
-                        Spacer()
-                        Text("🤬")
-                            .font(.system(size: 50))
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                        
-                        Spacer()
-                        Text("🥳")
-                            .font(.system(size: 50))
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                        
-                        Spacer()
-                        Text("😐")
-                            .font(.system(size: 50))
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                        
-                        Spacer()
-                        Text("😢")
-                            .font(.system(size: 50))
-                            .frame(width: 76, height: 76)
-                            .padding(.bottom)
-                        Spacer()
-                    }// Hstack Emoji
-                }// Zstack emotions
+                    emotionList[emotionSelected]
+                        .opacity(doneCheck ? 1 : 0)
+                }
                 
                 //MARK: Check-in Button
                 
                 HStack{
                     Button(action: {
-                         self.showCheckInView.toggle()
-                     }, label: {
-                         Text("Check-in")
-                             .font(.system(size: 17, weight: .semibold, design: .default))
-                     }
+                        self.showCheckInView.toggle()
+                    }, label: {
+                        Text(doneCheck ? "Redo" : "Check-in")
+                            .font(.system(size: 17, weight: .semibold, design: .default))
+                            .padding(.vertical)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.white)
+                            .background(Color(.systemIndigo))
+                            .cornerRadius(14)
+                            .padding(.horizontal)
+                    }
                     )
-                     .sheet(isPresented: $showCheckInView){
-                         CheckInView(showCheckInView: $showCheckInView)
-                     //when showCheckInView is true the view is presented, $ to bind the value from and to another view
-                     }
+                        .sheet(isPresented: $showCheckInView){
+                            CheckInView(showCheckInView: $showCheckInView, emotionSelected: $emotionSelected, doneCheck: $doneCheck)
+                            //when showCheckInView is true the view is presented, $ to bind the value from and to another view
+                        }
                 }//HStack Check-in
-                .padding(.vertical)
-                .frame(maxWidth: .infinity)
-                .foregroundColor(.white)
-                .background(Color(.systemIndigo))
-                .cornerRadius(14)
-                .padding(.horizontal)
+                
                 
                 HStack{
                     Text("Daily quote")
@@ -120,7 +111,7 @@ struct TodayView: View {
                         .padding()
                 }//HStack
                 .frame(maxWidth: .infinity, alignment: .leading)
-                                
+                
                 VStack(alignment: .leading){
                     Text("\(Image(systemName: "quote.opening"))")
                         .padding(.leading)
@@ -142,7 +133,7 @@ struct TodayView: View {
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .italic()
                                 .padding(.trailing)
-
+                            
                         }
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.trailing)
@@ -155,7 +146,9 @@ struct TodayView: View {
                 .background(Color(.systemGray6))
                 .cornerRadius(32)
                 .padding(.horizontal)
-
+                
+                //                Spacer()
+                
                 
             }//Vstack
             .navigationTitle("Today")
@@ -163,7 +156,7 @@ struct TodayView: View {
             .toolbar{
                 
                 Button{
-                  //Place the action that the button performs
+                    //Place the action that the button performs
                 } label: {
                     Image(systemName: "gearshape")
                         .foregroundColor(Color(.systemIndigo))

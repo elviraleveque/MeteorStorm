@@ -4,6 +4,7 @@
 //
 //  Created by Vincenzo Pascarella on 16/11/21.
 //
+// This struct is created to be used in order to create the circles with the possibility to select the emojis
 
 import SwiftUI
 
@@ -12,12 +13,14 @@ struct CircleEmoji: View{
     var emoji: String
     var emotionIndex: Int
     var color: Color
-    @Binding var emotionSelected: Int 
+    @Binding var emotionSelected: Int
+    @Binding var showCheckInView: Bool
     
     var body: some View{
         
         Button(action: {
             emotionSelected = emotionIndex
+            showCheckInView = true
         },
                label: {
             ZStack{
