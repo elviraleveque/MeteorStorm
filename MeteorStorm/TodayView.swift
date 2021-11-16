@@ -102,7 +102,7 @@ struct TodayView: View {
                      }
                     )
                      .sheet(isPresented: $showCheckInView){
-                         CheckInView(showCheckInView: self.$showCheckInView)
+                         CheckInView(showCheckInView: $showCheckInView)
                      //when showCheckInView is true the view is presented, $ to bind the value from and to another view
                      }
                 }//HStack Check-in
@@ -180,6 +180,8 @@ struct TodayView_Previews: PreviewProvider {
         Group {
             TodayView()
                 .preferredColorScheme(.light)
+            TodayView()
+                .preferredColorScheme(.dark)
         }
     }
 }
