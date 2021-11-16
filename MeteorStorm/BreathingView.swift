@@ -70,7 +70,6 @@ struct BreathingExercise: View {
                     NavigationView{
                               VStack{
                                         TextSwitch()
-//
                                         Spacer()
                                         Spacer()
                                         ZStack {
@@ -91,7 +90,7 @@ struct BreathingExercise: View {
                                         CountDown(isActive: $isActive)
                                         Spacer()
                                         
-                              }//VsTack
+                              }//VStack
                     }.navigationTitle("Breathing")
           }
 }//view with the real exercise
@@ -103,7 +102,7 @@ let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 struct CountDown: View{
           @Binding var isActive: Bool
-          @State private var timeRemaining = 5
+          @State private var timeRemaining = 63
           @State private var buttonOpacity = 0.0
           
           var body: some View{
@@ -148,42 +147,26 @@ struct CountDown: View{
           }
 }//CountdownView
 
-//var texts = ["Inhale", "Exhale"]
-//let texTimer = Timer.publish(every: 4, on: .main, in: .common).autoconnect()
-//var timeText = 16
-//
-//
-//func TextSwitch() {
-//          Text("\(texts[timeText%2])")
-//                    .onReceive(timer) {_ in
-//
-//                              if timeText > 0 {
-//                    timeText -= 1
-//
-//                                        }
-//                    }
-//}
 
 struct TextSwitch: View {
           @State var texts = ["Inhale", "Exhale"]
           let timer = Timer.publish(every: 4, on: .main, in: .common).autoconnect()
-          @State private var timer2 = 6
           @State var timeText = 16
+          @State private var visible: Bool = false
           var body: some View{
                     ZStack {
-                             Text("\(texts[timeText%2])")                  
+                              Text("\(texts[timeText%2])")
                                         .fontWeight(.semibold)
                                         .font(.system(size: 30))
                                         .onReceive(timer) {_ in
-
-                                                            if timeText > 0
-                                                            {
-                                                                timeText -= 1
-
-                                                            }
-                                                        }
-
-                           }
+                                                  
+                                                  if timeText > 0
+                                                  {
+                                                            timeText -= 1
+                                                            
+                                                  }
+                                        }
+                    }//ZStack
           }
 }
 
