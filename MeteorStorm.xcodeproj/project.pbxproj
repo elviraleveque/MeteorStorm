@@ -17,6 +17,8 @@
 		5984A187273E7E1900167292 /* MeteorStormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A186273E7E1900167292 /* MeteorStormTests.swift */; };
 		5984A191273E7E1900167292 /* MeteorStormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A190273E7E1900167292 /* MeteorStormUITests.swift */; };
 		5984A193273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A192273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift */; };
+		763FA36B2742981300E2108D /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763FA36A2742981300E2108D /* CheckInView.swift */; };
+		763FA36D2742BFBB00E2108D /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763FA36C2742BFBB00E2108D /* ColorSwatchView.swift */; };
 		7B047395274138D60013496C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047394274138D60013496C /* TabBarView.swift */; };
 		7B047397274139330013496C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047396274139330013496C /* CalendarView.swift */; };
 		7B04739927413A210013496C /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04739827413A210013496C /* TrainingView.swift */; };
@@ -54,6 +56,8 @@
 		5984A18C273E7E1900167292 /* MeteorStormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteorStormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5984A190273E7E1900167292 /* MeteorStormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormUITests.swift; sourceTree = "<group>"; };
 		5984A192273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		763FA36A2742981300E2108D /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
+		763FA36C2742BFBB00E2108D /* ColorSwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
 		7B047394274138D60013496C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		7B047396274139330013496C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7B04739827413A210013496C /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
@@ -109,12 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				7B047394274138D60013496C /* TabBarView.swift */,
+				763FA36C2742BFBB00E2108D /* ColorSwatchView.swift */,
 				7B7A7563274032DD00E4EB9F /* TodayView.swift */,
+				763FA36A2742981300E2108D /* CheckInView.swift */,
 				7B047396274139330013496C /* CalendarView.swift */,
 				7B04739827413A210013496C /* TrainingView.swift */,
 				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
 				446518F627402F1C00B18829 /* BreathingView.swift */,
-				5984A172273E7E1700167292 /* ContentView.swift */,
 				5984A172273E7E1700167292 /* DatesList.swift */,
 				5984A174273E7E1900167292 /* Assets.xcassets */,
 				5984A179273E7E1900167292 /* Persistence.swift */,
@@ -281,6 +286,8 @@
 			files = (
 				5984A17A273E7E1900167292 /* Persistence.swift in Sources */,
 				7B047397274139330013496C /* CalendarView.swift in Sources */,
+				763FA36D2742BFBB00E2108D /* ColorSwatchView.swift in Sources */,
+				763FA36B2742981300E2108D /* CheckInView.swift in Sources */,
 				7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */,
 				5984A17D273E7E1900167292 /* MeteorStorm.xcdatamodeld in Sources */,
 				7B04739927413A210013496C /* TrainingView.swift in Sources */,
