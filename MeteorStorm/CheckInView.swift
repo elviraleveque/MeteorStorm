@@ -10,28 +10,28 @@ import SwiftUI
 struct CheckInView: View {
     
     @Binding var showCheckInView: Bool
-//Binding: the value will come from outside and will be shared with another view
+    //Binding: the value will come from outside and will be shared with another view
     
     @State var emotionSelected: Int = 0
     
     var body: some View {
         NavigationView {
             
-        VStack{
-            Spacer()
-            
-            Text("How do you feel today?")
-                .font(.system(size: 34, weight: .regular, design: .default))
-                .foregroundColor(Color.primary)
-                .padding()
-            
-            Text("Choose the emoji that \n represents you the most")
-                .multilineTextAlignment(.center)
-                .font(.system(size: 17, weight: .regular, design: .default))
-                .foregroundColor(Color(.systemGray))
-            
-            Spacer()
-                        
+            VStack{
+                Spacer()
+                
+                Text("How do you feel today?")
+                    .font(.system(size: 34, weight: .regular, design: .default))
+                    .foregroundColor(Color.primary)
+                    .padding()
+                
+                Text("Choose the emoji that \n represents you the most")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: 17, weight: .regular, design: .default))
+                    .foregroundColor(Color(.systemGray))
+                
+                Spacer()
+                
                 HStack{
                     Spacer()
                     
@@ -47,7 +47,7 @@ struct CheckInView: View {
                     Spacer()
                     
                 } // Hstack circles row 1
-            
+                
                 HStack{
                     
                     Spacer()
@@ -59,7 +59,7 @@ struct CheckInView: View {
                     Spacer()
                     
                 } // Hstack circles row 2
-            
+                
                 HStack{
                     
                     Spacer()
@@ -77,36 +77,36 @@ struct CheckInView: View {
                     Spacer()
                     
                 } // Hstack circles row 3
-            
-            Spacer()
-            
-            Button(action: {
-                self.showCheckInView = false
-            }, //.append adds the item at the end of the list . insert at the start
-                   label: {
-                Text("Continue")
-                    .font(.system(size: 17, weight: .semibold, design: .default))
-            })
-                .padding(.vertical)
-                .frame(maxWidth: .infinity)
-                .foregroundColor(.white)
-                .background(Color(.systemIndigo))
-                .cornerRadius(14)
-                .padding(.horizontal)
+                
+                Spacer()
+                NavigationLink(destination: CalendarView()){
+                    
+                    Text("Continue")
+                        .font(.system(size: 17, weight: .semibold, design: .default))
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .background(Color(.systemIndigo))
+                        .cornerRadius(14)
+                        .padding(.horizontal)
+                    
+                }
+                
                 
             }//VStack
-        .navigationTitle("Check-in")
-        .padding(.bottom)
-        .toolbar{
-            
-            Button(action: {
-                self.showCheckInView = false
-            }, label: {
-                Image(systemName: "xmark.circle")
-                    .foregroundColor(Color(.systemIndigo))
-            })
-            
-        }//Toolbar
+            .navigationTitle("Check-in")
+            .padding(.bottom)
+            .toolbar{
+                
+                Button(action: {
+                    self.showCheckInView = false
+                }, label: {
+                    Image(systemName: "xmark.circle")
+                        .foregroundColor(Color(.systemIndigo))
+                })
+                
+                
+            }//Toolbar
             
         }//navigationView
     }
