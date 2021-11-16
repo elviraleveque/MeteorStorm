@@ -11,7 +11,6 @@ struct CheckInView: View {
     
     @Binding var showCheckInView: Bool
 //Binding: the value will come from outside and will be shared with another view
-    @State var selection: String = "swatch_shipcove"
     
     var body: some View {
         NavigationView {
@@ -21,8 +20,6 @@ struct CheckInView: View {
                 .font(.system(size: 34, weight: .regular, design: .default))
                 .foregroundColor(.black)
                 .padding()
-            
-            ColorSwatchView(selection: $selection)
             
             ZStack{
                 HStack{
