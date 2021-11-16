@@ -8,6 +8,7 @@ import SwiftUI
 import Foundation
 
 
+
 struct BreathingView: View {
     var body: some View {
         NavigationView {
@@ -72,9 +73,9 @@ struct BreathingExercise: View {
                 Spacer()
                 ZStack {
                     Image("MovingCircle")
-                        .scaleEffect(isVisible ? 1.5: 0.8)
+                        .scaleEffect(isVisible ? 1.0 : 1.9)
                         .onAppear(perform: {
-                            if(isActive) { withAnimation(.easeInOut(duration: 4).repeatCount(15, autoreverses: true))
+                            if(isActive) { withAnimation(.easeInOut(duration: 4).repeatCount(16, autoreverses: true))
                                 {
                                     self.isVisible.toggle()
                                 }
@@ -99,24 +100,35 @@ let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 struct CountDown: View{
     @Binding var isActive: Bool
-    @State private var timeRemaining = 60
+    @State private var timeRemaining = 5
+    @State private var buttonOpacity = 0.0
     
     var body: some View{
         VStack{
             let minutes = Int(timeRemaining / 60)
             let seconds = timeRemaining % 60
-            
+           
             Text("\(leadingZero(minutes)) : \(leadingZero(seconds))")
             .font(.title)
             .fontWeight(.bold)
-            DoneButton().hidden()
-           
+            .padding()
+            Button(action: {
+                
+            }, label: {Text("Done")})
+               
+                .padding(.vertical)
+                .frame( maxWidth: .infinity)
+                .foregroundColor(Color.white)
+                .background(Color(.systemIndigo)).cornerRadius(14)
+                .opacity(buttonOpacity)
+                .padding()
         }
         .onReceive(timer) { time in
             guard self.isActive else { return }
             
             if(timeRemaining == 0) {
                 timer.upstream.connect().cancel()
+                buttonOpacity = 1.0
                 
             }
             
@@ -133,18 +145,26 @@ struct CountDown: View{
         }
     }
 }
-struct DoneButton: View {
-    var body: some View{
-        NavigationLink(destination: BreathingExercise()) {
-            Text("Done")
-                .padding(.vertical)
-                .frame( maxWidth: .infinity)
-                .foregroundColor(Color.white)
-                .background(Color(.systemIndigo)).cornerRadius(14)
-                .padding(.horizontal)
-            }
-    }
-}
+
+//struct DoneButton: View {
+//    var body: some View{
+//        VStack{
+//            Button(action: {
+//                CountDown.timeRemaining = 30
+//            }, label: {Text("Done")})
+//        }
+//        .opacity(0)
+//        NavigationLink(destination: BreathingView()) {
+//            Text("Done")
+//                .padding(.vertical)
+//                .frame( maxWidth: .infinity)
+//                .foregroundColor(Color.white)
+//                .background(Color(.systemIndigo)).cornerRadius(14)
+//                .padding(.horizontal)
+//                .disabled(true)
+//            }
+//    }
+//}
 struct BreathingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
