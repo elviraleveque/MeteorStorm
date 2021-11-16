@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		446518F627402F1C00B18829 /* BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; };
+		446518F627402F1C00B18829 /* BreathingView.swift */ = {isa = PBXFileReference; indentWidth = 10; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; tabWidth = 10; };
 		5984A16D273E7E1700167292 /* MeteorStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteorStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5984A170273E7E1700167292 /* MeteorStormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormApp.swift; sourceTree = "<group>"; };
 		5984A172273E7E1700167292 /* DatesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesList.swift; sourceTree = "<group>"; };
