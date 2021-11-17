@@ -12,7 +12,6 @@ struct TrainingListItem<Destination: View>: View {
     var icon: String = "person"
     var exercise: String
     var isCompleted: String
-        
     var destination: Destination
     
     var body: some View {
@@ -35,23 +34,27 @@ struct TrainingListItem<Destination: View>: View {
 
 struct TrainingView: View {
     
-    let destinations = []
-    
+   
+    let icon = ["lungs", "heart.text.square", "eyes"]
+    let exercise = ["Breathing", "Relationship Caring", "Eye Contact"]
+    var isCompleted = ["Completed", "Completed", "Not Completed"]
+    let destinations: [AnyView] = [AnyView(BreathingView()), AnyView(CalendarView()), AnyView(TodayView())]
+   
     var body: some View {
         NavigationView {
             List{
                 Section(header: Text("Exercises")) {
-                    ForEach(destinations) {
-                        TrainingListItem(icon: "lungs", exercise: "Breathing", isCompleted: "Completed", destination: BreathingView())
+                    ForEach(destinations.indices) { i in
+                        TrainingListItem(icon: icon[i], exercise: exercise[i], isCompleted: isCompleted[i], destination: destinations[i])
                     }
                     
-                    TrainingListItem(icon: "lungs", exercise: "Breathing", isCompleted: "Completed", destination: BreathingView())
-                    
-                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: BreathingView())
-                    TrainingListItem(icon: "eyes", exercise: "Eye Contact", isCompleted: "Completed", destination: BreathingView())
-                    TrainingListItem(icon: "aqi.medium", exercise: "Guided meditation", isCompleted: "Completed", destination: BreathingView())
-                    TrainingListItem(icon: "figure.wave", exercise: "Self Esteem", isCompleted: "Completed", destination: BreathingView())
-                    TrainingListItem(icon: "lungs", exercise: "Traffic Light", isCompleted: "Completed", destination: BreathingView())
+//                    TrainingListItem(icon: "lungs", exercise: "Breathing", isCompleted: "Completed", destination: BreathingView())
+//
+//                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: BreathingView())
+//                    TrainingListItem(icon: "eyes", exercise: "Eye Contact", isCompleted: "Completed", destination: BreathingView())
+//                    TrainingListItem(icon: "aqi.medium", exercise: "Guided meditation", isCompleted: "Completed", destination: BreathingView())
+//                    TrainingListItem(icon: "figure.wave", exercise: "Self Esteem", isCompleted: "Completed", destination: BreathingView())
+//                    TrainingListItem(icon: "lungs", exercise: "Traffic Light", isCompleted: "Completed", destination: BreathingView())
                 }
             }
             .listStyle(.insetGrouped)

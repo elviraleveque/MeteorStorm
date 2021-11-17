@@ -9,7 +9,7 @@ import Foundation
 
 
 
-struct BreathingView: View {
+struct BreathingView: View, Hashable {
           var body: some View {
                     VStack{
                               Spacer()
