@@ -9,7 +9,10 @@ import Foundation
 
 
 
-struct BreathingView: View, Hashable {
+struct BreathingView: View {
+          @Binding var rootIsActive : Bool
+
+          
           var body: some View {
                     VStack{
                               Spacer()
@@ -31,7 +34,7 @@ struct BreathingView: View, Hashable {
                               
                               Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
                               
-                              NavigationLink(destination: BreathingExercise()) {
+                              NavigationLink(destination: BreathingExercise(rootIsActive: self.$rootIsActive)) {
                                         Text("Start")
                                                   .padding(.vertical)
                                                   .frame( maxWidth: .infinity)
@@ -44,16 +47,6 @@ struct BreathingView: View, Hashable {
                     .navigationTitle("Breathing")
                     .padding(.bottom)
                     
-                    .toolbar{
-                              
-                              Button{
-                                        //Place the action that the button performs
-                              } label: {
-                                        Image(systemName: "gearshape")
-                                                  .foregroundColor(Color(.systemIndigo))
-                              }
-                              
-                    }//Toolbar
           }
 }
 
@@ -132,13 +125,13 @@ struct TextSwitch: View {
           }
 }
 
-struct BreathingView_Previews: PreviewProvider {
-          static var previews: some View {
-                    Group {
-                              BreathingView()
-                                        .preferredColorScheme(.light)
-                              BreathingView()
-                                        .preferredColorScheme(.dark)
-                    }
-          }
-}
+//struct BreathingView_Previews: PreviewProvider {
+//          static var previews: some View {
+//                    Group {
+//                              BreathingExercise()
+//                                        .preferredColorScheme(.light)
+//                              BreathingExercise()
+//                                        .preferredColorScheme(.dark)
+//                    }
+//          }
+//}

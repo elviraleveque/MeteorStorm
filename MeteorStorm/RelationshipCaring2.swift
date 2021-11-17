@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RelationshipCaring2: View {
+    @Binding var rootIsActive : Bool
+
     
     @State private var name: String = ""
     
@@ -35,7 +37,31 @@ struct RelationshipCaring2: View {
                             
                             Spacer()
                             
-                      NavigationLink(destination: RelationshipCaring3(name: self.$name)) {
+                      if name == ""
+                      {
+                              Text("Continue")
+                                        .padding(.vertical)
+                                        .frame( maxWidth: .infinity)
+                                        .foregroundColor(Color.white)
+                                        .background(Color(.systemIndigo)).cornerRadius(14)
+                                        .padding(.horizontal)
+                                        .opacity(0.5)
+                          
+                      }
+                      else {
+                          NavigationLink(destination: RelationshipCaring3(rootIsActive: self.$rootIsActive, name: self.$name)) {
+                                          Text("Continue")
+                                                    .padding(.vertical)
+                                                    .frame( maxWidth: .infinity)
+                                                    .foregroundColor(Color.white)
+                                                    .background(Color(.systemIndigo)).cornerRadius(14)
+                                                    .padding(.horizontal)
+                                }
+                          .isDetailLink(false)
+                      }
+                      
+                      
+                      NavigationLink(destination: RelationshipCaring3(rootIsActive: self.$rootIsActive, name: self.$name)) {
                                       Text("Continue")
                                                 .padding(.vertical)
                                                 .frame( maxWidth: .infinity)
@@ -43,6 +69,7 @@ struct RelationshipCaring2: View {
                                                 .background(Color(.systemIndigo)).cornerRadius(14)
                                                 .padding(.horizontal)
                             }
+                      .isDetailLink(false)
                             
                   }//VStack
                   .navigationTitle("Relationship Caring")
@@ -51,8 +78,7 @@ struct RelationshipCaring2: View {
                   .toolbar{
                             
                             Button{
-                                      //Place the action that the button performs
-                            } label: {
+                                 self.rootIsActive = false                            } label: {
                                       Image(systemName: "xmark.circle")
                                                 .foregroundColor(Color(.systemIndigo))
                             }
@@ -66,8 +92,6 @@ struct RelationshipCaring2: View {
 
 struct RelationshipCaring2_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            RelationshipCaring2()
-        }
+        RelationshipCaring2(rootIsActive: .constant(true))
     }
 }

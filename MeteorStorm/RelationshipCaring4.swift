@@ -9,6 +9,9 @@ import Foundation
 
 struct RelationshipCaring4: View {
     
+    @Binding var rootIsActive : Bool
+
+    
     @Binding var feature1: String
     @Binding var feature2: String
     @Binding var feature3: String
@@ -56,14 +59,14 @@ struct RelationshipCaring4: View {
                                 
                                         Spacer()
                                         
-                                        NavigationLink(destination: TrainingView()) {
-                                                  Text("Done")
-                                                            .padding(.vertical)
-                                                            .frame( maxWidth: .infinity)
-                                                            .foregroundColor(Color.white)
-                                                            .background(Color(.systemIndigo)).cornerRadius(14)
-                                                            .padding(.horizontal)
-                                        }
+                                  Button(action: { self.rootIsActive = false }, label: {
+                                            Text("Done")
+                                                      .padding(.vertical)
+                                                      .frame( maxWidth: .infinity)
+                                                      .foregroundColor(Color.white)
+                                                      .background(Color(.systemIndigo)).cornerRadius(14)
+                                                      .padding(.horizontal)
+                                  })
                                         
                               }//VStack
                               .navigationTitle("Relationship Caring")
@@ -86,7 +89,7 @@ struct RelationshipCaring4: View {
 
 struct RelationshipCaring4_Previews: PreviewProvider {
     static var previews: some View {
-        RelationshipCaring4(feature1: .constant(""), feature2: .constant(""), feature3: .constant(""), name: .constant("Titina"))
+        RelationshipCaring4(rootIsActive: .constant(true),feature1: .constant(""), feature2: .constant(""), feature3: .constant(""), name: .constant("Titina"))
     }
 }
 
