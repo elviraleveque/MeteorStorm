@@ -11,6 +11,10 @@ import Foundation
 
 
 struct RelationshipCaring: View {
+    
+    @Binding var rootIsActive : Bool
+
+    
           var body: some View {
 
                               VStack{
@@ -35,7 +39,7 @@ struct RelationshipCaring: View {
                                         
                                         Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
                                         
-                                        NavigationLink(destination: RelationshipCaring2()) {
+                                  NavigationLink(destination: RelationshipCaring2(rootIsActive: self.$rootIsActive)) {
                                                   Text("Start")
                                                             .padding(.vertical)
                                                             .frame( maxWidth: .infinity)
@@ -43,27 +47,18 @@ struct RelationshipCaring: View {
                                                             .background(Color(.systemIndigo)).cornerRadius(14)
                                                             .padding(.horizontal)
                                         }
+                                    .isDetailLink(false)
+
                                         
                               }//VStack
                               .navigationTitle("Relationship Caring")
                               .padding(.bottom)
-                              
-                              .toolbar{
-                                        
-                                        Button{
-                                                  //Place the action that the button performs
-                                        } label: {
-                                                  Image(systemName: "gearshape")
-                                                            .foregroundColor(Color(.systemIndigo))
-                                        }
-                                        
-                              }//Toolbar
 
          }
 }
     
 struct RelationshipCaring_Previews: PreviewProvider {
     static var previews: some View {
-        RelationshipCaring()
+        RelationshipCaring(rootIsActive: .constant(true))
     }
 }

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RelationshipCaring3: View {
-    
+    @Binding var rootIsActive : Bool
+
     @State private var feature1: String = ""
     @State private var feature2: String = ""
     @State private var feature3: String = ""
@@ -58,7 +59,7 @@ struct RelationshipCaring3: View {
                                 
                                 Spacer()
                                 
-                          NavigationLink(destination: RelationshipCaring4(feature1: self.$feature1, feature2: self.$feature2, feature3: self.$feature3, name: self.$name)) {
+                          NavigationLink(destination: RelationshipCaring4(rootIsActive: self.$rootIsActive, feature1: self.$feature1, feature2: self.$feature2, feature3: self.$feature3, name: self.$name)) {
                                           Text("Continue")
                                                     .padding(.vertical)
                                                     .frame( maxWidth: .infinity)
@@ -66,6 +67,7 @@ struct RelationshipCaring3: View {
                                                     .background(Color(.systemIndigo)).cornerRadius(14)
                                                     .padding(.horizontal)
                                 }
+                          .isDetailLink(false)
                                 
                       }//VStack
                       .navigationTitle("Relationship Caring")
@@ -74,8 +76,7 @@ struct RelationshipCaring3: View {
                       .toolbar{
                                 
                                 Button{
-                                          //Place the action that the button performs
-                                } label: {
+                                     self.rootIsActive = false                                } label: {
                                           Image(systemName: "xmark.circle")
                                                     .foregroundColor(Color(.systemIndigo))
                                 }
@@ -88,7 +89,7 @@ struct RelationshipCaring3: View {
 
 struct RelationshipCaring3_Previews: PreviewProvider {
     static var previews: some View {
-        RelationshipCaring3(name: .constant(""))
+        RelationshipCaring3(rootIsActive: .constant(true), name: .constant(""))
     }
 }
 

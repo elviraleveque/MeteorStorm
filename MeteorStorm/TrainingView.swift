@@ -13,10 +13,11 @@ struct TrainingListItem<Destination: View>: View {
     var exercise: String
     var isCompleted: String
     var destination: Destination
+    @Binding var isActive : Bool
     
     var body: some View {
         HStack {
-            NavigationLink(destination: destination, label: {
+            NavigationLink(destination: destination,isActive: self.$isActive, label: {
                 Image(systemName: icon)
                     .foregroundColor(Color(.systemIndigo))
                     .frame(width: 25)
@@ -34,27 +35,22 @@ struct TrainingListItem<Destination: View>: View {
 
 struct TrainingView: View {
     
-   
-    let icon = ["lungs", "heart.text.square", "eyes"]
-    let exercise = ["Breathing", "Relationship Caring", "Eye Contact"]
-    var isCompleted = ["Completed", "Completed", "Not Completed"]
-    let destinations: [AnyView] = [AnyView(BreathingView()), AnyView(RelationshipCaring()), AnyView(TodayView())]
+    @State var isActive: [Bool] = [false, false, false]
    
     var body: some View {
         NavigationView {
             List{
+                
+                
                 Section(header: Text("Exercises")) {
-                    ForEach(destinations.indices) { i in
-                        TrainingListItem(icon: icon[i], exercise: exercise[i], isCompleted: isCompleted[i], destination: destinations[i])
-                    }
                     
-//                    TrainingListItem(icon: "lungs", exercise: "Breathing", isCompleted: "Completed", destination: BreathingView())
-//
-//                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: BreathingView())
-//                    TrainingListItem(icon: "eyes", exercise: "Eye Contact", isCompleted: "Completed", destination: BreathingView())
-//                    TrainingListItem(icon: "aqi.medium", exercise: "Guided meditation", isCompleted: "Completed", destination: BreathingView())
-//                    TrainingListItem(icon: "figure.wave", exercise: "Self Esteem", isCompleted: "Completed", destination: BreathingView())
-//                    TrainingListItem(icon: "lungs", exercise: "Traffic Light", isCompleted: "Completed", destination: BreathingView())
+                    TrainingListItem(icon: "lungs", exercise: "Breathing", isCompleted: "Completed", destination: BreathingView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
+
+                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: RelationshipCaring(rootIsActive: self.$isActive[1]), isActive: $isActive[1])
+                    
+                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: RelationshipCaring(rootIsActive: self.$isActive[1]), isActive: $isActive[1])
+
+                    
                 }
             }
             .listStyle(.insetGrouped)
@@ -63,8 +59,8 @@ struct TrainingView: View {
     }
 }
 
-struct TrainingView_Previews: PreviewProvider {
-    static var previews: some View {
-        TrainingView()
-    }
-}
+//struct TrainingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TrainingView(isActive: .constant)
+//    }
+//}
