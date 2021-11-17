@@ -49,7 +49,7 @@ struct RelationshipCaring2: View {
                           
                       }
                       else {
-                          NavigationLink(destination: RelationshipCaring3(name: self.$name)) {
+                          NavigationLink(destination: RelationshipCaring3(rootIsActive: self.$rootIsActive, name: self.$name)) {
                                           Text("Continue")
                                                     .padding(.vertical)
                                                     .frame( maxWidth: .infinity)
@@ -57,6 +57,7 @@ struct RelationshipCaring2: View {
                                                     .background(Color(.systemIndigo)).cornerRadius(14)
                                                     .padding(.horizontal)
                                 }
+                          .isDetailLink(false)
                       }
                       
                       

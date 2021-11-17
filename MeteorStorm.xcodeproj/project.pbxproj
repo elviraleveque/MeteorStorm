@@ -23,8 +23,6 @@
 		763B3B2D2744F881005AA766 /* RelationshipCaring2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B2C2744F881005AA766 /* RelationshipCaring2.swift */; };
 		763B3B2F2744F890005AA766 /* RelationshipCaring3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B2E2744F890005AA766 /* RelationshipCaring3.swift */; };
 		763B3B312744F8A4005AA766 /* RelationshipCaring4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B302744F8A4005AA766 /* RelationshipCaring4.swift */; };
-		763B3B332744FF9D005AA766 /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B322744FF9D005AA766 /* TrafficLight.swift */; };
-		763B3B3727450734005AA766 /* TrafficLight2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B3627450734005AA766 /* TrafficLight2.swift */; };
 		763FA36B2742981300E2108D /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763FA36A2742981300E2108D /* CheckInView.swift */; };
 		7B047395274138D60013496C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047394274138D60013496C /* TabBarView.swift */; };
 		7B047397274139330013496C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047396274139330013496C /* CalendarView.swift */; };
@@ -72,8 +70,6 @@
 		763B3B2C2744F881005AA766 /* RelationshipCaring2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring2.swift; sourceTree = "<group>"; };
 		763B3B2E2744F890005AA766 /* RelationshipCaring3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring3.swift; sourceTree = "<group>"; };
 		763B3B302744F8A4005AA766 /* RelationshipCaring4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring4.swift; sourceTree = "<group>"; };
-		763B3B322744FF9D005AA766 /* TrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
-		763B3B3627450734005AA766 /* TrafficLight2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLight2.swift; sourceTree = "<group>"; };
 		763FA36A2742981300E2108D /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
 		7B047394274138D60013496C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		7B047396274139330013496C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -144,8 +140,6 @@
 				7B33C9932743C181000F3D2E /* CircleEmoji.swift */,
 				7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */,
 				7B04739827413A210013496C /* TrainingView.swift */,
-				763B3B322744FF9D005AA766 /* TrafficLight.swift */,
-				763B3B3627450734005AA766 /* TrafficLight2.swift */,
 				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
 				446518F627402F1C00B18829 /* BreathingView.swift */,
 				44F747672743D1460059322F /* BreathingExercise.swift */,
@@ -318,10 +312,8 @@
 				5984A17A273E7E1900167292 /* Persistence.swift in Sources */,
 				7B047397274139330013496C /* CalendarView.swift in Sources */,
 				763FA36B2742981300E2108D /* CheckInView.swift in Sources */,
-				763B3B332744FF9D005AA766 /* TrafficLight.swift in Sources */,
 				763B3B312744F8A4005AA766 /* RelationshipCaring4.swift in Sources */,
 				7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */,
-				763B3B3727450734005AA766 /* TrafficLight2.swift in Sources */,
 				5984A17D273E7E1900167292 /* MeteorStorm.xcdatamodeld in Sources */,
 				7BA92FB027442AEC00C002F4 /* NotTappableEmoji.swift in Sources */,
 				7B04739927413A210013496C /* TrainingView.swift in Sources */,
