@@ -35,10 +35,10 @@ struct TrainingListItem<Destination: View>: View {
 struct TrainingView: View {
     
    
-    let icon = ["lungs", "heart.text.square", "eyes"]
-    let exercise = ["Breathing", "Relationship Caring", "Eye Contact"]
-    var isCompleted = ["Completed", "Completed", "Not Completed"]
-    let destinations: [AnyView] = [AnyView(BreathingView()), AnyView(RelationshipCaring()), AnyView(TodayView())]
+    let icon = ["lungs", "heart.text.square", "eyes", "figure.wave"]
+    let exercise = ["Breathing", "Relationship Caring", "Eye Contact", "SelfEsteem"]
+    var isCompleted = ["Completed", "Completed", "Not Completed", "Not Completed"]
+    let destinations: [AnyView] = [AnyView(BreathingView()), AnyView(RelationshipCaring()), AnyView(TodayView()), AnyView(SelfEsteem())]
    
     var body: some View {
         NavigationView {

@@ -66,6 +66,8 @@ struct RelationshipCaring2: View {
 
 struct RelationshipCaring2_Previews: PreviewProvider {
     static var previews: some View {
-        RelationshipCaring2()
+        Group {
+            RelationshipCaring2()
+        }
     }
 }
