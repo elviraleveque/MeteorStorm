@@ -37,6 +37,29 @@ struct RelationshipCaring2: View {
                             
                             Spacer()
                             
+                      if name == ""
+                      {
+                              Text("Continue")
+                                        .padding(.vertical)
+                                        .frame( maxWidth: .infinity)
+                                        .foregroundColor(Color.white)
+                                        .background(Color(.systemIndigo)).cornerRadius(14)
+                                        .padding(.horizontal)
+                                        .opacity(0.5)
+                          
+                      }
+                      else {
+                          NavigationLink(destination: RelationshipCaring3(name: self.$name)) {
+                                          Text("Continue")
+                                                    .padding(.vertical)
+                                                    .frame( maxWidth: .infinity)
+                                                    .foregroundColor(Color.white)
+                                                    .background(Color(.systemIndigo)).cornerRadius(14)
+                                                    .padding(.horizontal)
+                                }
+                      }
+                      
+                      
                       NavigationLink(destination: RelationshipCaring3(rootIsActive: self.$rootIsActive, name: self.$name)) {
                                       Text("Continue")
                                                 .padding(.vertical)
