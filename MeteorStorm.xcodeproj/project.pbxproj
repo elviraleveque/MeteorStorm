@@ -10,6 +10,7 @@
 		446518F727402F1C00B18829 /* BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446518F627402F1C00B18829 /* BreathingView.swift */; };
 		44F747662743C7770059322F /* BreathingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F747652743C7770059322F /* BreathingDetector.swift */; };
 		44F747682743D1460059322F /* BreathingExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F747672743D1460059322F /* BreathingExercise.swift */; };
+		44F7476A2744FC740059322F /* SelfEsteemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F747692744FC740059322F /* SelfEsteemView.swift */; };
 		5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A170273E7E1700167292 /* MeteorStormApp.swift */; };
 		5984A173273E7E1700167292 /* DatesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984A172273E7E1700167292 /* DatesList.swift */; };
 		5984A175273E7E1900167292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5984A174273E7E1900167292 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		446518F627402F1C00B18829 /* BreathingView.swift */ = {isa = PBXFileReference; indentWidth = 10; lastKnownFileType = sourcecode.swift; path = BreathingView.swift; sourceTree = "<group>"; tabWidth = 10; };
 		44F747652743C7770059322F /* BreathingDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingDetector.swift; sourceTree = "<group>"; };
 		44F747672743D1460059322F /* BreathingExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExercise.swift; sourceTree = "<group>"; };
+		44F747692744FC740059322F /* SelfEsteemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfEsteemView.swift; sourceTree = "<group>"; };
 		5984A16D273E7E1700167292 /* MeteorStorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteorStorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5984A170273E7E1700167292 /* MeteorStormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteorStormApp.swift; sourceTree = "<group>"; };
 		5984A172273E7E1700167292 /* DatesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesList.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				763B3B2E2744F890005AA766 /* RelationshipCaring3.swift */,
 				763B3B302744F8A4005AA766 /* RelationshipCaring4.swift */,
 				763FA36A2742981300E2108D /* CheckInView.swift */,
+				44F747692744FC740059322F /* SelfEsteemView.swift */,
 				7BA92FAD27440C8300C002F4 /* CheckInView2.swift */,
 				7B047396274139330013496C /* CalendarView.swift */,
 				7B33C9932743C181000F3D2E /* CircleEmoji.swift */,
@@ -319,6 +322,7 @@
 				7B04739927413A210013496C /* TrainingView.swift in Sources */,
 				5984A173273E7E1700167292 /* DatesList.swift in Sources */,
 				44F747662743C7770059322F /* BreathingDetector.swift in Sources */,
+				44F7476A2744FC740059322F /* SelfEsteemView.swift in Sources */,
 				7B047395274138D60013496C /* TabBarView.swift in Sources */,
 				5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */,
 				763B3B2F2744F890005AA766 /* RelationshipCaring3.swift in Sources */,

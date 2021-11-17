@@ -135,9 +135,9 @@ struct TextSwitch: View {
 struct BreathingView_Previews: PreviewProvider {
           static var previews: some View {
                     Group {
-                              BreathingExercise()
+                              BreathingView()
                                         .preferredColorScheme(.light)
-                              BreathingExercise()
+                              BreathingView()
                                         .preferredColorScheme(.dark)
                     }
           }
