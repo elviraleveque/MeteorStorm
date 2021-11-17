@@ -38,7 +38,7 @@ struct TrainingView: View {
     let icon = ["lungs", "heart.text.square", "eyes"]
     let exercise = ["Breathing", "Relationship Caring", "Eye Contact"]
     var isCompleted = ["Completed", "Completed", "Not Completed"]
-    let destinations: [AnyView] = [AnyView(BreathingView()), AnyView(CalendarView()), AnyView(TodayView())]
+    let destinations: [AnyView] = [AnyView(BreathingView()), AnyView(RelationshipCaring()), AnyView(TodayView())]
    
     var body: some View {
         NavigationView {
