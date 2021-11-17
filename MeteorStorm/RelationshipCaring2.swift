@@ -35,14 +35,29 @@ struct RelationshipCaring2: View {
                             
                             Spacer()
                             
-                      NavigationLink(destination: RelationshipCaring3(name: self.$name)) {
-                                      Text("Continue")
-                                                .padding(.vertical)
-                                                .frame( maxWidth: .infinity)
-                                                .foregroundColor(Color.white)
-                                                .background(Color(.systemIndigo)).cornerRadius(14)
-                                                .padding(.horizontal)
-                            }
+                      if name == ""
+                      {
+                              Text("Continue")
+                                        .padding(.vertical)
+                                        .frame( maxWidth: .infinity)
+                                        .foregroundColor(Color.white)
+                                        .background(Color(.systemIndigo)).cornerRadius(14)
+                                        .padding(.horizontal)
+                                        .opacity(0.5)
+                          
+                      }
+                      else {
+                          NavigationLink(destination: RelationshipCaring3(name: self.$name)) {
+                                          Text("Continue")
+                                                    .padding(.vertical)
+                                                    .frame( maxWidth: .infinity)
+                                                    .foregroundColor(Color.white)
+                                                    .background(Color(.systemIndigo)).cornerRadius(14)
+                                                    .padding(.horizontal)
+                                }
+                      }
+                      
+                      
                             
                   }//VStack
                   .navigationTitle("Relationship Caring")
