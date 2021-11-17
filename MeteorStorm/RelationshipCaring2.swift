@@ -61,15 +61,7 @@ struct RelationshipCaring2: View {
                       }
                       
                       
-                      NavigationLink(destination: RelationshipCaring3(rootIsActive: self.$rootIsActive, name: self.$name)) {
-                                      Text("Continue")
-                                                .padding(.vertical)
-                                                .frame( maxWidth: .infinity)
-                                                .foregroundColor(Color.white)
-                                                .background(Color(.systemIndigo)).cornerRadius(14)
-                                                .padding(.horizontal)
-                            }
-                      .isDetailLink(false)
+                      
                             
                   }//VStack
                   .navigationTitle("Relationship Caring")

@@ -48,7 +48,7 @@ struct TrainingView: View {
 
                     TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: RelationshipCaring(rootIsActive: self.$isActive[1]), isActive: $isActive[1])
                     
-                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: RelationshipCaring(rootIsActive: self.$isActive[1]), isActive: $isActive[1])
+//                    TrainingListItem(icon: "heart.text.square", exercise: "Relationship Caring", isCompleted: "Completed", destination: RelationshipCaring(rootIsActive: self.$isActive[1]), isActive: $isActive[1])
 
                     
                 }

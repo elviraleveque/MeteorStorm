@@ -74,12 +74,11 @@ struct RelationshipCaring4: View {
                               
                               .toolbar{
                                         
-                                        Button{
-                                                  //Place the action that the button performs
-                                        } label: {
-                                                  Image(systemName: "gearshape")
-                                                            .foregroundColor(Color(.systemIndigo))
-                                        }
+                                  Button{
+                                       self.rootIsActive = false                                } label: {
+                                            Image(systemName: "xmark.circle")
+                                                      .foregroundColor(Color(.systemIndigo))
+                                  }
                                         
                               }//Toolbar
                               
