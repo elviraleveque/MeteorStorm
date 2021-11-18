@@ -33,7 +33,7 @@ struct GuidedMeditation: View {
                               
                               Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
                               
-                              NavigationLink(destination: BreathingExercise()) {
+                              NavigationLink(destination: TextMed()) {
                                         Text("Start")
                                                   .padding(.vertical)
                                                   .frame( maxWidth: .infinity)

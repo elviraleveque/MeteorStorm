@@ -59,8 +59,8 @@ struct TrainingView: View {
     }
 }
 
-//struct TrainingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TrainingView(isActive: .constant)
-//    }
-//}
+struct TrainingView_Previews: PreviewProvider {
+    static var previews: some View {
+        TrainingView()
+    }
+}
