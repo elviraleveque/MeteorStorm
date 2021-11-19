@@ -57,7 +57,7 @@ let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 struct CountDown: View{
           @Binding var isActive: Bool
-          @State private var timeRemaining = 5
+          @State private var timeRemaining = 63
           @State private var buttonOpacity = 0.0
           
           var body: some View{
@@ -128,9 +128,9 @@ struct TextSwitch: View {
 //struct BreathingView_Previews: PreviewProvider {
 //          static var previews: some View {
 //                    Group {
-//                              BreathingExercise()
+//                              BreathingView(rootIsActive: .constant(true))
 //                                        .preferredColorScheme(.light)
-//                              BreathingExercise()
+//                              BreathingView(rootIsActive: .constant(false))
 //                                        .preferredColorScheme(.dark)
 //                    }
 //          }
