@@ -130,7 +130,7 @@ struct TodayView: View {
                             Text("- \(quoteArtist)")
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .italic()
-                                .padding(.trailing)
+                                .padding(.trailing, 35.0)
                             
                         }
                         .frame(maxWidth: .infinity, alignment: .trailing)
