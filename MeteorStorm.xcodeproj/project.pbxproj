@@ -35,9 +35,8 @@
 		7B047397274139330013496C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047396274139330013496C /* CalendarView.swift */; };
 		7B04739927413A210013496C /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04739827413A210013496C /* TrainingView.swift */; };
 		7B33C9942743C181000F3D2E /* CircleEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33C9932743C181000F3D2E /* CircleEmoji.swift */; };
-		7B471AD92747B95A008CDC33 /* Stoplight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B3C27454343005AA766 /* Stoplight.swift */; };
 		7B471ADD2747BAA3008CDC33 /* TrafficLight 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B471ADC2747BAA3008CDC33 /* TrafficLight 3.swift */; };
-		7B471ADF2747BAC3008CDC33 /* CountDownv2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B471ADE2747BAC3008CDC33 /* CountDownv2.swift */; };
+		7B471AE12747C440008CDC33 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B471AE02747C440008CDC33 /* Light.swift */; };
 		7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A7563274032DD00E4EB9F /* TodayView.swift */; };
 		7BA92FAE27440C8300C002F4 /* CheckInView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA92FAD27440C8300C002F4 /* CheckInView2.swift */; };
 		7BA92FB027442AEC00C002F4 /* NotTappableEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */; };
@@ -85,7 +84,6 @@
 		763B3B2C2744F881005AA766 /* RelationshipCaring2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring2.swift; sourceTree = "<group>"; };
 		763B3B2E2744F890005AA766 /* RelationshipCaring3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring3.swift; sourceTree = "<group>"; };
 		763B3B302744F8A4005AA766 /* RelationshipCaring4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring4.swift; sourceTree = "<group>"; };
-		763B3B3C27454343005AA766 /* Stoplight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stoplight.swift; sourceTree = "<group>"; };
 		763B3B4627479812005AA766 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		763B3B4B2747B802005AA766 /* TrafficLight2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLight2.swift; sourceTree = "<group>"; };
 		763B3B4D2747B802005AA766 /* TrafficLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
@@ -95,7 +93,7 @@
 		7B04739827413A210013496C /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		7B33C9932743C181000F3D2E /* CircleEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleEmoji.swift; sourceTree = "<group>"; };
 		7B471ADC2747BAA3008CDC33 /* TrafficLight 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrafficLight 3.swift"; sourceTree = "<group>"; };
-		7B471ADE2747BAC3008CDC33 /* CountDownv2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownv2.swift; sourceTree = "<group>"; };
+		7B471AE02747C440008CDC33 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		7B7A7563274032DD00E4EB9F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		7BA92FAD27440C8300C002F4 /* CheckInView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView2.swift; sourceTree = "<group>"; };
 		7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTappableEmoji.swift; sourceTree = "<group>"; };
@@ -229,12 +227,11 @@
 		7B471AD82747B934008CDC33 /* Traffic Light */ = {
 			isa = PBXGroup;
 			children = (
-				763B3B3C27454343005AA766 /* Stoplight.swift */,
 				763B3B4627479812005AA766 /* Pie.swift */,
 				763B3B4D2747B802005AA766 /* TrafficLight.swift */,
 				763B3B4B2747B802005AA766 /* TrafficLight2.swift */,
 				7B471ADC2747BAA3008CDC33 /* TrafficLight 3.swift */,
-				7B471ADE2747BAC3008CDC33 /* CountDownv2.swift */,
+				7B471AE02747C440008CDC33 /* Light.swift */,
 			);
 			name = "Traffic Light";
 			sourceTree = "<group>";
@@ -400,6 +397,7 @@
 				7B04739927413A210013496C /* TrainingView.swift in Sources */,
 				763B3B4F2747B802005AA766 /* TrafficLight2.swift in Sources */,
 				5984A173273E7E1700167292 /* DatesList.swift in Sources */,
+				7B471AE12747C440008CDC33 /* Light.swift in Sources */,
 				44F747662743C7770059322F /* BreathingDetector.swift in Sources */,
 				763B3B4727479813005AA766 /* Pie.swift in Sources */,
 				44F7476A2744FC740059322F /* SelfEsteemView.swift in Sources */,
@@ -412,8 +410,6 @@
 				763B3B512747B802005AA766 /* TrafficLight.swift in Sources */,
 				7B33C9942743C181000F3D2E /* CircleEmoji.swift in Sources */,
 				7BA92FAE27440C8300C002F4 /* CheckInView2.swift in Sources */,
-				7B471AD92747B95A008CDC33 /* Stoplight.swift in Sources */,
-				7B471ADF2747BAC3008CDC33 /* CountDownv2.swift in Sources */,
 				446518F727402F1C00B18829 /* BreathingView.swift in Sources */,
 				763B3B2B2744F86E005AA766 /* RelationshipCaring.swift in Sources */,
 				763B3B2D2744F881005AA766 /* RelationshipCaring2.swift in Sources */,

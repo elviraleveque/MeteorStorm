@@ -28,7 +28,7 @@ struct Pie: Shape {
         let radius = min(rect.width, rect.height) / 2
         let start = CGPoint(
             x: center.x + radius * cos(CGFloat(startAngle.radians)),
-            y: center.y + radius * sin(CGFloat(endAngle.radians))
+            y: center.y + radius * sin(CGFloat(startAngle.radians))
         )
         
         var p = Path()
@@ -39,6 +39,8 @@ struct Pie: Shape {
                  startAngle: startAngle,
                  endAngle: endAngle,
                  clockwise: clockwise)
+        
+        p.addLine(to: center)
         
         return p
         
