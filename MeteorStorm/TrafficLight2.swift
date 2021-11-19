@@ -30,7 +30,7 @@ struct TrafficLight2: View {
             
             if count == 0{
 
-                Light(color: Color(.systemRed), duration: 10)
+                Light(color: Color(.systemRed), duration: 10, count: $count)
                 
                 
                 Text("Topic:")
