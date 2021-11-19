@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RelationshipCaring3: View {
     @Binding var rootIsActive : Bool
+    @Binding var isCompleted : Bool
+
 
     @State private var feature1: String = ""
     @State private var feature2: String = ""
@@ -59,7 +61,7 @@ struct RelationshipCaring3: View {
                                 
                                 Spacer()
                                 
-                          NavigationLink(destination: RelationshipCaring4(rootIsActive: self.$rootIsActive, feature1: self.$feature1, feature2: self.$feature2, feature3: self.$feature3, name: self.$name)) {
+                          NavigationLink(destination: RelationshipCaring4(rootIsActive: self.$rootIsActive, isCompleted: self.$isCompleted, feature1: self.$feature1, feature2: self.$feature2, feature3: self.$feature3, name: self.$name)) {
                                           Text("Continue")
                                                     .padding(.vertical)
                                                     .frame( maxWidth: .infinity)
@@ -77,7 +79,7 @@ struct RelationshipCaring3: View {
                                 
                                 Button{
                                      self.rootIsActive = false                                } label: {
-                                          Image(systemName: "xmark.circle")
+                                          Text("Cancel")
                                                     .foregroundColor(Color(.systemIndigo))
                                 }
                                 
@@ -89,7 +91,7 @@ struct RelationshipCaring3: View {
 
 struct RelationshipCaring3_Previews: PreviewProvider {
     static var previews: some View {
-        RelationshipCaring3(rootIsActive: .constant(true), name: .constant(""))
+        RelationshipCaring3(rootIsActive: .constant(true), isCompleted: .constant(true), name: .constant(""))
     }
 }
 

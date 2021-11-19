@@ -11,6 +11,7 @@ import Foundation
 
 struct BreathingView: View {
           @Binding var rootIsActive : Bool
+          @Binding var isCompleted : Bool
 
           
           var body: some View {
@@ -34,7 +35,7 @@ struct BreathingView: View {
                               
                               Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
                               
-                              NavigationLink(destination: BreathingExercise(rootIsActive: self.$rootIsActive)) {
+                              NavigationLink(destination: BreathingExercise(rootIsActive: self.$rootIsActive, isCompleted: $isCompleted)) {
                                         Text("Start")
                                                   .padding(.vertical)
                                                   .frame( maxWidth: .infinity)
@@ -57,9 +58,11 @@ let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 struct CountDown: View{
           @Binding var isActive: Bool
-          @State private var timeRemaining = 63
+          @State private var timeRemaining = 3
           @State private var buttonOpacity = 0.0
-          
+          @Binding var isCompleted : Bool
+          @Binding var rootIsActive: Bool
+
           var body: some View{
                     VStack{
                               let minutes = Int(timeRemaining / 60)
@@ -70,6 +73,8 @@ struct CountDown: View{
                                         .fontWeight(.bold)
                                         .padding()
                               Button(action: {
+                                        self.rootIsActive = false
+                                        self.isCompleted = true
                                         
                               }, label: {Text("Done")})
                               

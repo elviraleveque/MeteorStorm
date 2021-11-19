@@ -14,6 +14,8 @@ struct BreathingExercise: View {
     @State var isVisible = false
     @State var currentDate = Date()
     @State var isActive = true
+    @Binding var isCompleted : Bool
+
     
     var body: some View{
         NavigationView{
@@ -36,7 +38,7 @@ struct BreathingExercise: View {
                 } //ZStack
                 Spacer()
                 Spacer()
-                CountDown(isActive: $isActive)
+                CountDown(isActive: $isActive, isCompleted: $isCompleted, rootIsActive: $rootIsActive)
                 Spacer()
                 
             }//VStack
@@ -46,7 +48,7 @@ struct BreathingExercise: View {
             
             Button{
                 self.rootIsActive = false                            } label: {
-                    Image(systemName: "xmark.circle")
+                    Text("Cancel")
                         .foregroundColor(Color(.systemIndigo))
                 }
             

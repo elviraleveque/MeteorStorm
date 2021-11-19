@@ -10,6 +10,8 @@ import Foundation
 struct RelationshipCaring4: View {
     
     @Binding var rootIsActive : Bool
+    @Binding var isCompleted : Bool
+
 
     
     @Binding var feature1: String
@@ -29,37 +31,38 @@ struct RelationshipCaring4: View {
                                                   .frame(width: 123, height: 86)
                                         
                                   if feature1 == "" || feature2 == "" || feature3 == ""{
-                                      
+                                      VStack(alignment: .leading){
                                       Text("It seems you had trouble listing \(name)'s features.")
-                                                .padding(.vertical)
+                                                .padding()
                                       
                                       Text("Maybe you should try paying more attention to them.")
-                                                .padding(.vertical)
-                                                .multilineTextAlignment(.center)
+                                          .padding(.horizontal)
                                       
                                       Text("Come back and redo the exercise when you feel like doing it.")
-                                                .padding(.vertical)
-                                                .multilineTextAlignment(.center)
+                                                .padding()
+                                      }
                                       
                                   }
                                   else{
+                                      VStack(alignment: .leading){
                                       Text("Well done!")
-                                          .padding(.vertical)
-                                          .multilineTextAlignment(.center)
+                                          .padding()
                                       
                                       Text("Paying attention to your surroundings is crucial.")
-                                          .padding(.vertical)
-                                          .multilineTextAlignment(.center)
+                                          .padding(.horizontal)
                                       
                                       Text("Keep practicing!")
-                                          .padding(.vertical)
-                                          .multilineTextAlignment(.center)
+                                          .padding()
+                                      }
 
                                   }
                                 
                                         Spacer()
                                         
-                                  Button(action: { self.rootIsActive = false }, label: {
+                                  Button(action: {
+                                      self.rootIsActive = false
+                                      self.isCompleted = true
+                                  }, label: {
                                             Text("Done")
                                                       .padding(.vertical)
                                                       .frame( maxWidth: .infinity)
@@ -76,7 +79,7 @@ struct RelationshipCaring4: View {
                                         
                                   Button{
                                        self.rootIsActive = false                                } label: {
-                                            Image(systemName: "xmark.circle")
+                                            Text("Cancel")
                                                       .foregroundColor(Color(.systemIndigo))
                                   }
                                         
@@ -88,7 +91,7 @@ struct RelationshipCaring4: View {
 
 struct RelationshipCaring4_Previews: PreviewProvider {
     static var previews: some View {
-        RelationshipCaring4(rootIsActive: .constant(true),feature1: .constant(""), feature2: .constant(""), feature3: .constant(""), name: .constant("Titina"))
+        RelationshipCaring4(rootIsActive: .constant(true), isCompleted: .constant(true),feature1: .constant(""), feature2: .constant(""), feature3: .constant(""), name: .constant("Titina"))
     }
 }
 
