@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CircleEmoji: View{
     
-    var emoji: String
+    var emoji: Image
     var emotionIndex: Int
     var color: Color
     @Binding var emotionSelected: Int
@@ -45,8 +45,7 @@ struct CircleEmoji: View{
                     .foregroundColor(color)
 
                 
-                Text(emoji)
-                    .font(.system(size: 50))
+                emoji
                     .frame(width: 76, height: 76)
                     .padding(.bottom)
             }

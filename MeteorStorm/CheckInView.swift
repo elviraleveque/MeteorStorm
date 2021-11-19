@@ -37,14 +37,14 @@ struct CheckInView: View {
                 HStack{
                     Spacer()
                     
-                    CircleEmoji(emoji: "🥳", emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("festa"), emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
                     
                     Spacer()
-                    CircleEmoji(emoji: "😍", emotionIndex: 2, color: Color(.systemOrange), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("innamorato"), emotionIndex: 2, color: Color(.systemOrange), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: "😮", emotionIndex: 3, color: Color(.systemPurple), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("felice"), emotionIndex: 3, color: Color(.systemPurple), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
                     
                     Spacer()
                     
@@ -54,11 +54,11 @@ struct CheckInView: View {
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: "🥱", emotionIndex: 4, color: Color(.systemTeal).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("sonno"), emotionIndex: 4, color: Color(.systemTeal).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: "😐",emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("neutro"),emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
                     
                     Spacer()
                     
@@ -68,22 +68,22 @@ struct CheckInView: View {
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: "🤬", emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("rabbia"), emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: "😢", emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("triste"), emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: "😱", emotionIndex: 8, color: Color(.systemBrown), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("paura"), emotionIndex: 8, color: Color(.systemBrown), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
                     
                     Spacer()
                     
                 } // Hstack circles row 3
                 
                 Spacer()
-                NavigationLink(destination: CheckInView2(showCheckInView: $showCheckInView)){
+                NavigationLink(destination: CheckInView2(showCheckInView: $showCheckInView, doneCheck: $doneCheck)){
                     
                     Text("Continue")
                         .font(.system(size: 17, weight: .semibold, design: .default))

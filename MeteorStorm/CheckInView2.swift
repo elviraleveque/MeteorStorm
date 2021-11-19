@@ -11,6 +11,9 @@ struct CheckInView2: View {
     @Binding var showCheckInView: Bool
     @State private var additional: String = ""
     
+    @Binding var doneCheck: Bool
+
+    
     
     var body: some View {
         VStack{
@@ -48,6 +51,9 @@ struct CheckInView2: View {
             
             Button(action: {
                 self.showCheckInView = false
+                self.doneCheck = true
+
+                
             }, label: {
                 Text("Done")
                     .font(.system(size: 17, weight: .semibold, design: .default))
@@ -71,6 +77,8 @@ struct CheckInView2: View {
             
             Button(action: {
                 self.showCheckInView = false
+                self.doneCheck = true
+
             }, label: {
                 Image(systemName: "xmark.circle")
                     .foregroundColor(Color(.systemIndigo))
@@ -82,8 +90,8 @@ struct CheckInView2: View {
 struct CheckInView2_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CheckInView2(showCheckInView: .constant(true))
-            CheckInView2(showCheckInView: .constant(true))
+            CheckInView2(showCheckInView: .constant(true), doneCheck: .constant(true))
+            CheckInView2(showCheckInView: .constant(true), doneCheck: .constant(true))
                 .preferredColorScheme(.dark)
         }
     }
