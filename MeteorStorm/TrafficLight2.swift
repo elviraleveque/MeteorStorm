@@ -23,15 +23,26 @@ struct TrafficLight2: View {
     
     @State var count = 0
     
+    @State private var animatedBonusRemaining: Double = 5
+    
     var body: some View {
         
         VStack{
             
             if count == 0{
                 
-                CountDown2(isActive: $isActive, count: $count, timeRemaining: $timeRemaining[0])
+//                CountDown2(isActive: $isActive, count: $count, timeRemaining: $timeRemaining[0])
                 
-                Stoplight(color: .red)
+//                Stoplight(color: .red)
+                
+                Pie(startAngle: Angle.degrees(0-90), endAngle: Angle.degrees(-animatedBonusRemaining*360-90), clockwise: true)
+                    .onAppear{
+//                        self.animatedBonusRemaining = 5
+                        withAnimation(.linear(duration: 3)){
+                            animatedBonusRemaining = 0
+                        }
+                    }
+                
                 Text("Topic:")
                     .font(.largeTitle).fontWeight(.bold).padding()
                 
@@ -153,6 +164,7 @@ struct TrafficLight2: View {
               }
 
                 }
+            
 
         }//VStack
 

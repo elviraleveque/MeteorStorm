@@ -28,6 +28,7 @@
 		763B3B3D27454343005AA766 /* Stoplight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B3C27454343005AA766 /* Stoplight.swift */; };
 		763B3B4327465328005AA766 /* TrafficLight3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B4227465328005AA766 /* TrafficLight3.swift */; };
 		763B3B45274654E3005AA766 /* CountDown2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B44274654E3005AA766 /* CountDown2.swift */; };
+		763B3B4727479813005AA766 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B4627479812005AA766 /* Pie.swift */; };
 		763FA36B2742981300E2108D /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763FA36A2742981300E2108D /* CheckInView.swift */; };
 		7B047395274138D60013496C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047394274138D60013496C /* TabBarView.swift */; };
 		7B047397274139330013496C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047396274139330013496C /* CalendarView.swift */; };
@@ -80,6 +81,7 @@
 		763B3B3C27454343005AA766 /* Stoplight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stoplight.swift; sourceTree = "<group>"; };
 		763B3B4227465328005AA766 /* TrafficLight3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLight3.swift; sourceTree = "<group>"; };
 		763B3B44274654E3005AA766 /* CountDown2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDown2.swift; sourceTree = "<group>"; };
+		763B3B4627479812005AA766 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		763FA36A2742981300E2108D /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
 		7B047394274138D60013496C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		7B047396274139330013496C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				7B33C9932743C181000F3D2E /* CircleEmoji.swift */,
 				7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */,
 				763B3B3C27454343005AA766 /* Stoplight.swift */,
+				763B3B4627479812005AA766 /* Pie.swift */,
 				7B04739827413A210013496C /* TrainingView.swift */,
 				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
 				446518F627402F1C00B18829 /* BreathingView.swift */,
@@ -338,6 +341,7 @@
 				5984A173273E7E1700167292 /* DatesList.swift in Sources */,
 				763B3B3D27454343005AA766 /* Stoplight.swift in Sources */,
 				44F747662743C7770059322F /* BreathingDetector.swift in Sources */,
+				763B3B4727479813005AA766 /* Pie.swift in Sources */,
 				763B3B4327465328005AA766 /* TrafficLight3.swift in Sources */,
 				7B047395274138D60013496C /* TabBarView.swift in Sources */,
 				5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */,
