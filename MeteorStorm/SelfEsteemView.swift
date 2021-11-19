@@ -2,7 +2,7 @@
 //  RelationshipCaring.swift
 //  MeteorStorm
 //
-//  Created by Luigi Luca Coletta on 16/11/21.
+//  Created by Vincenzo Pascarella on 16/11/21.
 //
 
 import SwiftUI
@@ -10,17 +10,18 @@ import Foundation
 
 
 
-struct RelationshipCaring: View {
+struct SelfEsteemView: View {
     
     @Binding var rootIsActive : Bool
     @Binding var isCompleted : Bool
 
     
+    
     var body: some View {
         
         VStack{
             Spacer()
-            Image(systemName: "heart.text.square")
+            Image(systemName: "figure.wave")
                 .resizable(resizingMode: .tile)
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(Color(.systemIndigo))
@@ -28,20 +29,19 @@ struct RelationshipCaring: View {
             
             
             VStack(alignment: .leading){
-                Text("Think of a person you interacted with today")
+                Text("You are beautiful because you are unique.")
                 
                     .padding()
                 
-                Text("Try to write down some traits or habits you noticed: being aware of this kind of details is important to strenghten your social awareness.")
+                Text("Look inside and outside at your personality,  then write down some things that you like about you.")
                     .padding(.horizontal)
             }
-            
             
             Spacer()
             
             Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
             
-            NavigationLink(destination: RelationshipCaring2(rootIsActive: self.$rootIsActive, isCompleted: self.$isCompleted)) {
+            NavigationLink(destination: SelfEsteemExercise(rootIsActive: self.$rootIsActive, isCompleted: self.$isCompleted)) {
                 Text("Start")
                     .padding(.vertical)
                     .frame( maxWidth: .infinity)
@@ -50,17 +50,12 @@ struct RelationshipCaring: View {
                     .padding(.horizontal)
             }
             .isDetailLink(false)
-            
+//
             
         }//VStack
-        .navigationTitle("Relationship Caring")
+        .navigationTitle("Self Esteem")
         .padding(.bottom)
         
     }
 }
 
-struct RelationshipCaring_Previews: PreviewProvider {
-    static var previews: some View {
-        RelationshipCaring(rootIsActive: .constant(true), isCompleted: .constant(true))
-    }
-}

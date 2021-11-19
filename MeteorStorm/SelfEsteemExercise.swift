@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RelationshipCaring3: View {
+struct SelfEsteemExercise: View {
     @Binding var rootIsActive : Bool
     @Binding var isCompleted : Bool
 
@@ -15,22 +15,22 @@ struct RelationshipCaring3: View {
     @State private var feature1: String = ""
     @State private var feature2: String = ""
     @State private var feature3: String = ""
-    
-    @Binding var name: String
+
     
         var body: some View {
 //            NavigationView {
                       VStack{
                           Spacer()
-                                Text("What do you know about that person?")
+                                Text("What do you like about yourself?")
                                     .font(.system(size: 34, weight: .regular, design: .default))
                                     .foregroundColor(Color.primary)
                                     .padding()
                           
-                                Text("List down some traits, hobbies, features.\n You can leave it blank if you have troubles with it.")
+                                Text("List down three traits of you personality that you like")
                                     .multilineTextAlignment(.center)
                                     .font(.system(size: 17, weight: .regular, design: .default))
                                     .foregroundColor(Color(.systemGray))
+                                    .padding()
                           
                           TextField("Type some feature...", text: $feature1) //gets the text
                               .disableAutocorrection(true)
@@ -60,19 +60,33 @@ struct RelationshipCaring3: View {
                               .padding()
                                 
                                 Spacer()
+                          
+                          if feature1=="" && feature2=="" && feature3==""{
+                              Text("Done")
+                                        .padding(.vertical)
+                                        .frame( maxWidth: .infinity)
+                                        .foregroundColor(Color.white)
+                                        .background(Color(.systemIndigo)).cornerRadius(14)
+                                        .padding(.horizontal)
+                                        .opacity(0.5)
+                          }
                                 
-                          NavigationLink(destination: RelationshipCaring4(rootIsActive: self.$rootIsActive, isCompleted: self.$isCompleted, feature1: self.$feature1, feature2: self.$feature2, feature3: self.$feature3, name: self.$name)) {
-                                          Text("Continue")
-                                                    .padding(.vertical)
-                                                    .frame( maxWidth: .infinity)
-                                                    .foregroundColor(Color.white)
-                                                    .background(Color(.systemIndigo)).cornerRadius(14)
-                                                    .padding(.horizontal)
+                          else {
+                              Button(action: {
+                                  self.rootIsActive = false
+                                  self.isCompleted = true
+                              }, label: {
+                                        Text("Done")
+                                                  .padding(.vertical)
+                                                  .frame( maxWidth: .infinity)
+                                                  .foregroundColor(Color.white)
+                                                  .background(Color(.systemIndigo)).cornerRadius(14)
+                                                  .padding(.horizontal)
+                              })
                                 }
-                          .isDetailLink(false)
                                 
                       }//VStack
-                      .navigationTitle("Relationship Caring")
+                      .navigationTitle("Self Esteem")
                       .padding(.bottom)
                       
                       .toolbar{
@@ -87,11 +101,5 @@ struct RelationshipCaring3: View {
                       
 //            }//navigationView
 }
-}
-
-struct RelationshipCaring3_Previews: PreviewProvider {
-    static var previews: some View {
-        RelationshipCaring3(rootIsActive: .constant(true), isCompleted: .constant(true), name: .constant(""))
-    }
 }
 

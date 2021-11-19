@@ -24,15 +24,15 @@ struct TodayView: View {
     @State var doneCheck = false
     
     let emotionList: [notTappableEmoji] = [
-        notTappableEmoji(emoji: "", color: .white),
-        notTappableEmoji(emoji: "🥳", color: Color(.systemGreen)),
-        notTappableEmoji(emoji: "😍", color: Color(.systemOrange)),
-        notTappableEmoji(emoji: "😮", color: Color(.systemPurple)),
-        notTappableEmoji(emoji: "🥱", color: Color(.systemTeal).opacity(0.75)),
-        notTappableEmoji(emoji: "😐", color: Color(.systemYellow)),
-        notTappableEmoji(emoji: "🤬", color: Color(.systemRed)),
-        notTappableEmoji(emoji: "😢", color: Color(.systemBlue)),
-        notTappableEmoji(emoji: "😱", color: Color(.systemBrown)),
+        notTappableEmoji(emoji: Image(""), color: .white),
+        notTappableEmoji(emoji: Image("festa"), color: Color(.systemGreen)),
+        notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange)),
+        notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)),
+        notTappableEmoji(emoji: Image("sonno"), color: Color(.systemTeal).opacity(0.75)),
+        notTappableEmoji(emoji: Image("neutro"), color: Color(.systemYellow)),
+        notTappableEmoji(emoji: Image("rabbia"), color: Color(.systemRed)),
+        notTappableEmoji(emoji: Image("triste"), color: Color(.systemBlue)),
+        notTappableEmoji(emoji: Image("paura"), color: Color(.systemBrown)),
 
 
     ]
@@ -58,20 +58,20 @@ struct TodayView: View {
                     HStack{
                         Spacer()
                         
-                        CircleEmoji(emoji: "🤬", emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("rabbia"), emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
                         
                         Spacer()
                         
-                        CircleEmoji(emoji: "🥳", emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("festa"), emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
                         
                         Spacer()
                         
-                        CircleEmoji(emoji: "😐",emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("neutro"),emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
                         
                         
                         Spacer()
                         
-                        CircleEmoji(emoji: "😢", emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("triste"), emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
                         
                         Spacer()
                     }

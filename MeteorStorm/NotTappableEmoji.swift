@@ -9,7 +9,7 @@ import SwiftUI
 
 struct notTappableEmoji: View{
     
-    var emoji: String
+    var emoji: Image
     var color: Color
     
     var body: some View{
@@ -17,16 +17,16 @@ struct notTappableEmoji: View{
             ZStack{
                 
                 Circle()
-                    .frame(width: 130, height: 130)
                     .padding(.bottom)
                     .foregroundColor(color)
 
                 
-                Text(emoji)
-                    .font(.system(size: 80))
-                    .frame(width: 130, height: 130)
+                emoji
+                    .scaleEffect(1.71)
                     .padding(.bottom)
             }
+            .frame(width: 130, height: 130)
+
     }
     
 }
