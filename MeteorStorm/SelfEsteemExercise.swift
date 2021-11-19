@@ -1,19 +1,21 @@
 //
-//  SelfEsteemExercise.swift
+//  RelationshipCaring3.swift
 //  MeteorStorm
 //
-//  Created by Fabiana Ferrara on 17/11/21.
+//  Created by Luigi Luca Coletta on 16/11/21.
 //
 
 import SwiftUI
-import Foundation
 
 struct SelfEsteemExercise: View {
-    
-    @State private var valueOne: String = ""
-    @State private var valueTwo: String = ""
-    @State private var valueThree: String = ""
-    
+    @Binding var rootIsActive : Bool
+    @Binding var isCompleted : Bool
+
+
+    @State private var feature1: String = ""
+    @State private var feature2: String = ""
+    @State private var feature3: String = ""
+
     
         var body: some View {
 //            NavigationView {
@@ -25,12 +27,12 @@ struct SelfEsteemExercise: View {
                                     .padding()
                           
                                 Text("List down three traits of you personality that you like")
-                                    .multilineTextAlignment(.leading)
+                                    .multilineTextAlignment(.center)
                                     .font(.system(size: 17, weight: .regular, design: .default))
                                     .foregroundColor(Color(.systemGray))
                                     .padding()
                           
-                          TextField("Type some feature...", text: $valueOne) //gets the text
+                          TextField("Type some feature...", text: $feature1) //gets the text
                               .disableAutocorrection(true)
                               .padding()
                               .overlay(
@@ -39,7 +41,7 @@ struct SelfEsteemExercise: View {
                               )
                               .padding()
                           
-                          TextField("Type some feature...", text: $valueTwo) //gets the text
+                          TextField("Type some feature...", text: $feature2) //gets the text
                               .disableAutocorrection(true)
                               .padding()
                               .overlay(
@@ -48,7 +50,7 @@ struct SelfEsteemExercise: View {
                               )
                               .padding()
                           
-                          TextField("Type some feature...", text: $valueThree) //gets the text
+                          TextField("Type some feature...", text: $feature3) //gets the text
                               .disableAutocorrection(true)
                               .padding()
                               .overlay(
@@ -58,36 +60,46 @@ struct SelfEsteemExercise: View {
                               .padding()
                                 
                                 Spacer()
+                          
+                          if feature1=="" && feature2=="" && feature3==""{
+                              Text("Done")
+                                        .padding(.vertical)
+                                        .frame( maxWidth: .infinity)
+                                        .foregroundColor(Color.white)
+                                        .background(Color(.systemIndigo)).cornerRadius(14)
+                                        .padding(.horizontal)
+                                        .opacity(0.5)
+                          }
                                 
-                          NavigationLink(destination: TrainingView()) {
-                                          Text("Done")
-                                                    .padding(.vertical)
-                                                    .frame( maxWidth: .infinity)
-                                                    .foregroundColor(Color.white)
-                                                    .background(Color(.systemIndigo)).cornerRadius(14)
-                                                    .padding(.horizontal)
+                          else {
+                              Button(action: {
+                                  self.rootIsActive = false
+                                  self.isCompleted = true
+                              }, label: {
+                                        Text("Done")
+                                                  .padding(.vertical)
+                                                  .frame( maxWidth: .infinity)
+                                                  .foregroundColor(Color.white)
+                                                  .background(Color(.systemIndigo)).cornerRadius(14)
+                                                  .padding(.horizontal)
+                              })
                                 }
                                 
                       }//VStack
-//                      .navigationTitle("SelfEsteem")
-//                      .padding(.bottom)
-//                      
-//                      .toolbar{
-//                                
-//                                Button{
-//                                          //Place the action that the button performs
-//                                } label: {
-//                                          Image(systemName: "xmark.circle")
-//                                                    .foregroundColor(Color(.systemIndigo))
-//                                }
-//                                
-//                      }//Toolbar
+                      .navigationTitle("Self Esteem")
+                      .padding(.bottom)
+                      
+                      .toolbar{
+                                
+                                Button{
+                                     self.rootIsActive = false                                } label: {
+                                          Text("Cancel")
+                                                    .foregroundColor(Color(.systemIndigo))
+                                }
+                                
+                      }//Toolbar
                       
 //            }//navigationView
 }
 }
-struct SelfEsteemExercise_Previews: PreviewProvider {
-    static var previews: some View {
-        SelfEsteemExercise()
-    }
-}
+

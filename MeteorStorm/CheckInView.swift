@@ -108,7 +108,7 @@ struct CheckInView: View {
                         self.doneCheck = true
                     }
                 }, label: {
-                    Image(systemName: "xmark.circle")
+                    Text("Cancel")
                         .foregroundColor(Color(.systemIndigo))
                 })
                 
