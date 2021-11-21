@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalendarView: View {
-    @State var isActive: [Bool] = [false, false, false, false, false]
+    @State var isActive: [Bool] = [false, false, false, false, false, false]
    
     var body: some View {
         NavigationView {
@@ -24,6 +24,8 @@ struct CalendarView: View {
                     CalendarCard(emotion: notTappableEmoji(emoji: Image("rabbia"), color: Color(.systemRed)), emoname: "Angry", days: "3", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                     
                     CalendarCard(emotion: notTappableEmoji(emoji: Image("paura"), color: Color(.systemBrown)), emoname: "Scared", days: "2", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
+                    
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange)), emoname: "In Love", days: "2", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                    
                 }
                 .padding(.top)
