@@ -32,7 +32,7 @@
 		763B3B512747B802005AA766 /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B4D2747B802005AA766 /* TrafficLight.swift */; };
 		763FA36B2742981300E2108D /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763FA36A2742981300E2108D /* CheckInView.swift */; };
 		76B87A4D274A5D4300CC0172 /* CalendarCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B87A4C274A5D4300CC0172 /* CalendarCard.swift */; };
-		76B87A4F274A722E00CC0172 /* HappyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B87A4E274A722E00CC0172 /* HappyView.swift */; };
+		76EABE33274AA96C0064384E /* HappyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EABE32274AA96C0064384E /* HappyView.swift */; };
 		7B047395274138D60013496C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047394274138D60013496C /* TabBarView.swift */; };
 		7B047397274139330013496C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047396274139330013496C /* CalendarView.swift */; };
 		7B04739927413A210013496C /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04739827413A210013496C /* TrainingView.swift */; };
@@ -91,7 +91,7 @@
 		763B3B4D2747B802005AA766 /* TrafficLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
 		763FA36A2742981300E2108D /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
 		76B87A4C274A5D4300CC0172 /* CalendarCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCard.swift; sourceTree = "<group>"; };
-		76B87A4E274A722E00CC0172 /* HappyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyView.swift; sourceTree = "<group>"; };
+		76EABE32274AA96C0064384E /* HappyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HappyView.swift; path = ../HappyView.swift; sourceTree = "<group>"; };
 		7B047394274138D60013496C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		7B047396274139330013496C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7B04739827413A210013496C /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 			children = (
 				76B87A4C274A5D4300CC0172 /* CalendarCard.swift */,
 				7B047396274139330013496C /* CalendarView.swift */,
-				76B87A4E274A722E00CC0172 /* HappyView.swift */,
+				76EABE32274AA96C0064384E /* HappyView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -418,7 +418,7 @@
 				44F747702745073F0059322F /* GuidedMExercise.swift in Sources */,
 				76B87A4D274A5D4300CC0172 /* CalendarCard.swift in Sources */,
 				44F7476E274505800059322F /* GuidedMeditationView.swift in Sources */,
-				76B87A4F274A722E00CC0172 /* HappyView.swift in Sources */,
+				76EABE33274AA96C0064384E /* HappyView.swift in Sources */,
 				7B047395274138D60013496C /* TabBarView.swift in Sources */,
 				44F7476C2744FE110059322F /* SelfEsteemExercise.swift in Sources */,
 				5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */,

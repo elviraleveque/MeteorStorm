@@ -15,9 +15,9 @@ struct TodayView: View {
     @State private var showCheckInView = false
     //boolean var shared with CheckInView to create a modal view
     
-    @State var quote: String = "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. "
+    @State var quote: String = "Adapt what is useful, reject what is useless and add what is specifically your own."
     
-    @State var quoteArtist: String = "John Doe"
+    @State var quoteArtist: String = "Bruce Lee"
     
     @State var emotionSelected: Int = 0
     
@@ -120,10 +120,8 @@ struct TodayView: View {
                     HStack{
                         Text("\(quote)")
                             .font(.system(size: 17, weight: .regular, design: .default))
-                    }//Hstack of quote, 3 padding in order to centre it
-                    .padding(.horizontal)
-                    .padding(.horizontal)
-                    .padding(.horizontal)
+                    }//Hstack of quote
+                    .padding(.horizontal, 54.0)
                     
                     HStack{
                         VStack(alignment: .trailing){
@@ -132,7 +130,7 @@ struct TodayView: View {
                             Text("- \(quoteArtist)")
                                 .font(.system(size: 14, weight: .regular, design: .default))
                                 .italic()
-                                .padding(.trailing)
+                                .padding(.trailing, 35.0)
                             
                         }
                         .frame(maxWidth: .infinity, alignment: .trailing)

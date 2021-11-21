@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct CalendarView: View {
-    @State var isActive: [Bool] = [false, false, false, false, false]
+    @State var isActive: [Bool] = [false, false, false, false, false, false]
    
     var body: some View {
         NavigationView {
             ScrollView{
-                VStack(spacing: 30){
+                VStack(spacing: 12.0){
                     
-                    CalendarCard(emotion:
-                                    notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)), emoname: "Happy", days: "10", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)), emoname: "Happy", days: "10", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                     
                     CalendarCard(emotion: notTappableEmoji(emoji: Image("neutro"), color: Color(.systemYellow)), emoname: "Blank", days: "6", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                     
@@ -26,11 +25,17 @@ struct CalendarView: View {
                     
                     CalendarCard(emotion: notTappableEmoji(emoji: Image("paura"), color: Color(.systemBrown)), emoname: "Scared", days: "2", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                     
-                    }
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange)), emoname: "In Love", days: "2", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
+                   
                 }
-            
+                .padding(.top)
         }
-        .padding()
+            .background(Color( #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)))
+             .navigationTitle("Calendar")
+        }
+        
+        
+      
     }
 }
 
