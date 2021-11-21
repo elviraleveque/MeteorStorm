@@ -21,28 +21,26 @@ struct CalendarCard<Destination: View>: View {
             ZStack{
                 rectangle
                     .foregroundColor(.white)
-                    .padding()
-                    .padding(.trailing, -21.0)
-            HStack(spacing: 15){
-        emotion
-                .scaleEffect(0.7)
-                
-            
-            VStack(spacing: 5){
-                Text("\(emoname)")
-                    .font(.system(size: 28, weight: .bold, design: .default))
-                    .foregroundColor(Color(.black))
-                Text("\(days) days")
-                    .font(.system(size: 17, weight: .regular, design: .default))
-            }
-            Spacer()
-                Image(systemName: "chevron.right")
-                    .padding(.trailing)
-        }
+                    .padding(.horizontal)
+                   
+                HStack{
+                    emotion
+                        .scaleEffect(0.7)
+                    
+                    VStack(alignment: .leading){
+                        Text("\(emoname)")
+                            .font(.system(size: 28, weight: .bold, design: .default))
+                            .foregroundColor(Color(.black))
+                        Text("\(days) days")
+                            .font(.system(size: 17, weight: .regular, design: .default))
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .padding()
+                }
+                .padding(.horizontal)
                 
         .foregroundColor(Color(.systemGray))
-        .padding()
-        .padding(.trailing, -21.0)
             }
         })
     }
@@ -50,6 +48,8 @@ struct CalendarCard<Destination: View>: View {
 
 //struct CalendarCard_Previews: PreviewProvider {
 //    static var previews: some View {
-//        CalendarCard<<#Destination: View#>>(emotion: notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)), emoname: "Happy", days: "10")
+//        
+//        CalendarCard(emotion:
+//                        notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)), emoname: "Happy", days: "10", destination: HappyView(rootIsActive: $isActive), isActive: true)
 //    }
 //}
