@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalendarCard<Destination: View>: View {
-    
+    let rectangle = RoundedRectangle(cornerRadius: 15)
     var emotion: notTappableEmoji
     var emoname: String
     var days: String
@@ -18,11 +18,15 @@ struct CalendarCard<Destination: View>: View {
     
     var body: some View {
         NavigationLink(destination: destination, isActive: self.$isActive, label: {
-        HStack(spacing: 15){
+            ZStack{
+                rectangle
+                    .foregroundColor(.white)
+                    .padding()
+                    .padding(.trailing, -21.0)
+            HStack(spacing: 15){
         emotion
                 .scaleEffect(0.7)
-            
-            Spacer()
+                
             
             VStack(spacing: 5){
                 Text("\(emoname)")
@@ -30,10 +34,16 @@ struct CalendarCard<Destination: View>: View {
                     .foregroundColor(Color(.black))
                 Text("\(days) days")
                     .font(.system(size: 17, weight: .regular, design: .default))
-            }.padding()
+            }
+            Spacer()
+                Image(systemName: "chevron.right")
+                    .padding(.trailing)
         }
+                
         .foregroundColor(Color(.systemGray))
         .padding()
+        .padding(.trailing, -21.0)
+            }
         })
     }
 }
