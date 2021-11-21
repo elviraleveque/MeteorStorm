@@ -48,7 +48,7 @@ struct GuidedMeditation: View {
 
                               
                     }//VStack
-                    .navigationTitle("Breathing")
+                    .navigationTitle("Guided Meditation")
                     .padding(.bottom)
                     .toolbar{
                               

@@ -47,7 +47,7 @@ struct TrafficLight2: View {
             
             else if redLight{
                 
-                Light(color: Color(.systemRed), duration: 3, count: $yellowLight, notCount: $redLight)
+                Light(color: Color(.systemRed), duration: 5, count: $yellowLight, notCount: $redLight)
                     .padding()
                 
                 
@@ -73,7 +73,7 @@ struct TrafficLight2: View {
                 
                 let hasWrited = (emotions[0] != "" || emotions[1] != "" || emotions[2] != "")
                 
-                Light(color: Color(.systemYellow), duration: 3, count: $greenLight, notCount: .constant(false))
+                Light(color: Color(.systemYellow), duration: 15, count: $greenLight, notCount: .constant(false))
                     .padding()
                 
                 
@@ -152,7 +152,7 @@ struct TrafficLight2: View {
                 
                 let hasWrited = (thoughts[0] != "" || thoughts[1] != "" || thoughts[2] != "")
                 
-                Light(color: Color(.systemGreen), duration: 3, count: $offLight, notCount: .constant(false))
+                Light(color: Color(.systemGreen), duration: 15, count: $offLight, notCount: .constant(false))
                     .padding()
                 
                 Text("Thoughts:")
