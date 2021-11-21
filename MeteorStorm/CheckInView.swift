@@ -116,6 +116,8 @@ struct CheckInView: View {
             }//Toolbar
             
         }//navigationView
+        .accentColor(Color(.systemIndigo))
+
     }
 }
 

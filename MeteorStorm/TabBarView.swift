@@ -20,7 +20,7 @@ struct TabBarView: View{
                     Label("Calendar", systemImage: "calendar")
                 }
             
-            TrainingView(isActive: [false, false, false])
+            TrainingView(isActive: [false, false, false, false, false])
                 .tabItem{
                     Label("Training", systemImage: "brain")
                 }

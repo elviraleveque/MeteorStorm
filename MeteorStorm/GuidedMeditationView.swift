@@ -10,6 +10,9 @@ import SwiftUI
 
 
 struct GuidedMeditation: View {
+    @Binding var rootIsActive : Bool
+    @Binding var isCompleted : Bool
+    
           var body: some View {
                     VStack{
                               Spacer()
@@ -33,7 +36,7 @@ struct GuidedMeditation: View {
                               
                               Text("Ready?").font(.largeTitle).fontWeight(.bold).padding()
                               
-                              NavigationLink(destination: TextMed()) {
+                              NavigationLink(destination: TextMed(rootIsActive: self.$rootIsActive, isCompleted: self.$isCompleted)) {
                                         Text("Start")
                                                   .padding(.vertical)
                                                   .frame( maxWidth: .infinity)
@@ -41,17 +44,17 @@ struct GuidedMeditation: View {
                                                   .background(Color(.systemIndigo)).cornerRadius(14)
                                                   .padding(.horizontal)
                               }
+                              .isDetailLink(false)
+
                               
                     }//VStack
                     .navigationTitle("Breathing")
                     .padding(.bottom)
-                    
                     .toolbar{
                               
                               Button{
-                                        //Place the action that the button performs
-                              } label: {
-                                        Image(systemName: "gearshape")
+                                   self.rootIsActive = false                                } label: {
+                                        Text("Cancel")
                                                   .foregroundColor(Color(.systemIndigo))
                               }
                               
@@ -59,14 +62,4 @@ struct GuidedMeditation: View {
           }
 }
 
-struct GuidedMeditation_Previews: PreviewProvider {
-          static var previews: some View {
-                    Group {
-                              GuidedMeditation()
-                                        .preferredColorScheme(.light)
-                              GuidedMeditation()
-                                        .preferredColorScheme(.dark)
-                    }
-          }
-}
 
