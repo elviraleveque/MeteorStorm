@@ -27,11 +27,18 @@
 		763B3B2D2744F881005AA766 /* RelationshipCaring2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B2C2744F881005AA766 /* RelationshipCaring2.swift */; };
 		763B3B2F2744F890005AA766 /* RelationshipCaring3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B2E2744F890005AA766 /* RelationshipCaring3.swift */; };
 		763B3B312744F8A4005AA766 /* RelationshipCaring4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B302744F8A4005AA766 /* RelationshipCaring4.swift */; };
+		763B3B4727479813005AA766 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B4627479812005AA766 /* Pie.swift */; };
+		763B3B4F2747B802005AA766 /* TrafficLight2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B4B2747B802005AA766 /* TrafficLight2.swift */; };
+		763B3B512747B802005AA766 /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B4D2747B802005AA766 /* TrafficLight.swift */; };
 		763FA36B2742981300E2108D /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763FA36A2742981300E2108D /* CheckInView.swift */; };
+		76B87A4D274A5D4300CC0172 /* CalendarCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B87A4C274A5D4300CC0172 /* CalendarCard.swift */; };
+		76B87A4F274A722E00CC0172 /* HappyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B87A4E274A722E00CC0172 /* HappyView.swift */; };
 		7B047395274138D60013496C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047394274138D60013496C /* TabBarView.swift */; };
 		7B047397274139330013496C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047396274139330013496C /* CalendarView.swift */; };
 		7B04739927413A210013496C /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04739827413A210013496C /* TrainingView.swift */; };
 		7B33C9942743C181000F3D2E /* CircleEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B33C9932743C181000F3D2E /* CircleEmoji.swift */; };
+		7B471ADD2747BAA3008CDC33 /* TrafficLight 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B471ADC2747BAA3008CDC33 /* TrafficLight 3.swift */; };
+		7B471AE12747C440008CDC33 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B471AE02747C440008CDC33 /* Light.swift */; };
 		7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A7563274032DD00E4EB9F /* TodayView.swift */; };
 		7BA92FAE27440C8300C002F4 /* CheckInView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA92FAD27440C8300C002F4 /* CheckInView2.swift */; };
 		7BA92FB027442AEC00C002F4 /* NotTappableEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */; };
@@ -79,11 +86,18 @@
 		763B3B2C2744F881005AA766 /* RelationshipCaring2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring2.swift; sourceTree = "<group>"; };
 		763B3B2E2744F890005AA766 /* RelationshipCaring3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring3.swift; sourceTree = "<group>"; };
 		763B3B302744F8A4005AA766 /* RelationshipCaring4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationshipCaring4.swift; sourceTree = "<group>"; };
+		763B3B4627479812005AA766 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		763B3B4B2747B802005AA766 /* TrafficLight2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLight2.swift; sourceTree = "<group>"; };
+		763B3B4D2747B802005AA766 /* TrafficLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
 		763FA36A2742981300E2108D /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
+		76B87A4C274A5D4300CC0172 /* CalendarCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCard.swift; sourceTree = "<group>"; };
+		76B87A4E274A722E00CC0172 /* HappyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyView.swift; sourceTree = "<group>"; };
 		7B047394274138D60013496C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		7B047396274139330013496C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7B04739827413A210013496C /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		7B33C9932743C181000F3D2E /* CircleEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleEmoji.swift; sourceTree = "<group>"; };
+		7B471ADC2747BAA3008CDC33 /* TrafficLight 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrafficLight 3.swift"; sourceTree = "<group>"; };
+		7B471AE02747C440008CDC33 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		7B7A7563274032DD00E4EB9F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		7BA92FAD27440C8300C002F4 /* CheckInView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView2.swift; sourceTree = "<group>"; };
 		7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTappableEmoji.swift; sourceTree = "<group>"; };
@@ -117,6 +131,7 @@
 		5984A164273E7E1700167292 = {
 			isa = PBXGroup;
 			children = (
+				76B87A50274A754F00CC0172 /* Calendar */,
 				5984A16F273E7E1700167292 /* MeteorStorm */,
 				5984A185273E7E1900167292 /* MeteorStormTests */,
 				5984A18F273E7E1900167292 /* MeteorStormUITests */,
@@ -139,25 +154,15 @@
 			children = (
 				442F210E274699C600129B35 /* Info.plist */,
 				7B047394274138D60013496C /* TabBarView.swift */,
-				7B7A7563274032DD00E4EB9F /* TodayView.swift */,
-				763B3B2A2744F86E005AA766 /* RelationshipCaring.swift */,
-				763B3B2C2744F881005AA766 /* RelationshipCaring2.swift */,
-				763B3B2E2744F890005AA766 /* RelationshipCaring3.swift */,
-				763B3B302744F8A4005AA766 /* RelationshipCaring4.swift */,
-				763FA36A2742981300E2108D /* CheckInView.swift */,
-				7BA92FAD27440C8300C002F4 /* CheckInView2.swift */,
-				44F747692744FC740059322F /* SelfEsteemView.swift */,
-				44F7476B2744FE110059322F /* SelfEsteemExercise.swift */,
-				7B047396274139330013496C /* CalendarView.swift */,
-				7B33C9932743C181000F3D2E /* CircleEmoji.swift */,
-				7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */,
-				7B04739827413A210013496C /* TrainingView.swift */,
-				44F7476D274505800059322F /* GuidedMeditationView.swift */,
-				44F7476F2745073F0059322F /* GuidedMExercise.swift */,
 				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
-				446518F627402F1C00B18829 /* BreathingView.swift */,
-				44F747672743D1460059322F /* BreathingExercise.swift */,
-				44F747652743C7770059322F /* BreathingDetector.swift */,
+				7B7A7563274032DD00E4EB9F /* TodayView.swift */,
+				7B04739827413A210013496C /* TrainingView.swift */,
+				7B471AD12747B8AF008CDC33 /* RelationshipCaring */,
+				7B471AD22747B8C6008CDC33 /* Check in */,
+				7B471AD82747B934008CDC33 /* Traffic Light */,
+				7B471ADA2747B960008CDC33 /* Breathing */,
+				7B471ADB2747B9C9008CDC33 /* Guided meditation */,
+				7B471AD72747B924008CDC33 /* Self Esteem */,
 				5984A172273E7E1700167292 /* DatesList.swift */,
 				5984A174273E7E1900167292 /* Assets.xcassets */,
 				5984A179273E7E1900167292 /* Persistence.swift */,
@@ -190,6 +195,78 @@
 				5984A192273E7E1900167292 /* MeteorStormUITestsLaunchTests.swift */,
 			);
 			path = MeteorStormUITests;
+			sourceTree = "<group>";
+		};
+		76B87A50274A754F00CC0172 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				76B87A4C274A5D4300CC0172 /* CalendarCard.swift */,
+				7B047396274139330013496C /* CalendarView.swift */,
+				76B87A4E274A722E00CC0172 /* HappyView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		7B471AD12747B8AF008CDC33 /* RelationshipCaring */ = {
+			isa = PBXGroup;
+			children = (
+				763B3B2A2744F86E005AA766 /* RelationshipCaring.swift */,
+				763B3B2C2744F881005AA766 /* RelationshipCaring2.swift */,
+				763B3B2E2744F890005AA766 /* RelationshipCaring3.swift */,
+				763B3B302744F8A4005AA766 /* RelationshipCaring4.swift */,
+			);
+			name = RelationshipCaring;
+			sourceTree = "<group>";
+		};
+		7B471AD22747B8C6008CDC33 /* Check in */ = {
+			isa = PBXGroup;
+			children = (
+				7B33C9932743C181000F3D2E /* CircleEmoji.swift */,
+				7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */,
+				763FA36A2742981300E2108D /* CheckInView.swift */,
+				7BA92FAD27440C8300C002F4 /* CheckInView2.swift */,
+			);
+			name = "Check in";
+			sourceTree = "<group>";
+		};
+		7B471AD72747B924008CDC33 /* Self Esteem */ = {
+			isa = PBXGroup;
+			children = (
+				44F747692744FC740059322F /* SelfEsteemView.swift */,
+				44F7476B2744FE110059322F /* SelfEsteemExercise.swift */,
+			);
+			name = "Self Esteem";
+			sourceTree = "<group>";
+		};
+		7B471AD82747B934008CDC33 /* Traffic Light */ = {
+			isa = PBXGroup;
+			children = (
+				763B3B4627479812005AA766 /* Pie.swift */,
+				763B3B4D2747B802005AA766 /* TrafficLight.swift */,
+				763B3B4B2747B802005AA766 /* TrafficLight2.swift */,
+				7B471ADC2747BAA3008CDC33 /* TrafficLight 3.swift */,
+				7B471AE02747C440008CDC33 /* Light.swift */,
+			);
+			name = "Traffic Light";
+			sourceTree = "<group>";
+		};
+		7B471ADA2747B960008CDC33 /* Breathing */ = {
+			isa = PBXGroup;
+			children = (
+				446518F627402F1C00B18829 /* BreathingView.swift */,
+				44F747672743D1460059322F /* BreathingExercise.swift */,
+				44F747652743C7770059322F /* BreathingDetector.swift */,
+			);
+			name = Breathing;
+			sourceTree = "<group>";
+		};
+		7B471ADB2747B9C9008CDC33 /* Guided meditation */ = {
+			isa = PBXGroup;
+			children = (
+				44F7476D274505800059322F /* GuidedMeditationView.swift */,
+				44F7476F2745073F0059322F /* GuidedMExercise.swift */,
+			);
+			name = "Guided meditation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,21 +402,28 @@
 				44F747682743D1460059322F /* BreathingExercise.swift in Sources */,
 				5984A17A273E7E1900167292 /* Persistence.swift in Sources */,
 				7B047397274139330013496C /* CalendarView.swift in Sources */,
+				7B471ADD2747BAA3008CDC33 /* TrafficLight 3.swift in Sources */,
 				763FA36B2742981300E2108D /* CheckInView.swift in Sources */,
 				763B3B312744F8A4005AA766 /* RelationshipCaring4.swift in Sources */,
 				7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */,
 				5984A17D273E7E1900167292 /* MeteorStorm.xcdatamodeld in Sources */,
 				7BA92FB027442AEC00C002F4 /* NotTappableEmoji.swift in Sources */,
 				7B04739927413A210013496C /* TrainingView.swift in Sources */,
+				763B3B4F2747B802005AA766 /* TrafficLight2.swift in Sources */,
 				5984A173273E7E1700167292 /* DatesList.swift in Sources */,
+				7B471AE12747C440008CDC33 /* Light.swift in Sources */,
 				44F747662743C7770059322F /* BreathingDetector.swift in Sources */,
+				763B3B4727479813005AA766 /* Pie.swift in Sources */,
 				44F7476A2744FC740059322F /* SelfEsteemView.swift in Sources */,
 				44F747702745073F0059322F /* GuidedMExercise.swift in Sources */,
+				76B87A4D274A5D4300CC0172 /* CalendarCard.swift in Sources */,
 				44F7476E274505800059322F /* GuidedMeditationView.swift in Sources */,
+				76B87A4F274A722E00CC0172 /* HappyView.swift in Sources */,
 				7B047395274138D60013496C /* TabBarView.swift in Sources */,
 				44F7476C2744FE110059322F /* SelfEsteemExercise.swift in Sources */,
 				5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */,
 				763B3B2F2744F890005AA766 /* RelationshipCaring3.swift in Sources */,
+				763B3B512747B802005AA766 /* TrafficLight.swift in Sources */,
 				7B33C9942743C181000F3D2E /* CircleEmoji.swift in Sources */,
 				7BA92FAE27440C8300C002F4 /* CheckInView2.swift in Sources */,
 				446518F727402F1C00B18829 /* BreathingView.swift in Sources */,

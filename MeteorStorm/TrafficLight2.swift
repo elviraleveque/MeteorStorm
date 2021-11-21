@@ -15,39 +15,36 @@ struct TrafficLight2: View {
     @State var currentDate = Date()
     @State var isActive = true
     
-    @State var timeRemaining = [5, 6, 7]
+    @State var timeRemaining = [10, 6, 7]
     @State var emotions = ["","",""]
     @State var thoughts = ["","",""]
     
     @State var empty = false
     
     @State var count = 0
+
     
     var body: some View {
         
         VStack{
             
             if count == 0{
+
+                Light(color: Color(.systemRed), duration: 10, count: $count)
                 
-                CountDown2(isActive: $isActive, count: $count, timeRemaining: $timeRemaining[0])
                 
-                Stoplight(color: .red)
                 Text("Topic:")
                     .font(.largeTitle).fontWeight(.bold).padding()
                 
                 Text("Family")
                     .font(.system(size: 34, weight: .regular, design: .default))
                     .foregroundColor(Color.primary)
-                    
-                Spacer()
+
                 
-        
+                
             }
             else if count == 1{
                 
-                CountDown2(isActive: $isActive, count: $count, timeRemaining: $timeRemaining[1])
-                
-                Stoplight(color: .yellow)
                 
                 Text("Emotions:")
                     .font(.largeTitle).fontWeight(.bold).padding()
@@ -78,34 +75,12 @@ struct TrafficLight2: View {
                             .stroke(Color(.systemYellow), lineWidth: 2)
                     )
                     .padding()
-                      
-                      Spacer()
                 
-//                                if (emotions[0] == "" && emotions[1] == "" && emotions[2] == ""){
-//                                    Text("Continue")
-//                                              .padding(.vertical)
-//                                              .frame( maxWidth: .infinity)
-//                                              .foregroundColor(Color.white)
-//                                              .background(Color(.systemIndigo)).cornerRadius(14)
-//                                              .padding(.horizontal)
-//                                              .opacity(0.5)
-//                                                }
-//                                else{
-//                                    Text("Continue")
-//                                              .padding(.vertical)
-//                                              .frame( maxWidth: .infinity)
-//                                              .foregroundColor(Color.white)
-//                                              .background(Color(.systemIndigo)).cornerRadius(14)
-//                                              .padding(.horizontal)
-//                                              .opacity(0.5)
-//                                    }
+                Spacer()
                 
+
             }
             else if count == 2 {
-                
-                CountDown2(isActive: $isActive, count: $count, timeRemaining: $timeRemaining[2])
-                
-                Stoplight(color: .green)
                 
                 Text("Thoughts:")
                     .font(.largeTitle).fontWeight(.bold).padding()
@@ -119,7 +94,7 @@ struct TrafficLight2: View {
                             .stroke(Color(.systemGreen), lineWidth: 2)
                     )
                     .padding()
-            
+                
                 
                 
                 TextField("Why \(emotions[1])?", text: $thoughts[1]) //gets the text
@@ -146,15 +121,16 @@ struct TrafficLight2: View {
                 
             }
             else{
-                        TrafficLight3()
+                TrafficLight3()
                 
-                        }
-                        
-              }
-
-                }
-
-        }//VStack
+            }
+            
+        }
+        
+    }
+    
+    
+}//VStack
 
 
 
