@@ -131,7 +131,6 @@
 		5984A164273E7E1700167292 = {
 			isa = PBXGroup;
 			children = (
-				76B87A50274A754F00CC0172 /* Calendar */,
 				5984A16F273E7E1700167292 /* MeteorStorm */,
 				5984A185273E7E1900167292 /* MeteorStormTests */,
 				5984A18F273E7E1900167292 /* MeteorStormUITests */,
@@ -157,6 +156,7 @@
 				5984A170273E7E1700167292 /* MeteorStormApp.swift */,
 				7B7A7563274032DD00E4EB9F /* TodayView.swift */,
 				7B04739827413A210013496C /* TrainingView.swift */,
+				76B87A50274A754F00CC0172 /* Calendar */,
 				7B471AD12747B8AF008CDC33 /* RelationshipCaring */,
 				7B471AD22747B8C6008CDC33 /* Check in */,
 				7B471AD82747B934008CDC33 /* Traffic Light */,
