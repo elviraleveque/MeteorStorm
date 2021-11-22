@@ -25,22 +25,21 @@ struct TrafficLight: View {
             
             VStack(alignment: .leading){
                 
-                Text("Try to pull yourself together by following the traffic light of your mindfulness.")
-                    .padding(.horizontal)
-                    .padding(.top)
+                Text("""
+Try to pull yourself together by following the traffic light of your mindfulness.
+
+**Red light**:
+Stop for some time and think about the provided topic
+
+**Yellow light**:
+Type down a set of emotions before the timer expires
+
+**Green light**:
+Type down your thoughts on your set of emotions before the timer expires
+""")
                 
-                Text("Red light:\nStop for some time and think about the provided topic")
-                    .padding(.horizontal)
-                    .padding(.top)
-                
-                Text("Yellow light:\nType down a set of emotions before the timer expires")
-                    .padding(.horizontal)
-                    .padding(.top)
-                
-                Text("Green light:\nType down your thoughts on your set of emotions before the timer expires")
-                    .padding(.horizontal)
-                    .padding(.top)
             }
+            .padding()
             
             Spacer()
             
