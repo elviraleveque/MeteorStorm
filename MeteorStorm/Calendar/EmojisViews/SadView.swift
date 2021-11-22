@@ -50,7 +50,7 @@ struct SadView: View {
             }
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
-        .navigationTitle("Scared")
+        .navigationTitle("Sad")
         .background(Color(.systemGray6))
     }
 }
