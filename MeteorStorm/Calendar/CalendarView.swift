@@ -92,7 +92,7 @@ struct CalendarView: View {
                     .padding(.horizontal)
                     
                     
-                    CalendarCard(emotion: notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)), emoname: "Happy", days: "10", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)), emoname: "Happy", days: "6", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                     
                     CalendarCard(emotion: notTappableEmoji(emoji: Image("neutro"), color: Color(.systemYellow)), emoname: "Blank", days: "6", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                     

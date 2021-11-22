@@ -20,8 +20,10 @@ struct SadView: View {
     
     var body: some View {
         VStack{
-            
+            Spacer()
             notTappableEmoji(emoji: Image("triste"), color: Color(.systemBlue))
+                .padding(.top)
+
             
             Text("5 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
@@ -37,7 +39,7 @@ struct SadView: View {
                     JournalCard(date: dates[4], text: $texts[4], editMode: $editMode)
 
                 }
-            }.background(Color(.systemGray6))
+            }
             
         }
         .toolbar{
@@ -49,6 +51,7 @@ struct SadView: View {
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Scared")
+        .background(Color(.systemGray6))
     }
 }
 

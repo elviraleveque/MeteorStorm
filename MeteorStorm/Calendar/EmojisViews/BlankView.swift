@@ -20,8 +20,10 @@ struct BlankView: View {
     
     var body: some View {
         VStack{
-            
+            Spacer()
             notTappableEmoji(emoji: Image("neutro"), color: Color(.systemYellow))
+                .padding(.top)
+
             
             Text("6 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
@@ -38,7 +40,7 @@ struct BlankView: View {
                     JournalCard(date: dates[5], text: $texts[5], editMode: $editMode)
 
                 }
-            }.background(Color( .systemGray6))
+            }
             
         }
         .toolbar{
@@ -50,6 +52,7 @@ struct BlankView: View {
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Blank")
+        .background(Color( .systemGray6))
     }
 }
 

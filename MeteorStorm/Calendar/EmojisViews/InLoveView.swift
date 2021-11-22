@@ -20,8 +20,9 @@ struct InLoveView: View {
     
     var body: some View {
         VStack{
-            
+            Spacer()
             notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange))
+                .padding(.top)
             
             Text("2 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
@@ -34,7 +35,7 @@ struct InLoveView: View {
                     JournalCard(date: dates[1], text: $texts[1], editMode: $editMode)
 
                 }
-            }.background(Color( .systemGray6))
+            }
             
         }
         .toolbar{
@@ -46,6 +47,7 @@ struct InLoveView: View {
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("In Love")
+        .background(Color( .systemGray6))
     }
 }
 

@@ -32,7 +32,7 @@ struct CheckInView2: View {
             
             
             TextField(
-                "Today I'm feelling...",
+                "Today I'm feeling...",
                 text: $additional
             )
                 .disableAutocorrection(true)

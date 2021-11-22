@@ -20,8 +20,10 @@ struct AngryView: View {
     
     var body: some View {
         VStack{
-            
+            Spacer()
             notTappableEmoji(emoji: Image("rabbia"), color: Color(.systemRed))
+                .padding(.top)
+
             
             Text("3 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
@@ -35,7 +37,7 @@ struct AngryView: View {
                     JournalCard(date: dates[2], text: $texts[2], editMode: $editMode)
 
                 }
-            }.background(Color(.systemGray6))
+            }
             
         }
         .toolbar{
@@ -47,6 +49,7 @@ struct AngryView: View {
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Angry")
+        .background(Color(.systemGray6))
     }
 }
 
