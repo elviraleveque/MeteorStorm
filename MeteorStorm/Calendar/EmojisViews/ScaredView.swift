@@ -11,9 +11,9 @@ struct ScaredView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 02", "October 04"]
+    @State var dates = ["November 02", "November 04"]
     
-    @State var texts = ["I got a live presentation... I'm so scared!","Spider encounter"]
+    @State var texts = ["I've to do an hard project and I'm not so good in coding... I'm so scared!","Spider encounter"]
     
     @State var editMode = false
     

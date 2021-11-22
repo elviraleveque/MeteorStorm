@@ -14,7 +14,7 @@ struct TrainingListItem<Destination: View>: View {
     var isCompleted: Bool
     var destination: Destination
     @Binding var isActive : Bool
-    
+
     var body: some View {
         HStack {
             NavigationLink(destination: destination,isActive: self.$isActive, label: {
@@ -39,6 +39,9 @@ struct TrainingView: View {
     
     @State var isActive: [Bool] = [false, false, false, false, false]
     @State var completed: [Bool] = [false, false, false, false, false]
+//    init() {
+//        UITableView.appearance().backgroundColor = UIColor.systemBackground
+//    }
 
    
     var body: some View {

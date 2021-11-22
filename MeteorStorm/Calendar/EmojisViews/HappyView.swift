@@ -11,9 +11,9 @@ struct HappyView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 06", "October 07", "October 08", "October 09", "October 11", "October 12"]
+    @State var dates = ["November 06", "November 07", "November 08", "November 09", "November 11", "November 12"]
     
-    @State var texts = ["Such a sunny day in October!","Today I have a day off from work!","I feel so relaxed!","I found 5 euros on the floor!","Everything is going smoothly.","I was praised at work! Yay, so proud of myself!"]
+    @State var texts = ["Such a sunny day in November!","Today I have a day off from work!","I feel so relaxed!","I found 5 euros on the floor!","Everything is going smoothly.","I was praised at work! Yay, so proud of myself!"]
     
     @State var editMode = false
     
@@ -55,6 +55,8 @@ struct HappyView: View {
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Happy")
         .background(Color(.systemGray6))
+        .navigationBarColor(.systemGray6)
+
     }
 }
 

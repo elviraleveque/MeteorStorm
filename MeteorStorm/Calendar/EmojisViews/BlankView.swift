@@ -11,7 +11,7 @@ struct BlankView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 26", "October 27", "October 28", "October 29","October 30", "October 31"]
+    @State var dates = ["November 01", "November 13", "November 14", "November 17","November 18", "November 25"]
     
     @State var texts = ["I don't feel anything.","I'm feeling quite indifferent.","I have a day off, but I don't know what to do.","Bored.","I don't know how I feel.","Hard to explain how I feel today."]
     

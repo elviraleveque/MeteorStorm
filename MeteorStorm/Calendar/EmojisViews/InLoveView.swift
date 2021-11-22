@@ -11,9 +11,9 @@ struct InLoveView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 10", "October 13"]
+    @State var dates = ["November 10", "November 15", "November 19", "November 26"]
     
-    @State var texts = ["I met a  stray dog and he followed me home!","Cuddling all day with my puppy!"]
+    @State var texts = ["I met a stray dog and he followed me home!","Cuddling all day with my puppy!", "My project is shaping up and it looks awesome", "My presentation day was great!"]
     
     @State var editMode = false
     
@@ -24,7 +24,7 @@ struct InLoveView: View {
             notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange))
                 .padding(.top)
             
-            Text("2 days")
+            Text("4 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
                 .foregroundColor(Color(.systemGray))
             ZStack{
@@ -34,6 +34,8 @@ struct InLoveView: View {
 
                     JournalCard(date: dates[0], text: $texts[0], editMode: $editMode)
                     JournalCard(date: dates[1], text: $texts[1], editMode: $editMode)
+                    JournalCard(date: dates[2], text: $texts[2], editMode: $editMode)
+                    JournalCard(date: dates[3], text: $texts[3], editMode: $editMode)
 
                 }
             }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View{
+
     var body: some View{
         TabView{
             TodayView()
@@ -20,7 +21,7 @@ struct TabBarView: View{
                     Label("Calendar", systemImage: "calendar")
                 }
             
-            TrainingView(isActive: [false, false, false, false, false])
+            TrainingView()
                 .tabItem{
                     Label("Training", systemImage: "brain")
                 }

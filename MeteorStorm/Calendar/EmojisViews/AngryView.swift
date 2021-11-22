@@ -11,7 +11,7 @@ struct AngryView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 01", "October 03", "October 05"]
+    @State var dates = ["November 01", "November 03", "November 05"]
     
     @State var texts = ["My teammate was so rude with me, but I didn't have the chance to reply!","Still upset because of my teammate. Can't stop thinking about it!","I talked with him and he didn't even pay attention!",]
     

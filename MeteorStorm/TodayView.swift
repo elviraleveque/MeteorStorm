@@ -145,22 +145,21 @@ struct TodayView: View {
                 .cornerRadius(32)
                 .padding(.horizontal)
                 
-                //                Spacer()
                 
                 
             }//Vstack
             .navigationTitle("Today")
             .padding(.bottom) //Add to prevent overlay with tabBar
-            .toolbar{
-                
-                Button{
-                    //Place the action that the button performs
-                } label: {
-                    Image(systemName: "gearshape")
-                        .foregroundColor(Color(.systemIndigo))
-                }
-                
-            }//Toolbar
+//            .toolbar{
+//
+//                Button{
+//                    //Place the action that the button performs
+//                } label: {
+//                    Image(systemName: "gearshape")
+//                        .foregroundColor(Color(.systemIndigo))
+//                }
+//
+//            }//Toolbar
             
         }//Navigation View
     }

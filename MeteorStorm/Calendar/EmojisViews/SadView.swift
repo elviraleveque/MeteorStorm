@@ -11,7 +11,7 @@ struct SadView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 20", "October 21", "October 22", "October 23", "October 24"]
+    @State var dates = ["November 20", "November 21", "November 22", "November 23", "November 24"]
     
     @State var texts = ["My friends didn't call me to go out with them.... So sad","Maybe I did something wrong?","Why no one ever listen to me?!","I don't feel like doing anything...","I need to work on my project but I'm feeling gloomy..."]
     
