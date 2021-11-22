@@ -24,7 +24,7 @@ struct TodayView: View {
     @State var doneCheck = false
     
     let emotionList: [notTappableEmoji] = [
-        notTappableEmoji(emoji: Image(""), color: .white),
+        notTappableEmoji(emoji: Image("festa"), color: .white),
         notTappableEmoji(emoji: Image("festa"), color: Color(.systemGreen)),
         notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange)),
         notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)),

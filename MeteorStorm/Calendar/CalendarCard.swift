@@ -22,7 +22,7 @@ struct CalendarCard<Destination: View>: View {
                 rectangle
                     .foregroundColor(.white)
                     .padding(.horizontal)
-                   
+                
                 HStack{
                     emotion
                         .scaleEffect(0.7)
@@ -30,17 +30,16 @@ struct CalendarCard<Destination: View>: View {
                     VStack(alignment: .leading){
                         Text("\(emoname)")
                             .font(.system(size: 28, weight: .bold, design: .default))
-                            .foregroundColor(Color(.black))
+                            .foregroundColor(Color.primary)
                         Text("\(days) days")
                             .font(.system(size: 17, weight: .regular, design: .default))
+                            .foregroundColor(.gray)
                     }
                     Spacer()
                     Image(systemName: "chevron.right")
                         .padding()
                 }
                 .padding(.horizontal)
-                
-        .foregroundColor(Color(.systemGray))
             }
         })
     }

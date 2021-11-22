@@ -20,8 +20,9 @@ struct HappyView: View {
     
     var body: some View {
         VStack{
-            
+            Spacer()
             notTappableEmoji(emoji: Image( "felice"), color: Color(.systemPurple))
+                .padding(.top)
             
             Text("10 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
@@ -35,8 +36,8 @@ struct HappyView: View {
                     JournalCard(date: dates[2], text: $texts[2], editMode: $editMode)
 
                 }
-            }.background(Color( #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)))
-            
+            }
+
         }
         .toolbar{
             Button{
@@ -47,6 +48,7 @@ struct HappyView: View {
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Happy")
+        .background(Color(.systemGray6))
     }
 }
 
