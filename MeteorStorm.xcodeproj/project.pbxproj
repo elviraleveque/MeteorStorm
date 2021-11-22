@@ -32,7 +32,6 @@
 		763B3B512747B802005AA766 /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763B3B4D2747B802005AA766 /* TrafficLight.swift */; };
 		763FA36B2742981300E2108D /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763FA36A2742981300E2108D /* CheckInView.swift */; };
 		76B87A4D274A5D4300CC0172 /* CalendarCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B87A4C274A5D4300CC0172 /* CalendarCard.swift */; };
-		76EABE33274AA96C0064384E /* HappyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EABE32274AA96C0064384E /* HappyView.swift */; };
 		7B047395274138D60013496C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047394274138D60013496C /* TabBarView.swift */; };
 		7B047397274139330013496C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B047396274139330013496C /* CalendarView.swift */; };
 		7B04739927413A210013496C /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04739827413A210013496C /* TrainingView.swift */; };
@@ -42,6 +41,8 @@
 		7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A7563274032DD00E4EB9F /* TodayView.swift */; };
 		7BA92FAE27440C8300C002F4 /* CheckInView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA92FAD27440C8300C002F4 /* CheckInView2.swift */; };
 		7BA92FB027442AEC00C002F4 /* NotTappableEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */; };
+		7BD4E82B274B8E3B00441F0D /* JournalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4E82A274B8E3B00441F0D /* JournalCard.swift */; };
+		7BD4E82E274B91A900441F0D /* HappyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4E82D274B91A900441F0D /* HappyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +92,6 @@
 		763B3B4D2747B802005AA766 /* TrafficLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
 		763FA36A2742981300E2108D /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
 		76B87A4C274A5D4300CC0172 /* CalendarCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCard.swift; sourceTree = "<group>"; };
-		76EABE32274AA96C0064384E /* HappyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HappyView.swift; path = ../HappyView.swift; sourceTree = "<group>"; };
 		7B047394274138D60013496C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		7B047396274139330013496C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7B04739827413A210013496C /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
@@ -101,6 +101,8 @@
 		7B7A7563274032DD00E4EB9F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		7BA92FAD27440C8300C002F4 /* CheckInView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView2.swift; sourceTree = "<group>"; };
 		7BA92FAF27442AEC00C002F4 /* NotTappableEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTappableEmoji.swift; sourceTree = "<group>"; };
+		7BD4E82A274B8E3B00441F0D /* JournalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCard.swift; sourceTree = "<group>"; };
+		7BD4E82D274B91A900441F0D /* HappyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,9 +202,10 @@
 		76B87A50274A754F00CC0172 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				7BD4E82C274B918D00441F0D /* EmojisViews */,
 				76B87A4C274A5D4300CC0172 /* CalendarCard.swift */,
 				7B047396274139330013496C /* CalendarView.swift */,
-				76EABE32274AA96C0064384E /* HappyView.swift */,
+				7BD4E82A274B8E3B00441F0D /* JournalCard.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -267,6 +270,14 @@
 				44F7476F2745073F0059322F /* GuidedMExercise.swift */,
 			);
 			name = "Guided meditation";
+			sourceTree = "<group>";
+		};
+		7BD4E82C274B918D00441F0D /* EmojisViews */ = {
+			isa = PBXGroup;
+			children = (
+				7BD4E82D274B91A900441F0D /* HappyView.swift */,
+			);
+			path = EmojisViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +418,7 @@
 				763B3B312744F8A4005AA766 /* RelationshipCaring4.swift in Sources */,
 				7B7A7564274032DD00E4EB9F /* TodayView.swift in Sources */,
 				5984A17D273E7E1900167292 /* MeteorStorm.xcdatamodeld in Sources */,
+				7BD4E82E274B91A900441F0D /* HappyView.swift in Sources */,
 				7BA92FB027442AEC00C002F4 /* NotTappableEmoji.swift in Sources */,
 				7B04739927413A210013496C /* TrainingView.swift in Sources */,
 				763B3B4F2747B802005AA766 /* TrafficLight2.swift in Sources */,
@@ -418,7 +430,6 @@
 				44F747702745073F0059322F /* GuidedMExercise.swift in Sources */,
 				76B87A4D274A5D4300CC0172 /* CalendarCard.swift in Sources */,
 				44F7476E274505800059322F /* GuidedMeditationView.swift in Sources */,
-				76EABE33274AA96C0064384E /* HappyView.swift in Sources */,
 				7B047395274138D60013496C /* TabBarView.swift in Sources */,
 				44F7476C2744FE110059322F /* SelfEsteemExercise.swift in Sources */,
 				5984A171273E7E1700167292 /* MeteorStormApp.swift in Sources */,
@@ -428,6 +439,7 @@
 				7BA92FAE27440C8300C002F4 /* CheckInView2.swift in Sources */,
 				446518F727402F1C00B18829 /* BreathingView.swift in Sources */,
 				763B3B2B2744F86E005AA766 /* RelationshipCaring.swift in Sources */,
+				7BD4E82B274B8E3B00441F0D /* JournalCard.swift in Sources */,
 				763B3B2D2744F881005AA766 /* RelationshipCaring2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
