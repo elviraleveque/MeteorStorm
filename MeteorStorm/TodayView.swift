@@ -62,7 +62,7 @@ struct TodayView: View {
                         
                         Spacer()
                         
-                        CircleEmoji(emoji: Image("festa"), emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("felice"), emotionIndex: 3, color: Color(.systemPurple), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
                         
                         Spacer()
                         

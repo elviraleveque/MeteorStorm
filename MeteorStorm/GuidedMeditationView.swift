@@ -49,14 +49,6 @@ struct GuidedMeditation: View {
         }//VStack
         .navigationTitle("Guided Meditation")
         .padding(.bottom)
-        .toolbar{
-            
-            Button{
-                self.rootIsActive = false                                } label: {
-                    Text("Cancel")
-                        .foregroundColor(Color(.systemIndigo))
-                }
-            
-        }//Toolbar
+        
     }
 }

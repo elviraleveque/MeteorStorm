@@ -13,7 +13,8 @@ struct CalendarView: View {
     @State var selectedMonth: Int = Calendar.current.component(.month, from: Date()) - 1
     
     let months: [String] = Calendar.current.shortMonthSymbols
-    
+    @Environment(\.colorScheme) var colorScheme
+
     @State var isActive: [Bool] = [false, false, false, false, false, false]
     
     var body: some View {
@@ -90,7 +91,7 @@ struct CalendarView: View {
                     }
                     .padding(.horizontal)
                     
-                    CalendarCard(emotion: notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange)), emoname: "In Love", days: "2", destination: InLoveView(rootIsActive: self.$isActive[5]), isActive: $isActive[5])
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange)), emoname: "In Love", days: "4", destination: InLoveView(rootIsActive: self.$isActive[5]), isActive: $isActive[5])
                     
                     CalendarCard(emotion: notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)), emoname: "Happy", days: "6", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                     
@@ -106,8 +107,8 @@ struct CalendarView: View {
                 .padding(.vertical)
             }
             .navigationTitle("Calendar")
-            .background(Color(.systemGray6))
-            .navigationBarColor(.systemGray6)
+            .background(colorScheme == .dark ? .black : Color(.systemGray6))
+            .navigationBarColor(colorScheme == .dark ? .black : .systemGray6)
             
         }
         

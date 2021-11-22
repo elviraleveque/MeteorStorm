@@ -11,9 +11,9 @@ struct InLoveView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["November 10", "November 15", "November 19", "November 26"]
+    @State var dates = ["November 10", "November 15", "November 19", "November 25", "November 26"]
     
-    @State var texts = ["I met a stray dog and he followed me home!","Cuddling all day with my puppy!", "My project is shaping up and it looks awesome", "My presentation day was great!"]
+    @State var texts = ["I met a stray dog and he followed me home!","Cuddling all day with my puppy!","My project is shaping up and it looks awesome","The project is ready. I love it!","My presentation day was great!"]
     
     @State var editMode = false
     
@@ -36,6 +36,7 @@ struct InLoveView: View {
                     JournalCard(date: dates[1], text: $texts[1], editMode: $editMode)
                     JournalCard(date: dates[2], text: $texts[2], editMode: $editMode)
                     JournalCard(date: dates[3], text: $texts[3], editMode: $editMode)
+                    JournalCard(date: dates[4], text: $texts[4], editMode: $editMode)
 
                 }
             }
@@ -54,6 +55,8 @@ struct InLoveView: View {
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("In Love")
         .background(Color( .systemGray6))
+        .navigationBarColor(.systemGray6)
+
     }
 }
 

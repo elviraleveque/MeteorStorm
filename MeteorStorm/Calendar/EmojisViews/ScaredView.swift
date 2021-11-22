@@ -52,6 +52,8 @@ struct ScaredView: View {
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Scared")
         .background(Color( .systemGray6))
+        .navigationBarColor(.systemGray6)
+
     }
 }
 

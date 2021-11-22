@@ -12,7 +12,7 @@ import Foundation
 struct BreathingView: View {
           @Binding var rootIsActive : Bool
           @Binding var isCompleted : Bool
-
+          
           
           var body: some View {
                     VStack{
@@ -24,12 +24,13 @@ struct BreathingView: View {
                                         .frame(width: 123, height: 86)
                               
                               
-                              
-                              Text("Sit on a chair that supports your back or lay    \non a yoga  mat on the floor.")
-                              
-                                        .padding(.vertical)
-                              
-                              Text("Breath in through your nose and out through your mouth.")
+                              VStack(alignment: .leading){
+                                        Text("Sit on a chair that supports your back or lay on a yoga mat on the floor.")
+                                                  .padding()
+                                        
+                                        Text("Breath in through your nose and out through your mouth.")
+                                                  .padding(.horizontal)
+                              }
                               
                               Spacer()
                               
@@ -58,11 +59,11 @@ let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 struct CountDown: View{
           @Binding var isActive: Bool
-          @State private var timeRemaining = 3
+          @State private var timeRemaining = 80
           @State private var buttonOpacity = 0.0
           @Binding var isCompleted : Bool
           @Binding var rootIsActive: Bool
-
+          
           var body: some View{
                     VStack{
                               let minutes = Int(timeRemaining / 60)
@@ -76,14 +77,18 @@ struct CountDown: View{
                                         self.rootIsActive = false
                                         self.isCompleted = true
                                         
-                              }, label: {Text("Done")})
+                              }, label:
+                                        {
+                                        Text("Done")
+                                                  .padding(.vertical)
+                                                  .frame( maxWidth: .infinity)
+                                                  .foregroundColor(Color.white)
+                                                  .background(Color(.systemIndigo)).cornerRadius(14)
+                                                  .opacity(buttonOpacity)
+                                                  .padding()
+                                        
+                              })
                               
-                                        .padding(.vertical)
-                                        .frame( maxWidth: .infinity)
-                                        .foregroundColor(Color.white)
-                                        .background(Color(.systemIndigo)).cornerRadius(14)
-                                        .opacity(buttonOpacity)
-                                        .padding()
                     }//VStack
                     .onReceive(timer) { time in
                               guard self.isActive else { return }

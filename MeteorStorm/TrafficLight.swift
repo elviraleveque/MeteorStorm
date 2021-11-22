@@ -58,15 +58,7 @@ Type down your thoughts on your set of emotions before the timer expires
         }//VStack
         .navigationTitle("Traffic Light")
         .padding(.bottom)
-        .toolbar{
-            
-            Button{
-                self.rootIsActive = false                                } label: {
-                    Text("Cancel")
-                        .foregroundColor(Color(.systemIndigo))
-                }
-            
-        }//Toolbar
+        
         
     }
 }

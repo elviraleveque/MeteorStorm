@@ -13,6 +13,7 @@ struct CalendarCard<Destination: View>: View {
     var emoname: String
     var days: String
     var destination: Destination
+    @Environment(\.colorScheme) var colorScheme
     
     @Binding var isActive : Bool
     
@@ -20,7 +21,7 @@ struct CalendarCard<Destination: View>: View {
         NavigationLink(destination: destination, isActive: self.$isActive, label: {
             ZStack{
                 rectangle
-                    .foregroundColor(.white)
+                    .foregroundColor(colorScheme == .dark ? Color(.systemGray5) : .white)
                     .padding(.horizontal)
                 
                 HStack{

@@ -11,9 +11,9 @@ struct BlankView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["November 01", "November 13", "November 14", "November 17","November 18", "November 25"]
+    @State var dates = ["November 01", "November 13", "November 14", "November 17","November 18"]
     
-    @State var texts = ["I don't feel anything.","I'm feeling quite indifferent.","I have a day off, but I don't know what to do.","Bored.","I don't know how I feel.","Hard to explain how I feel today."]
+    @State var texts = ["I don't feel anything.","I'm feeling quite indifferent.","I have a day off, but I don't know what to do.","Bored.","I don't know how I feel."]
     
     @State var editMode = false
     
@@ -38,8 +38,6 @@ struct BlankView: View {
                     JournalCard(date: dates[2], text: $texts[2], editMode: $editMode)
                     JournalCard(date: dates[3], text: $texts[3], editMode: $editMode)
                     JournalCard(date: dates[4], text: $texts[4], editMode: $editMode)
-                    JournalCard(date: dates[5], text: $texts[5], editMode: $editMode)
-
                 }
             }
             

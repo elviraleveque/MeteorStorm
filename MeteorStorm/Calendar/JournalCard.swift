@@ -19,8 +19,13 @@ struct JournalCard: View {
                 
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 14)
+                .foregroundColor(Color.primary).colorInvert()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14)
+                                           .stroke(Color(.systemIndigo), lineWidth: 2)
+                )
                 .padding(.horizontal)
-                .foregroundColor(.white)
+
             
             if editMode{
             TextEditor(text: $text) //gets the text

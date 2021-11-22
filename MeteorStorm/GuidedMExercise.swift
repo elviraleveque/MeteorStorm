@@ -55,7 +55,7 @@ struct TextMed: View {
 
 struct GuidedMExercise: View{
     @State var meditationTexts : [String]
-    let timerText = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    let timerText = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     @State var timeTextMed = 0
     var body: some View{
         ZStack {
