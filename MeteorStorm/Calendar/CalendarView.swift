@@ -15,7 +15,7 @@ struct CalendarView: View {
     let months: [String] = Calendar.current.shortMonthSymbols
     
     
-    @State var isActive: [Bool] = [false, false, false, false, false]
+    @State var isActive: [Bool] = [false, false, false, false, false, false]
     
     var body: some View {
         NavigationView {
@@ -94,18 +94,18 @@ struct CalendarView: View {
                     
                     CalendarCard(emotion: notTappableEmoji(emoji: Image("felice"), color: Color(.systemPurple)), emoname: "Happy", days: "6", destination: HappyView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
                     
-                    CalendarCard(emotion: notTappableEmoji(emoji: Image("neutro"), color: Color(.systemYellow)), emoname: "Blank", days: "6", destination: BlankView(rootIsActive: self.$isActive[0]), isActive: $isActive[0])
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("neutro"), color: Color(.systemYellow)), emoname: "Blank", days: "6", destination: BlankView(rootIsActive: self.$isActive[1]), isActive: $isActive[1])
                     
-                    CalendarCard(emotion: notTappableEmoji(emoji: Image("triste"), color: Color(.systemBlue)), emoname: "Sad", days: "5", destination: SadView(rootIsActive: self.$isActive[1]), isActive: $isActive[1])
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("triste"), color: Color(.systemBlue)), emoname: "Sad", days: "5", destination: SadView(rootIsActive: self.$isActive[2]), isActive: $isActive[2])
                     
-                    CalendarCard(emotion: notTappableEmoji(emoji: Image("rabbia"), color: Color(.systemRed)), emoname: "Angry", days: "3", destination: AngryView(rootIsActive: self.$isActive[2]), isActive: $isActive[2])
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("rabbia"), color: Color(.systemRed)), emoname: "Angry", days: "3", destination: AngryView(rootIsActive: self.$isActive[3]), isActive: $isActive[3])
                     
-                    CalendarCard(emotion: notTappableEmoji(emoji: Image("paura"), color: Color(.systemBrown)), emoname: "Scared", days: "2", destination: ScaredView(rootIsActive: self.$isActive[3]), isActive: $isActive[3])
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("paura"), color: Color(.systemBrown)), emoname: "Scared", days: "2", destination: ScaredView(rootIsActive: self.$isActive[4]), isActive: $isActive[4])
                     
-                    CalendarCard(emotion: notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange)), emoname: "In Love", days: "2", destination: InLoveView(rootIsActive: self.$isActive[4]), isActive: $isActive[4])
+                    CalendarCard(emotion: notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange)), emoname: "In Love", days: "2", destination: InLoveView(rootIsActive: self.$isActive[5]), isActive: $isActive[5])
                     
                 }
-                .padding(.top)
+                .padding(.vertical)
             }
             .navigationTitle("Calendar")
             .background(Color(.systemGray6))
