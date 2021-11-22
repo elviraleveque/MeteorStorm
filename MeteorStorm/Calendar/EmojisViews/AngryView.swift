@@ -31,14 +31,19 @@ struct AngryView: View {
             ZStack{
                 
                 ScrollView{
-                    
+                    Spacer()
+
                     JournalCard(date: dates[0], text: $texts[0], editMode: $editMode)
                     JournalCard(date: dates[1], text: $texts[1], editMode: $editMode)
                     JournalCard(date: dates[2], text: $texts[2], editMode: $editMode)
 
                 }
             }
+
             
+        }
+        .onTapGesture{
+            hideKeyboard()
         }
         .toolbar{
             Button{

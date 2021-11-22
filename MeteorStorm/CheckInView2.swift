@@ -73,6 +73,9 @@ struct CheckInView2: View {
         }//VStack
         .navigationTitle("Check-In")
         .padding(.bottom)
+        .onTapGesture{
+            hideKeyboard()
+        }
         .toolbar{
             
             Button(action: {

@@ -30,13 +30,17 @@ struct ScaredView: View {
             ZStack{
                 
                 ScrollView{
-                    
+                    Spacer()
                     JournalCard(date: dates[0], text: $texts[0], editMode: $editMode)
                     JournalCard(date: dates[1], text: $texts[1], editMode: $editMode)
 
                 }
             }
+
             
+        }
+        .onTapGesture{
+            hideKeyboard()
         }
         .toolbar{
             Button{

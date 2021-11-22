@@ -74,7 +74,9 @@ struct RelationshipCaring3: View {
                       }//VStack
                       .navigationTitle("Relationship Caring")
                       .padding(.bottom)
-                      
+                      .onTapGesture{
+                          hideKeyboard()
+                      }
                       .toolbar{
                                 
                                 Button{

@@ -13,14 +13,10 @@ struct JournalCard: View {
     @Binding var editMode: Bool
     
     var body: some View {
-        Spacer()
         
         Text(date)
             .font(.system(size: 28, weight: .bold, design: .default))
-            .padding(.top)
-        
-        Spacer()
-        
+                
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 14)
                 .padding(.horizontal)
@@ -42,6 +38,7 @@ struct JournalCard: View {
             }
             
         }
+        .padding(.bottom)
     }
 }
 

@@ -8,7 +8,6 @@
 import SwiftUI
 
 
-
 struct TrafficLight2: View {
     @Binding var rootIsActive : Bool
     @Binding var isCompleted : Bool
@@ -27,8 +26,8 @@ struct TrafficLight2: View {
     @State var yellowLight = false
     @State var greenLight = false
     @State var offLight = false
-
-
+    @State var keyboard = false
+    
     var body: some View {
         
         VStack{
@@ -75,6 +74,7 @@ struct TrafficLight2: View {
                 
                 Light(color: Color(.systemYellow), duration: 15, count: $greenLight, notCount: .constant(false))
                     .padding()
+                    .opacity(keyboard ? 0 : 1)
                 
                 
                 Text("Emotions:")
@@ -110,8 +110,7 @@ struct TrafficLight2: View {
                     .padding(.horizontal)
                     .padding(.bottom)
                 
-                Spacer()
-                
+                Spacer(minLength: keyboard ? 200 : nil)
                 
                 Text(hasWrited ? "If you are ready go forward" : "Continue to think and write something")
                     .foregroundColor(Color(.systemGray))
@@ -120,7 +119,9 @@ struct TrafficLight2: View {
                 
                 if hasWrited{
                     Button{
-                        yellowLight = false
+                        if greenLight{
+                            yellowLight = false
+                        }
                     } label: {
                         
                         Text("Continue")
@@ -154,6 +155,7 @@ struct TrafficLight2: View {
                 
                 Light(color: Color(.systemGreen), duration: 15, count: $offLight, notCount: .constant(false))
                     .padding()
+                    .opacity(keyboard ? 0 : 1)
                 
                 Text("Thoughts:")
                     .font(.largeTitle).fontWeight(.bold).padding(.horizontal)
@@ -191,7 +193,8 @@ struct TrafficLight2: View {
                     )
                     .padding(.horizontal)
                     .padding(.bottom)
-                Spacer()
+                
+                Spacer(minLength: keyboard ? 200 : nil)
                 
                 
                 Text(hasWrited ? "If you are ready click done" : "Continue to think and write something")
@@ -201,7 +204,9 @@ struct TrafficLight2: View {
                 
                 if hasWrited{
                     Button{
-                        greenLight = false
+                        if offLight{
+                            greenLight = false
+                        }
                     } label: {
                         
                         Text("Done")
@@ -236,6 +241,14 @@ struct TrafficLight2: View {
             }
             
         }//Vstack
+        .onTapGesture{
+            hideKeyboard()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
+            keyboard = true
+        }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
+            keyboard = false
+        }
         .toolbar{
             
             Button{
