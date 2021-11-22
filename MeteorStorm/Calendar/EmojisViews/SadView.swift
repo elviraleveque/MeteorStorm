@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct HappyView: View {
+struct SadView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 06", "October 07", "October 08", "October 09", "October 11", "October 12"]
+    @State var dates = ["October 20", "October 21", "October 22", "October 23", "October 24"]
     
-    @State var texts = ["Such a sunny day in October!","Today I have a day off from work!","I feel so relaxed!","I found 5 euros on the floor!","Everything is going smoothly.","I was praised at work! Yay, so proud of myself!"]
+    @State var texts = ["My friends didn't call me to go out with them.... So sad","Maybe I did something wrong?","Why no one ever listen to me?!","I don't feel like doing anything...","I need to work on my project but I'm feeling gloomy..."]
     
     @State var editMode = false
     
@@ -21,9 +21,9 @@ struct HappyView: View {
     var body: some View {
         VStack{
             
-            notTappableEmoji(emoji: Image( "felice"), color: Color(.systemPurple))
+            notTappableEmoji(emoji: Image("triste"), color: Color(.systemBlue))
             
-            Text("6 days")
+            Text("5 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
                 .foregroundColor(Color(.systemGray))
             ZStack{
@@ -35,10 +35,9 @@ struct HappyView: View {
                     JournalCard(date: dates[2], text: $texts[2], editMode: $editMode)
                     JournalCard(date: dates[3], text: $texts[3], editMode: $editMode)
                     JournalCard(date: dates[4], text: $texts[4], editMode: $editMode)
-                    JournalCard(date: dates[5], text: $texts[5], editMode: $editMode)
 
                 }
-            }.background(Color( .systemGray6))
+            }.background(Color(.systemGray6))
             
         }
         .toolbar{
@@ -49,12 +48,13 @@ struct HappyView: View {
             }
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
-        .navigationTitle("Happy")
+        .navigationTitle("Scared")
     }
 }
 
-struct HappyView_Previews: PreviewProvider {
+struct SadView_Previews: PreviewProvider {
     static var previews: some View {
-        HappyView(rootIsActive: .constant(true))
+        SadView(rootIsActive: .constant(true))
     }
 }
+

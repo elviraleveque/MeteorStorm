@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct HappyView: View {
+struct BlankView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 06", "October 07", "October 08", "October 09", "October 11", "October 12"]
+    @State var dates = ["October 26", "October 27", "October 28", "October 29","October 30", "October 31"]
     
-    @State var texts = ["Such a sunny day in October!","Today I have a day off from work!","I feel so relaxed!","I found 5 euros on the floor!","Everything is going smoothly.","I was praised at work! Yay, so proud of myself!"]
+    @State var texts = ["I don't feel anything.","I'm feeling quite indifferent.","I have a day off, but I don't know what to do.","Bored.","I don't know how I feel.","Hard to explain how I feel today."]
     
     @State var editMode = false
     
@@ -21,7 +21,7 @@ struct HappyView: View {
     var body: some View {
         VStack{
             
-            notTappableEmoji(emoji: Image( "felice"), color: Color(.systemPurple))
+            notTappableEmoji(emoji: Image("neutro"), color: Color(.systemYellow))
             
             Text("6 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
@@ -49,12 +49,13 @@ struct HappyView: View {
             }
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
-        .navigationTitle("Happy")
+        .navigationTitle("Blank")
     }
 }
 
-struct HappyView_Previews: PreviewProvider {
+struct BlankView_Previews: PreviewProvider {
     static var previews: some View {
-        HappyView(rootIsActive: .constant(true))
+        BlankView(rootIsActive: .constant(true))
     }
 }
+

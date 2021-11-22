@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct HappyView: View {
+struct ScaredView: View {
     
     @Binding var rootIsActive: Bool
     
-    @State var dates = ["October 06", "October 07", "October 08", "October 09", "October 11", "October 12"]
+    @State var dates = ["October 02", "October 04"]
     
-    @State var texts = ["Such a sunny day in October!","Today I have a day off from work!","I feel so relaxed!","I found 5 euros on the floor!","Everything is going smoothly.","I was praised at work! Yay, so proud of myself!"]
+    @State var texts = ["I got a live presentation... I'm so scared!","Spider encounter"]
     
     @State var editMode = false
     
@@ -21,9 +21,9 @@ struct HappyView: View {
     var body: some View {
         VStack{
             
-            notTappableEmoji(emoji: Image( "felice"), color: Color(.systemPurple))
+            notTappableEmoji(emoji: Image("paura"), color: Color(.systemBrown))
             
-            Text("6 days")
+            Text("2 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
                 .foregroundColor(Color(.systemGray))
             ZStack{
@@ -32,10 +32,6 @@ struct HappyView: View {
                     
                     JournalCard(date: dates[0], text: $texts[0], editMode: $editMode)
                     JournalCard(date: dates[1], text: $texts[1], editMode: $editMode)
-                    JournalCard(date: dates[2], text: $texts[2], editMode: $editMode)
-                    JournalCard(date: dates[3], text: $texts[3], editMode: $editMode)
-                    JournalCard(date: dates[4], text: $texts[4], editMode: $editMode)
-                    JournalCard(date: dates[5], text: $texts[5], editMode: $editMode)
 
                 }
             }.background(Color( .systemGray6))
@@ -49,12 +45,12 @@ struct HappyView: View {
             }
         }
         .navigationBarBackButtonHidden(editMode ? true : false)
-        .navigationTitle("Happy")
+        .navigationTitle("Scared")
     }
 }
 
-struct HappyView_Previews: PreviewProvider {
+struct ScaredView_Previews: PreviewProvider {
     static var previews: some View {
-        HappyView(rootIsActive: .constant(true))
+        ScaredView(rootIsActive: .constant(true))
     }
 }
