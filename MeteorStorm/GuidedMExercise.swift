@@ -12,7 +12,7 @@ import SwiftUI
 struct TextMed: View {
     @Binding var rootIsActive : Bool
     @Binding var isCompleted : Bool
-    
+    @State var buttonOpacity = false
     
     let text1 = "Just close the eyes, sense your body sitting, sense your posture."
     let text2 = "Take a few mindful breaths, and be aware of the soundscape that’s all around you."
@@ -31,11 +31,28 @@ struct TextMed: View {
         VStack{
             Spacer()
             
-            GuidedMExercise(meditationTexts: [text1,text2,text3,text4,text5,text6,text7,text8,text9,text10,text11])
+            GuidedMExercise(meditationTexts: [text1,text2,text3,text4,text5,text6,text7,text8,text9,text10,text11], buttonOpacity: $buttonOpacity)
                 .padding()
             
             Spacer()
             
+            Button(action: {
+                      if buttonOpacity{
+                      self.rootIsActive = false
+                      self.isCompleted = true
+                      }
+                      
+            }, label:
+                      {
+                      Text("Done")
+                                .padding(.vertical)
+                                .frame( maxWidth: .infinity)
+                                .foregroundColor(Color.white)
+                                .background(Color(.systemIndigo)).cornerRadius(14)
+                                .opacity(buttonOpacity ? 1 : 0)
+                                .padding()
+                      
+            })
             
             
         }//VStack
@@ -57,6 +74,7 @@ struct GuidedMExercise: View{
     @State var meditationTexts : [String]
     let timerText = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     @State var timeTextMed = 0
+    @Binding var buttonOpacity: Bool
     var body: some View{
         ZStack {
             Text("\(meditationTexts[timeTextMed])")
@@ -71,6 +89,7 @@ struct GuidedMExercise: View{
                     }
                     else {
                         timeTextMed = 0
+                        buttonOpacity = true
                     }
                 }
             

@@ -37,14 +37,14 @@ struct CheckInView: View {
                 HStack{
                     Spacer()
                     
-                    CircleEmoji(emoji: Image("festa"), emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("festa"), emotionIndex: 1, color: Color(.systemGreen), emotionSelected: $emotionSelected, showCheckInView: .constant(true), doneCheck: $doneCheck)
                     
                     Spacer()
-                    CircleEmoji(emoji: Image("innamorato"), emotionIndex: 2, color: Color(.systemOrange), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("innamorato"), emotionIndex: 2, color: Color(.systemOrange), emotionSelected: $emotionSelected, showCheckInView: .constant(true), doneCheck: $doneCheck)
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: Image("felice"), emotionIndex: 3, color: Color(.systemPurple), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("felice"), emotionIndex: 3, color: Color(.systemPurple), emotionSelected: $emotionSelected, showCheckInView: .constant(true), doneCheck: $doneCheck)
                     
                     Spacer()
                     
@@ -54,11 +54,11 @@ struct CheckInView: View {
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: Image("sonno"), emotionIndex: 4, color: Color(.systemTeal).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("sonno"), emotionIndex: 4, color: Color(.systemTeal).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: .constant(true), doneCheck: $doneCheck)
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: Image("neutro"),emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("neutro"),emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: .constant(true), doneCheck: $doneCheck)
                     
                     Spacer()
                     
@@ -68,15 +68,15 @@ struct CheckInView: View {
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: Image("rabbia"), emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("rabbia"), emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: .constant(true), doneCheck: $doneCheck)
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: Image("triste"), emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("triste"), emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: .constant(true), doneCheck: $doneCheck)
                     
                     Spacer()
                     
-                    CircleEmoji(emoji: Image("paura"), emotionIndex: 8, color: Color(.systemBrown), emotionSelected: $emotionSelected, showCheckInView: .constant(true))
+                    CircleEmoji(emoji: Image("paura"), emotionIndex: 8, color: Color(.systemBrown), emotionSelected: $emotionSelected, showCheckInView: .constant(true), doneCheck: $doneCheck)
                     
                     Spacer()
                     
@@ -104,9 +104,6 @@ struct CheckInView: View {
                 
                 Button(action: {
                     self.showCheckInView = false
-                    if emotionSelected != 0{
-                        self.doneCheck = true
-                    }
                 }, label: {
                     Text("Cancel")
                         .foregroundColor(Color(.systemIndigo))

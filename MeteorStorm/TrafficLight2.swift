@@ -12,21 +12,18 @@ struct TrafficLight2: View {
     @Binding var rootIsActive : Bool
     @Binding var isCompleted : Bool
     
-    @State var isVisible = false
-    @State var currentDate = Date()
     @State var isActive = true
-    
-    @State var timeRemaining = [10, 6, 7]
     @State var emotions = ["","",""]
     @State var thoughts = ["","",""]
-    
-    @State var empty = false
-    
+        
     @State var redLight = false
     @State var yellowLight = false
     @State var greenLight = false
     @State var offLight = false
     @State var keyboard = false
+    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     
     var body: some View {
         
@@ -114,13 +111,14 @@ struct TrafficLight2: View {
                 
                 Text(hasWrited ? "If you are ready go forward" : "Continue to think and write something")
                     .foregroundColor(Color(.systemGray))
-                    .opacity(greenLight ? 1 : 0)
+                    .opacity((greenLight || hasWrited) ? 1 : 0)
                     .padding(.horizontal)
                 
                 if hasWrited{
                     Button{
-                        if greenLight{
+                        if (greenLight || hasWrited){
                             yellowLight = false
+                            greenLight = true
                         }
                     } label: {
                         
@@ -131,7 +129,7 @@ struct TrafficLight2: View {
                             .background(Color(.systemIndigo)).cornerRadius(14)
                             .padding(.horizontal)
                             .padding(.bottom)
-                            .opacity(greenLight ? 1 : 0)
+                            .opacity((greenLight || hasWrited) ? 1 : 0)
                         
                     }
                 } else {
@@ -199,13 +197,14 @@ struct TrafficLight2: View {
                 
                 Text(hasWrited ? "If you are ready click done" : "Continue to think and write something")
                     .foregroundColor(Color(.systemGray))
-                    .opacity(offLight ? 1 : 0)
+                    .opacity((offLight || hasWrited) ? 1 : 0)
                     .padding(.horizontal)
                 
                 if hasWrited{
                     Button{
-                        if offLight{
+                        if (offLight || hasWrited){
                             greenLight = false
+                            offLight = true
                         }
                     } label: {
                         
@@ -216,7 +215,7 @@ struct TrafficLight2: View {
                             .background(Color(.systemIndigo)).cornerRadius(14)
                             .padding(.horizontal)
                             .padding(.bottom)
-                            .opacity(offLight ? 1 : 0)
+                            .opacity((offLight || hasWrited) ? 1 : 0)
                         
                     }
                 } else {
@@ -244,9 +243,9 @@ struct TrafficLight2: View {
         .onTapGesture{
             hideKeyboard()
         }
-        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
             keyboard = true
-        }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
+        }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
             keyboard = false
         }
         .toolbar{

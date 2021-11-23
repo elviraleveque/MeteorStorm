@@ -39,7 +39,9 @@ struct HappyView: View {
                     JournalCard(date: dates[5], text: $texts[5], editMode: $editMode)
 
                 }
+
             }
+
 
         }
         .onTapGesture{

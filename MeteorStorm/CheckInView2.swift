@@ -80,7 +80,6 @@ struct CheckInView2: View {
             
             Button(action: {
                 self.showCheckInView = false
-                self.doneCheck = true
 
             }, label: {
                 Text("Cancel")

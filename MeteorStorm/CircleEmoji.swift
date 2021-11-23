@@ -15,12 +15,15 @@ struct CircleEmoji: View{
     var color: Color
     @Binding var emotionSelected: Int
     @Binding var showCheckInView: Bool
+    @Binding var doneCheck: Bool
+
     
     var body: some View{
         
         Button(action: {
             emotionSelected = emotionIndex
             showCheckInView = true
+            doneCheck = true
         },
                label: {
             ZStack{

@@ -74,8 +74,10 @@ struct CountDown: View{
                                         .fontWeight(.bold)
                                         .padding()
                               Button(action: {
+                                        if buttonOpacity == 1.0{
                                         self.rootIsActive = false
                                         self.isCompleted = true
+                                        }
                                         
                               }, label:
                                         {
@@ -85,7 +87,7 @@ struct CountDown: View{
                                                   .foregroundColor(Color.white)
                                                   .background(Color(.systemIndigo)).cornerRadius(14)
                                                   .opacity(buttonOpacity)
-                                                  .padding()
+                                                  .padding(.horizontal)
                                         
                               })
                               

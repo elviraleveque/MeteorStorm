@@ -58,20 +58,20 @@ struct TodayView: View {
                     HStack{
                         Spacer()
                         
-                        CircleEmoji(emoji: Image("rabbia"), emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("rabbia"), emotionIndex: 6, color: Color(.systemRed), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView, doneCheck: $doneCheck)
                         
                         Spacer()
                         
-                        CircleEmoji(emoji: Image("felice"), emotionIndex: 3, color: Color(.systemPurple), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("felice"), emotionIndex: 3, color: Color(.systemPurple), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView, doneCheck: $doneCheck)
                         
                         Spacer()
                         
-                        CircleEmoji(emoji: Image("neutro"),emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("neutro"),emotionIndex: 5, color: Color(.systemYellow), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView, doneCheck: $doneCheck)
                         
                         
                         Spacer()
                         
-                        CircleEmoji(emoji: Image("triste"), emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView)
+                        CircleEmoji(emoji: Image("triste"), emotionIndex: 7, color: Color(.systemBlue).opacity(0.75), emotionSelected: $emotionSelected, showCheckInView: $showCheckInView, doneCheck: $doneCheck)
                         
                         Spacer()
                     }

@@ -39,7 +39,7 @@ struct BreathingExercise: View {
                 Spacer()
                 Spacer()
                 CountDown(isActive: $isActive, isCompleted: $isCompleted, rootIsActive: $rootIsActive)
-                Spacer()
+                    .padding(.bottom)
                 
             }//VStack
         }
