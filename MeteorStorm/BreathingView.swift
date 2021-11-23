@@ -13,7 +13,6 @@ struct BreathingView: View {
           @Binding var rootIsActive : Bool
           @Binding var isCompleted : Bool
           
-          
           var body: some View {
                     VStack{
                               Spacer()

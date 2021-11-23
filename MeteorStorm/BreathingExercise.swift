@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct BreathingExercise: View {
-    var breathRecognizer: BreathRecognizer! = nil
+
     @Binding var rootIsActive : Bool
     @State var isVisible = false
     @State var currentDate = Date()
@@ -35,6 +35,11 @@ struct BreathingExercise: View {
                         })//onAppear
                     
                     Image("StaticCircle")
+                        .overlay(
+                            WavesView()
+                        )
+                        
+                    
                 } //ZStack
                 Spacer()
                 Spacer()

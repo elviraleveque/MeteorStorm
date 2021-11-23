@@ -13,7 +13,7 @@ struct InLoveView: View {
     
     @State var dates = ["November 10", "November 15", "November 19", "November 25", "November 26"]
     
-    @State var texts = ["I met a stray dog and he followed me home!","Cuddling all day with my puppy!","My project is shaping up and it looks awesome","The project is ready. I love it!","My presentation day was great!"]
+    @State var texts = ["I met a stray dog and he followed me home!","Cuddling all day with my puppy!","My project is shaping up and it looks awesome","The project is ready. I love it!","The presentation day is great!"]
     
     @State var editMode = false
     
