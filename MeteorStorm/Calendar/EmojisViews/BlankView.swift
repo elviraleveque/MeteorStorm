@@ -55,6 +55,8 @@ struct BlankView: View {
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Blank")
         .background(Color( .systemGray6))
+        .navigationBarColor(.systemGray6)
+
     }
 }
 
