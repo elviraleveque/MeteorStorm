@@ -55,6 +55,8 @@ struct AngryView: View {
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Angry")
         .background(Color(.systemGray6))
+        .navigationBarColor(.systemGray6)
+
     }
 }
 

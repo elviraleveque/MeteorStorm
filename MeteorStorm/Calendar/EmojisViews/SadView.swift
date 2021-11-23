@@ -56,6 +56,8 @@ struct SadView: View {
         .navigationBarBackButtonHidden(editMode ? true : false)
         .navigationTitle("Sad")
         .background(Color(.systemGray6))
+        .navigationBarColor(.systemGray6)
+
     }
 }
 
