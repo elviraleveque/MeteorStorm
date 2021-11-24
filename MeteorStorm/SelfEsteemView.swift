@@ -18,7 +18,7 @@ struct SelfEsteemView: View {
     
     
     var body: some View {
-        
+        NavigationView{
         VStack{
             Spacer()
             Image(systemName: "figure.wave")
@@ -55,7 +55,19 @@ struct SelfEsteemView: View {
         }//VStack
         .navigationTitle("Self Esteem")
         .padding(.bottom)
+        .toolbar{
+                  
+                  Button{
+                       self.rootIsActive = false                                } label: {
+                            Text("Close")
+                                      .foregroundColor(Color(.systemIndigo))
+                  }
+                  
+        }//Toolbar
+        }
         
+        .accentColor(Color(.systemIndigo))
+
     }
 }
 

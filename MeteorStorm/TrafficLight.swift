@@ -14,7 +14,7 @@ struct TrafficLight: View {
     
     
     var body: some View {
-        
+        NavigationView{
         VStack{
             Spacer()
             Image("traffic Light")
@@ -58,7 +58,18 @@ Type down your thoughts on your set of emotions before the timer expires
         }//VStack
         .navigationTitle("Traffic Light")
         .padding(.bottom)
-        
+        .toolbar{
+                  
+                  Button{
+                       self.rootIsActive = false                                } label: {
+                            Text("Close")
+                                      .foregroundColor(Color(.systemIndigo))
+                  }
+                  
+        }//Toolbar
+        }
+        .accentColor(Color(.systemIndigo))
+
         
     }
 }

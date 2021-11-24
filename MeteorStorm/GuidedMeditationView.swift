@@ -14,6 +14,7 @@ struct GuidedMeditation: View {
     @Binding var isCompleted : Bool
     
     var body: some View {
+        NavigationView{
         VStack{
             Spacer()
             Image(systemName: "aqi.medium")
@@ -49,6 +50,17 @@ struct GuidedMeditation: View {
         }//VStack
         .navigationTitle("Guided Meditation")
         .padding(.bottom)
-        
+        .toolbar{
+                  
+                  Button{
+                       self.rootIsActive = false                                } label: {
+                            Text("Close")
+                                      .foregroundColor(Color(.systemIndigo))
+                  }
+                  
+        }//Toolbar
+        }
+        .accentColor(Color(.systemIndigo))
+
     }
 }

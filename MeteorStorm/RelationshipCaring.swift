@@ -17,7 +17,7 @@ struct RelationshipCaring: View {
 
     
     var body: some View {
-        
+        NavigationView{
         VStack{
             Spacer()
             Image(systemName: "heart.text.square")
@@ -55,7 +55,18 @@ struct RelationshipCaring: View {
         }//VStack
         .navigationTitle("Relationship Caring")
         .padding(.bottom)
-        
+        .toolbar{
+                  
+                  Button{
+                       self.rootIsActive = false                                } label: {
+                            Text("Close")
+                                      .foregroundColor(Color(.systemIndigo))
+                  }
+                  
+        }//Toolbar
+        }
+        .accentColor(Color(.systemIndigo))
+
     }
 }
 

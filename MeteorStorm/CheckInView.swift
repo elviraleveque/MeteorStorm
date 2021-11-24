@@ -105,7 +105,7 @@ struct CheckInView: View {
                 Button(action: {
                     self.showCheckInView = false
                 }, label: {
-                    Text("Cancel")
+                    Text("Close")
                         .foregroundColor(Color(.systemIndigo))
                 })
                 

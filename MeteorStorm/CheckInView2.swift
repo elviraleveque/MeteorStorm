@@ -82,7 +82,7 @@ struct CheckInView2: View {
                 self.showCheckInView = false
 
             }, label: {
-                Text("Cancel")
+                Text("Close")
                     .foregroundColor(Color(.systemIndigo))
             })
         }

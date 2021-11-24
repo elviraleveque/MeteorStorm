@@ -252,7 +252,7 @@ struct TrafficLight2: View {
             
             Button{
                 self.rootIsActive = false                                } label: {
-                    Text("Cancel")
+                    Text("Close")
                         .foregroundColor(Color(.systemIndigo))
                 }
             

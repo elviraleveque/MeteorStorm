@@ -14,6 +14,7 @@ struct BreathingView: View {
           @Binding var isCompleted : Bool
           
           var body: some View {
+                    NavigationView{
                     VStack{
                               Spacer()
                               Image(systemName: "lungs")
@@ -47,6 +48,18 @@ struct BreathingView: View {
                     }//VStack
                     .navigationTitle("Breathing")
                     .padding(.bottom)
+                    .toolbar{
+                              
+                              Button{
+                                   self.rootIsActive = false                                } label: {
+                                        Text("Close")
+                                                  .foregroundColor(Color(.systemIndigo))
+                              }
+                              
+                    }//Toolbar
+                    }
+                    .accentColor(Color(.systemIndigo))
+
                     
           }
 }
