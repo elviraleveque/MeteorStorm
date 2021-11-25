@@ -24,7 +24,7 @@ struct InLoveView: View {
             notTappableEmoji(emoji: Image("innamorato"), color: Color(.systemOrange))
                 .padding(.top)
             
-            Text("4 days")
+            Text("5 days")
                 .font(.system(size: 17, weight: .regular, design: .default))
                 .foregroundColor(Color(.systemGray))
             ZStack{
